@@ -7,20 +7,20 @@
   \emph{Rationale:} h1 の中心。同じ主モデル・同じ実験予算・同じ 2 件・同じ公式 Evaluator で、手法だけを替えたときの差が STE に出れば、仮説条件付きの閉ループが SBML の機構回復にも効くという h1 の主張の直接の証拠になる。
   \emph{Criterion:} \texttt{\detokenize{autoscilab-luna}}.\texttt{\detokenize{trajectory_smape}} $-$ \texttt{\detokenize{react-luna}}.\texttt{\detokenize{trajectory_smape}} $\leq -0.02$.
   \emph{Prediction:} $[-0.15, 0.05]$ (137 件での前研究: 同じ gpt-6-luna の公式 ReAct は STE 0.2151（auto-res2/scigym-autoscilab）/ 0.2185（auto-res2/scigym-autoscilab-v3）、速度則を 3 型に固定した前の移植は 0.3133 / 0.3125（差 +0.098 / +0.094）。予測区間は autoscilab-10（10 件）の −0.15〜0.05 をそのまま使う。2 件では差の標準誤差を見積もる意味が無い。).
-  \emph{Observed:} pending.
-  \emph{Verdict:} pending.
+  \emph{Observed:} 0.310331.
+  \emph{Verdict:} refuted.
 \item[\textbf{Claim 2}] 同じ部品で実験選択だけを仮説と無関係にした autoscilab-nohyp-luna の平均 STE（等間隔に選んだ 2 件（pilot））は、autoscilab-luna より 0.01 以上高い。~\cite[s2.p7, s2.p11, s2.p22]{kabra-2026-llm}
   \emph{Rationale:} h1 の「改善は実験選択則によるもの」の部分。論文で最も効いた部品（s2.p7）を外した run との差が出れば、c1 の差が仮説生成やフィットではなく仮説条件付き獲得に帰せられる。
   \emph{Criterion:} \texttt{\detokenize{autoscilab-nohyp-luna}}.\texttt{\detokenize{trajectory_smape}} $-$ \texttt{\detokenize{autoscilab-luna}}.\texttt{\detokenize{trajectory_smape}} $\geq 0.01$.
   \emph{Prediction:} $[-0.08, 0.1]$ (137 件での前研究ではアブレーションとの差は +0.005 で判定線に届かなかった。論文の Figure 4（s2.p7）は大きな低下を報告する。区間は autoscilab-10 と同じ −0.08〜0.10（2 件では統計的な意味を持たない）。).
-  \emph{Observed:} pending.
-  \emph{Verdict:} pending.
+  \emph{Observed:} 0.0704456.
+  \emph{Verdict:} supported.
 \item[\textbf{Claim 3}] SciGym 公式 ReAct エージェント（react-luna）の RMS（修飾子なしの reaction\_f1、等間隔に選んだ 2 件（pilot））は、autoscilab-luna より 0.02 以上低い。~\cite[s1.p1, s1.p2, s1.p3, s1.p4, s1.p6, s1.p10, s1.p11]{duan-2025-measuring}
   \emph{Rationale:} h1 の RMS の部分。STE は軌道の近さしか見ないので、反応の構造が実際に回復されているかは RMS で確かめる。react-luna はこの claim の run であると同時に c1 の比較対象でもある。
   \emph{Criterion:} \texttt{\detokenize{react-luna}}.\texttt{\detokenize{reaction_f1}} $-$ \texttt{\detokenize{autoscilab-luna}}.\texttt{\detokenize{reaction_f1}} $\leq -0.02$.
   \emph{Prediction:} $[-0.25, 0.05]$ (137 件での前研究で ReAct の reaction\_f1 は 0.3971 / 0.3443、移植は 0.4580 / 0.4558（差 −0.061 / −0.112）。構造の回復は速度則の文法に依存しない。区間は autoscilab-10 と同じ −0.25〜0.05（2 件では統計的な意味を持たない）。).
-  \emph{Observed:} pending.
-  \emph{Verdict:} pending.
+  \emph{Observed:} 0.202381.
+  \emph{Verdict:} refuted.
 \end{enumerate}
 \noindent\emph{Assumed, so that the claims together imply Hypothesis 1:}
 \begin{itemize}
