@@ -1,0 +1,119 @@
+\PassOptionsToPackage{numbers}{natbib}
+\documentclass{article}
+\usepackage{iclr2024_conference}
+\usepackage{luatexja-fontspec}
+\usepackage{hyperref}
+\usepackage{url}
+\usepackage{booktabs}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{graphicx}
+\graphicspath{{../}}
+
+\InputIfFileExists{values.tex}{}{}
+\providecommand{\airasval}[1]{\textbf{??airasval:\detokenize{#1}??}}
+\providecommand{\unverified}[1]{#1}
+\providecommand{\airasrecordlink}[1]{#1}
+
+\title{仮説条件付き実験選択は SBML の機構回復にも効くか（第 2 報）: LLM-AutoSciLab の公式モジュールを Antimony の仮説で SciGym に繋ぎ、宣言を検証可能なキーで記録し直す 2 件の pilot}
+\author{AIRAS}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+LLM-AutoSciLab \citep{kabra-2026-llm} は、複数の候補機構を明示的に持ち、候補どうしの予測が最も食い違う条件を次の実験に選ぶ閉ループの発見枠組みである。前研究（auto-res2/scigym-autoscilab、同 v3）は SciGym \citep{duan-2025-measuring} の反応回復課題にこの枠組みを移植して 137 件で検証し、反応の構造（RMS）では公式 ReAct エージェントを上回ったが軌道誤差（STE）では及ばず、仮説条件付きの実験選択は測れる差を与えなかった。事後分析では、移植が速度則を 3 型に固定していたこと（論文の LLM は式を自由に書く）が主因と判断した。本研究は移植を書き直す: 上流の公式モジュール（\texttt{EnsembleAgent}、\texttt{HypothesisDistribution}、\texttt{FalsificationSelector}、\texttt{ExperimentStore}、\texttt{LLMMemory}、LLM クライアント）をそのまま使い、Python 式が前提の部分だけをサブクラスで差し替え、仮説は Antimony の反応ブロックとして LLM が反応・速度則・定数を自由に書く。データ（SciGym-small から等間隔に 2 件。pilot）、実験の種類（初期濃度の変更）、正解モデルへの問い合わせ予算（20 回）、評価（公式 Evaluator の STE / RMS / NTS）、LLM（3 run とも openai/gpt-6-luna）は固定し、比較相手は SciGym 公式 ReAct、アブレーションは実験選択だけを仮説と無関係にした同じ部品である。実験前に 3 つの主張を凍結する: 手法 run の平均 STE が ReAct より 0.02 以上低い（c1）、アブレーションの平均 STE が手法 run より 0.01 以上高い（c2）、ReAct の RMS F1 が手法 run より 0.02 以上低い（c3）。本報は第 2 報（auto-res2/scigym-autoscilab-10、10 件、full）の宣言を、記録の新しい形（上流の引数名をキーとし、値を各 run の設定に同じキーで置く）で書き直した 2 件の pilot であり、目的は実験設定が宣言どおりに実行されたことを検証の仕組みが機械で確かめられる範囲を広げることにある。2 件の差に統計的な意味はなく、判定は規則どおり導くが解釈しない。
+\end{abstract}
+
+\section{はじめに}
+\label{sec:intro}
+LLM に科学的発見のサイクル全体を行わせる研究には、二つの流れがある。一つは SciGym \citep{duan-2025-measuring} のように、LLM エージェントが摂動実験を要求し、返ってきたデータを解析し、機構を提出するまでを一つの会話の中で行わせ、その出来を測るベンチマークである。もう一つは LLM-AutoSciLab \citep{kabra-2026-llm} のように、発見を「進化する仮説集合の上での逐次実験計画」として定式化し、仮説を一つに絞らずに複数の候補機構を持ち、候補どうしの予測が最も食い違う条件を次の実験に選ぶ枠組みである。
+
+LLM-AutoSciLab は、候補機構の食い違いに基づく実験選択（仮説条件付き獲得）が固定予算のもとでサンプル効率を改善すると主張し \cite[s2.p2]{kabra-2026-llm}、アブレーションではこの部品を外すと全ベンチマークで大きく低下したと報告している \cite[s2.p7]{kabra-2026-llm}。しかし評価に使われたオラクルは、入力を与えると一つの値を返すノイズのない黒箱関数である \cite[s2.p5]{kabra-2026-llm}。公式リポジトリに含まれる SciGym 向けのアダプタも、SBML の機構復元ではなくスカラーのシミュレータ応答を最適化するものだと自ら述べており \cite[s2.p14]{kabra-2026-llm}、SciGym の課題そのもの（全種の時系列を観測し、欠けた反応を SBML として提出する）には当てられていない。著者らも、性能が LLM の仮説の質とパーサ・改良バックエンドの対応範囲に依存することを限界として挙げている \cite[s2.p8]{kabra-2026-llm}。一方 SciGym の側では、公式の ReAct エージェント \cite[s1.p3]{duan-2025-measuring} は実験の選び方に原理を持たない。論文は、初期濃度の変更という摂動が「戦略的に設計されれば」種の関係・反応の型・速度則・反応速度について多くの情報を与えると述べている \cite[s1.p8]{duan-2025-measuring} が、何をもって戦略的とするかはエージェントの推論に委ねられている。
+
+AIRAS の前研究（auto-res2/scigym-autoscilab と同 v3）は、この二つを接続する最初の試みだった。LLM-AutoSciLab の獲得則と LLM クライアントを公式コードから借り、SBML 固有の部分を自前のループ（約 850 行）で書き、速度則を質量作用・Michaelis--Menten・Hill の 3 型に固定して、137 件で SciGym 公式 ReAct と比べた。結果は、反応の構造の回復（RMS F1）では手法が上回ったが、軌道誤差（STE）では ReAct に及ばず（差 \unverified{+0.098} と \unverified{+0.094}）、実験選択を仮説と無関係にしても STE は変わらなかった。事後分析では、完走した 134 件のうち 43 件でフィット誤差（log 濃度の RMSE）が 1 を超え、フィット誤差と構造の正しさがほぼ無相関であり、本研究の文法では正解の速度則（差の形、多項式、Hill 項の積）を表せないことが主因と判断した。論文の LLM は関数形を自由に書くので、3 型への固定は移植側の逸脱でもあった。
+
+第 2 報（auto-res2/scigym-autoscilab-10）はその移植を書き直した。上流の公式モジュールをそのまま使い、Python 式が前提になっている部分だけをサブクラスで差し替え、仮説は Antimony の反応ブロックとして LLM が反応・速度則・定数を自由に書く。問いは前研究と同じ「仮説条件付き獲得は、時系列が観測され SBML を提出する機構回復でも効くか」である。本報はその設計をそのまま引き継ぎ、記録の形だけを変えて等間隔に選んだ 2 件の pilot で再実行する。第 2 報の検証報告では、実験設定のうち上流の引数に渡る値は観測と照合されたが、seed、並列数、打ち切り時間、確信度の門、アブレーションの切替のように自分のコードだけが消費する設定は照合の相手が無く未検証のまま残った。本報では設定のキーを「その値を消費する関数の引数名」に揃え、自分のコードの設定も同じ仕組みで照合する。判定は AIRAS の事前登録の枠組みに従い、仮説・判定基準・予測区間・実行条件を実験前に記録へ凍結し、実験後は計測値だけを流し込む。
+
+\section{関連研究}
+\label{sec:related}
+\paragraph{SciGym.}
+SciGym \citep{duan-2025-measuring} は BioModels 由来の SBML モデルから反応を取り除いたものをエージェントに渡し、エージェントは初期濃度を変えた摂動実験を要求し \cite[s1.p4]{duan-2025-measuring}、Python で解析し、最終的な SBML を提出する。提出は任意の時点で行え、反復数の上限は 20 である \cite[s1.p1]{duan-2025-measuring}。提出モデルが無効なら 3 回までのデバッグ反復が許され、それでも無効なら不完全モデルのまま採点される \cite[s1.p2]{duan-2025-measuring}。評価指標は、予測した系と真の系の各種の時系列軌道を比べる STE \cite[s1.p5]{duan-2025-measuring}（airas-eval では \texttt{trajectory\_smape}、全種の対称平均絶対パーセント誤差）、反応物と生成物の集合が一致した反応の F1 である RMS（修飾子まで要求する厳格版もある）\cite[s1.p6]{duan-2025-measuring}、種間の相互作用の F1 である NTS \cite[s1.p7]{duan-2025-measuring} の 3 つである。論文は計算資源の制約から small split の 137 件で 6 モデルを評価した \cite[s1.p9]{duan-2025-measuring}。提出 SBML の速度則に制限はなく、エージェントは libSBML で任意の数式を書く。
+
+\paragraph{LLM-AutoSciLab.}
+LLM-AutoSciLab \citep{kabra-2026-llm} は、既存の LLM による発見システムの多くが表現固定かつ受動的で、事前に集めた静的データの上で事後的に仮説を生成・改良するにとどまる \cite[s2.p3]{kabra-2026-llm} と指摘し、仮説を機構レベルの対象としてオンラインの実験選択に使う。1 ラウンドは、small モデルが候補仮説を K 個ずつ並列にサンプルし（論文設定 K = 5 \cite[s2.p9]{kabra-2026-llm}）、構造の骨格でクラスタして、クラスタ分布のエントロピーの変化が 0.1 を下回るか 20 個に達したら止め \cite[s2.p10]{kabra-2026-llm}、large モデルがそれを本命・対抗案・探索領域に整理する仮説生成、候補機構の予測が最も食い違う点を選ぶ実験選択 \cite[s2.p6]{kabra-2026-llm}、新データで候補の定数を合わせ直しブートストラップで確信度を測る改良からなる。確信度が閾値（論文設定 0.9）を超えると不確実性サンプリングによる改良モードに切り替わる \cite[s2.p12]{kabra-2026-llm}。論文は主モデルに GPT-4o-mini、small モデルに Qwen2.5-7B-Instruct を用い \cite[s2.p4]{kabra-2026-llm}、アンサンブルのサンプリング温度は 1.0 である \cite[s2.p13]{kabra-2026-llm}。公式コードでは、仮説は Python 式の文字列で、数値リテラルを置換した骨格でクラスタされ \cite[s2.p28]{kabra-2026-llm}、Python 式として評価できない仮説はサンプリング時に捨てられる \cite[s2.p29]{kabra-2026-llm}。
+
+\section{仮説と予測}
+\label{sec:hypothesis}
+以下は記録（record.json）から生成された仮説・主張・判定基準・予測区間の一覧である。実験後は Observed と Verdict が計測値から埋められる。
+
+\input{claims.tex}
+
+\paragraph{判定基準と予測区間の根拠.}
+マージンは前研究と同じ（c1 0.02、c2 0.01、c3 0.02）である。前研究の 137 件では、同じ openai/gpt-6-luna の公式 ReAct は平均 STE \unverified{0.2151}（scigym-autoscilab）と \unverified{0.2185}（同 v3）、修飾子なしの RMS F1 は \unverified{0.3971} と \unverified{0.3443} で、3 型に固定した移植は STE \unverified{0.3133} / \unverified{0.3125}、RMS F1 \unverified{0.4580} / \unverified{0.4558} だった。予測区間は第 2 報と同じ（c1: $[-0.15, 0.05]$、c2: $[-0.08, 0.10]$、c3: $[-0.25, 0.05]$）。2 件の pilot では差の標準誤差を見積もる意味がなく、判定は規則どおり導くが、支持・反証のどちらも解釈しない。NTS、修飾子ありの RMS、提出数、1 件あたりの実験回数、トークン数は同じ実行から表として報告するが、判定には用いない。
+
+\section{方法}
+\label{sec:method}
+\paragraph{課題と固定するもの.}
+各件は真の SBML、反応をすべて取り除いた不完全な SBML、シミュレーション条件（SED-ML）からなる。SciGym の公式コードには正解モデルを呼ぶ \texttt{Experiment.call\_simulator} がある \cite[s1.p12]{duan-2025-measuring}。本研究では正解モデルへの問い合わせをこの関数だけで行う。摂動は論文と同じく初期濃度の変更 \cite[s1.p4]{duan-2025-measuring} である。観測する種を指定しない呼び出しでは全種の時系列が返る（SciGym 公式コードの振る舞い）。3 つの run すべてで、この問い合わせを 1 件あたり最大 20 回に揃える。提出 SBML は airas-eval の \texttt{scigym\_small} パック（SciGym 公式の Evaluator をそのまま包んだもの）で採点する。
+
+\paragraph{比較相手: SciGym 公式 ReAct（run \texttt{react-luna}）.}
+SciGym 公式コードのベンチマーク実行の入口は \texttt{run\_benchmark(self, model: LLM)} である \cite[s1.p11]{duan-2025-measuring}。本研究はこの Controller を無改変で用い、LLM は \texttt{scigym.api.api.LLM} のサブクラスとして Vercel AI Gateway の OpenAI 互換エンドポイントを呼ぶアダプタだけを書く。反復数の上限 20 は論文と同じである \cite[s1.p1]{duan-2025-measuring}。無効な提出に対するデバッグ反復 3 回も論文と同じである \cite[s1.p2]{duan-2025-measuring}。temperature 1.0 は SciGym 公式コードの既定値である。SciGym の反復にはコード実行だけの反復も含まれるため、ReAct の実験回数は 20 以下になる。
+
+\paragraph{手法: LLM-AutoSciLab の公式モジュール + SciGym 用アダプタ（run \texttt{autoscilab-luna}）.}
+仮説は Antimony（SBML のテキスト形式）の反応ブロックで表す。LLM は反応（反応物・生成物・可逆性・化学量論）と速度則（種と名前付き定数の任意の数式）と定数の値を自由に書き、不完全モデルを Antimony にした末尾にそのブロックを足して SBML に戻す。速度則の形は制限しない。種や区画への代入、既知でない種、速度則の無い反応、既定条件でシミュレーションが通らないブロックは無効として捨てる（公式コードが Python 式として評価できない仮説を捨てる \cite[s2.p29]{kabra-2026-llm} のに当たる）。論文 Algorithm 1 の各段階と公式モジュールの対応は次のとおりである。
+\begin{itemize}
+\item 仮説生成（GenHyp）: 公式 \texttt{EnsembleAgent.run\_round} \cite[s2.p26]{kabra-2026-llm} をそのまま呼ぶ。small モデルの K = 5 並列サンプル \cite[s2.p9]{kabra-2026-llm} は公式 \texttt{EnsembleClient.complete\_json\_k}、large モデルの整理は公式 \texttt{synthesize\_proposal} \cite[s2.p37]{kabra-2026-llm} と \texttt{LLMClient.complete\_json}（上流のスキーマと prompt のまま）である。上流はサンプルした仮説を \texttt{\_filter\_valid\_expressions} に通す \cite[s2.p29]{kabra-2026-llm}。この選別は Python 式を前提とし Antimony には使えないので、\texttt{sample\_hypothesis\_distribution} と \texttt{\_sample\_adaptive} の 2 メソッドをサブクラスで上書きする。上書き版は上流の prompt 生成関数をそのまま使い（課題と Antimony の書き方はオラクル役の説明文として入る）、出力スキーマだけ Antimony 用に替え、有効な候補を canonical 文字列（反応を反応物・生成物・速度則の順に並べ、定数を出現順に付け直したもの）にして公式 \texttt{HypothesisDistribution.from\_expressions} \cite[s2.p27]{kabra-2026-llm} に渡す。骨格（数値を置換した文字列 \cite[s2.p28]{kabra-2026-llm}）によるクラスタ、エントロピー、適応サンプリングの停止則（エントロピーの変化が 0.1 未満か 20 個 \cite[s2.p10]{kabra-2026-llm}、公式既定値 \cite[s2.p30, s2.p31]{kabra-2026-llm}）は上流のままである。仮説集合（最大 8）は large の本命（Antimony として有効なら）、クラスタの代表（大きい順）、これまでの最良からなる。
+\item 定数の当てはめ（RefineHyp）: 本研究のコード。仮説が足した定数を、これまでの実験の濃度時系列（等間隔 50 時点、log スケール）に対して scipy で最小二乗フィットする。公式の \texttt{EquationLearner.fit} は PySR の記号回帰でスカラー目標を扱うため使えない。
+\item 実験選択（Acquire）: 公式 \texttt{FalsificationSelector.select} \cite[s2.p22]{kabra-2026-llm} をそのまま呼ぶ（候補点 2000 \cite[s2.p15]{kabra-2026-llm}、多様性 0.3 \cite[s2.p16]{kabra-2026-llm}、1 反復 4 点 \cite[s2.p19]{kabra-2026-llm}）。渡す仮説分布は \texttt{HypothesisDistribution} のサブクラスで、\texttt{compute\_disagreement} だけを「候補 SBML を SciGym の \texttt{Simulator} で回した全種 × 50 時点の log 濃度の候補間分散」に上書きする（上流は Python 式のスカラー予測の log10 標準偏差）。オラクル役は \texttt{BaseOracle} のサブクラスで、変えてよい種とその初期濃度の範囲（既定値の 0.2〜5 倍）を返す。探索領域は large の提案（上流の \texttt{SearchRegion}）を許可範囲に切り詰めたものである。
+\item 問い合わせ: オラクル役の \texttt{run} から SciGym の \texttt{Experiment.call\_simulator} へ。結果は \texttt{OracleResult} のサブクラス（全種 × 全時刻の軌道を持つ。上流の \texttt{measurement} はスカラー \cite[s2.p34]{kabra-2026-llm}）として公式 \texttt{ExperimentStore} に入れる。prompt 用の表 \cite[s2.p33]{kabra-2026-llm} だけ軌道の要約（5 時点 × 全種）に上書きする。候補 SBML の試走はオラクルを通らず、予算を消費しない。
+\item 確信度（ConfGate）: 公式 \texttt{learner.py} の定義 \cite[s2.p35]{kabra-2026-llm}（実験を復元抽出して再フィットし、予測の変動係数の平均を 1 から引く）と、ブートストラップ確信度の計算にだけ掛ける $R^2 > 0.5$ の門 \cite[s2.p36]{kabra-2026-llm} を本研究のコードで計算する（上流の実装は PySR を再学習する private メソッド）。0.9 以上なら改良モード \cite[s2.p12]{kabra-2026-llm}: スコアだけを「本命のブートストラップ再フィット間の軌道分散」に替え、選択と多様性は同じ \texttt{FalsificationSelector.select} を使う。
+\item メモリ: 公式 \texttt{LLMMemory} をそのまま使い、反復ごとに最良候補とそのフィット値・確信度を記録して次の prompt に入れる。
+\item 提出: 予算を使い切ったら、フィット誤差が最小の候補を全実験で再フィットし、定数を書き込んだ SBML を提出する。妥当な候補が無い件は提出なし。
+\end{itemize}
+ループ本体は本研究のコードで、上の部品を順に呼ぶだけである（公式の \texttt{DiscoveryLoop.run} はスカラーの実験履歴・PySR・スカラーのオラクルを内蔵した一枚岩で、差し替え口が無い）。候補 SBML のシミュレーションは、公式の子プロセス管理 \texttt{\_JsonWorker} のサブクラスで別プロセスに出す。上流の \texttt{request} は子プロセスの stdout を \texttt{readline} で読む \cite[s2.p32]{kabra-2026-llm}。この読み取りに時間切れを足す（LLM が出した候補は硬い ODE になりやすく、C ライブラリ内で止まると Python のシグナルでは戻せないため）。worker スクリプトは本研究のコードである（公式の \texttt{scigym\_worker.py} は 3 種の初期濃度から 1 種の最終値を返す縮約 \cite[s2.p14]{kabra-2026-llm} で、全種 × 全時刻を返すには中身の改変が要る）。
+
+\paragraph{アブレーション（run \texttt{autoscilab-nohyp-luna}）.}
+同じ部品・同じモデル・同じ予算・同じ 2 件で、\texttt{FalsificationSelector.select} に渡す食い違いスコアを全候補点で 0 にする。貪欲選択は多様性項だけで点を選ぶので、実験は仮説と無関係に濃度空間を埋める配置になる。論文は仮説条件付き獲得を外すアブレーションで全ベンチマークの性能が大きく低下したと報告しているが \cite[s2.p7]{kabra-2026-llm}、その実装の詳細は述べていないので、ここでの実装は本研究が対応させたものである。
+
+\paragraph{記録と検証.}
+記録には SciGym（コミット 88a7b93）と LLM-AutoSciLab（コミット 351aae7）のコードスナップショットを固定し、手法の各段階について「どの上流の関数をそのまま使うか」「どこをサブクラスで上書きするか」「本研究のコードになる段階はどの上流の関数を検討しなぜ使えないか」を設計に書く。各 run の設定は \texttt{config/run/<run\_id>.yaml} にあり、そのキーは値を消費する関数の引数名である（例: \texttt{autoscilab.llm.ensemble\_agent.EnsembleAgent.run\_round.total\_budget} = 20、\texttt{src.model.make\_rng.seed} = 0）。design の \texttt{arguments} はそのキーの列で、値は各 run の \texttt{params} に同じキーで載る。実行時の観測フックが各関数の実引数と読み込んだ上流ファイルのハッシュを記録し、検証はその実引数を \texttt{params} の値と突き合わせる。上流に渡らない設定（seed、並列数、打ち切り時間、確信度の門、アブレーションの切替）も、消費する \texttt{src/} の関数の引数にして同じ仕組みで照合する。凍結の前に sanity モードで 5 つの条件を機械的に確かめる: コードに速度則の型の列挙が無いこと、任意の速度則の Antimony が SBML になり回ること、同じ構造で定数だけ違う仮説が同じクラスタになること、候補の試走が予算を消費しないこと、改良モードのスコアがブートストラップ再フィット間の分散でアブレーションのスコアが 0 であること。
+
+\section{実験設計}
+\label{sec:design}
+\paragraph{データと評価.}
+SciGym の small split 137 件を id 順に並べ、等間隔に 2 件（先頭から 68 件おき）を選ぶ。3 run とも同じ 2 件である。評価は airas-eval \texttt{scigym\_small} の STE（\texttt{trajectory\_smape}）、RMS F1（\texttt{reaction\_f1}、修飾子なし）、修飾子ありの RMS F1、NTS F1（\texttt{topology\_f1}）。
+
+\paragraph{run.}
+\texttt{react-luna}（SciGym 公式 ReAct、openai/gpt-6-luna、最大 20 反復）、\texttt{autoscilab-luna}（手法、large = small = openai/gpt-6-luna、問い合わせ 20 回、1 反復 4 実験）、\texttt{autoscilab-nohyp-luna}（アブレーション、食い違いスコア 0）。run と主張の対応は、c1 $\leftarrow$ \texttt{autoscilab-luna}（比較対象は \texttt{react-luna}）、c2 $\leftarrow$ \texttt{autoscilab-nohyp-luna}（比較対象は \texttt{autoscilab-luna}）、c3 $\leftarrow$ \texttt{react-luna}（比較対象は \texttt{autoscilab-luna}）である。
+
+\paragraph{LLM.}
+3 run とも openai/gpt-6-luna。論文は主モデルに GPT-4o-mini、small モデルに Qwen2.5-7B-Instruct を用いた \cite[s2.p4]{kabra-2026-llm} が、本研究ではこの非対称を再現せず、small モデルの K = 5 並列サンプルも同じモデルを temperature 1.0 \cite[s2.p13]{kabra-2026-llm} で引く。
+
+\paragraph{予算の揃え方.}
+3 run とも正解モデルへの問い合わせを 1 件 20 回で揃える。ReAct の 20 反復にはコード実行だけの反復も含まれるので、ReAct の実験回数は 20 以下になる。両方で 1 件あたりの実験回数とトークン数を記録し、表に出す。
+
+\paragraph{計算環境と手順.}
+RIKYU（理研 R-CCS、aarch64）上で Seyval の BYO Slurm ジョブとして実行する。1 run = 1 ジョブ（cpu-general、1 ノード、上限 4 日）、1 件 1 プロセス、2 件を並列。手順は sanity（1 件、予算 9 / 2 反復、上の 5 条件の確認を含む）→ 凍結 → pilot（2 件 × 3 run）。full は置かない。sanity の出力は証拠にせず、pilot は凍結コミットの子孫で実行する。引用判定のモデルは前研究と同じ gpt-4.1 である。
+
+% ===== airas: post-experiment sections, filled once runs exist =====
+
+\section{結果}
+\label{sec:results}
+（実験後に記入）
+
+\section{考察}
+\label{sec:discussion}
+（実験後に記入）
+
+\section{結論}
+\label{sec:conclusion}
+（実験後に記入）
+
+\section*{データの利用可能性}
+記録は \airasrecordlink{record.json} にある。実験コード、環境の固定（Dockerfile と \texttt{uv.lock}）、各 run の結果と provenance は同じリポジトリに含まれる。
+
+\bibliographystyle{iclr2024_conference}
+\bibliography{references}
+
+\end{document}
