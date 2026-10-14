@@ -1,0 +1,125 @@
+name: "Verify Record"
+run-name: "🔎 Verify the record"
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+defaults:
+  run:
+    shell: bash
+
+jobs:
+  verify-record:
+    name: Verify the record
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          # The job token checkout would leave in git config overrides the
+          # PAT the report commit pushes with (publish_paper does the same).
+          persist-credentials: false
+
+      - name: Install uv
+        uses: astral-sh/setup-uv@v5
+
+      - name: Verify record against run outputs, history and the execution backend
+        env:
+          SEYVAL_API_KEY: ${{ secrets.SEYVAL_API_KEY }}
+          GH_PERSONAL_ACCESS_TOKEN: ${{ github.token }}
+        run: |
+          # airas の commit SHA は、airas 側の CI（pin_airas_template.yml）によって自動的に書き換えられる。
+          uvx --from "airas @ git+https://github.com/airas-org/airas.git@fb5e4e9427545a152f412640e3bbab1b43795cda#subdirectory=backend" \
+            airas verify-record --local-path .
+
+      # The gate's report (.research/verification.md: every live declaration
+      # with ok / mismatch / skipped, linked to its record.json line and its
+      # evidence file) lands on the default branch so a reviewer reads it in
+      # the repository, not in a run log. Only a passing commit's report can
+      # land: the report commit must pass the gate itself, and it does
+      # because the record is unchanged. A commit that changes only the
+      # report is not reported again (that would loop).
+      - name: Commit the verification report onto the default branch
+        if: success() && github.event_name == 'push' && github.ref == format('refs/heads/{0}', github.event.repository.default_branch)
+        env:
+          GH_TOKEN: ${{ secrets.GH_PERSONAL_ACCESS_TOKEN }}
+        run: |
+          set -euo pipefail
+          report=.research/verification.md
+          [ -f "$report" ] || { echo "no report written"; exit 0; }
+          if [ -z "${GH_TOKEN:-}" ]; then
+            echo "GH_PERSONAL_ACCESS_TOKEN is not set as a repository secret;" \
+                 "the report stays in the job summary (set_github_actions_secrets fixes this)."
+            exit 0
+          fi
+          if git rev-parse --verify -q HEAD~1 > /dev/null; then
+            changed=$(git diff --name-only HEAD~1 HEAD)
+          else
+            changed=$(git show --name-only --format= HEAD)
+          fi
+          if [ "$changed" = "$report" ]; then
+            echo "HEAD changes only the report; not reported again."
+            exit 0
+          fi
+          if git diff --quiet -- "$report" && git ls-files --error-unmatch "$report" > /dev/null 2>&1; then
+            echo "The committed report already describes this state."
+            exit 0
+          fi
+
+          remote="https://x-access-token:${GH_TOKEN}@github.com/${GITHUB_REPOSITORY}.git"
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add "$report"
+          git commit -q \
+            -m "verify: report for ${GITHUB_SHA}" \
+            -m "Written by Verify Record run ${GITHUB_RUN_ID} on ${GITHUB_SHA}: every live declaration with what the gate compared it with."
+          sha=$(git rev-parse HEAD)
+          scratch="verify-record-${GITHUB_SHA::12}"
+          echo "report commit $sha, staged on $scratch"
+          git push -q --force "$remote" "HEAD:refs/heads/$scratch"
+
+          state=pending
+          for _ in $(seq 1 60); do
+            sleep 20
+            state=$(gh api "repos/${GITHUB_REPOSITORY}/commits/${sha}/check-runs" \
+              --jq '[.check_runs[] | select(.name == "Verify the record" or .name == "Verify the paper")]
+                    | if length < 2 then "pending"
+                      elif any(.status != "completed") then "in_progress"
+                      elif all(.conclusion == "success") then "success"
+                      else "failure" end')
+            echo "Verify the record and the paper on $sha: $state"
+            case "$state" in
+              success) break ;;
+              failure|cancelled|timed_out|action_required|stale)
+                echo "The gate rejected the report commit; nothing lands." >&2
+                exit 1 ;;
+            esac
+          done
+          if [ "$state" != success ]; then
+            echo "The gate did not finish in time; nothing lands." >&2
+            exit 1
+          fi
+
+          landed=false
+          for _ in $(seq 1 12); do
+            if git push -q "$remote" "HEAD:refs/heads/${GITHUB_REF_NAME}"; then
+              landed=true
+              break
+            fi
+            echo "push not accepted yet; retrying"
+            sleep 10
+          done
+          if [ "$landed" != true ]; then
+            echo "The report commit did not land on ${GITHUB_REF_NAME}." >&2
+            exit 1
+          fi
+          git push -q "$remote" --delete "$scratch" || true
+          echo "verification report for ${GITHUB_SHA} landed as $sha on ${GITHUB_REF_NAME}."
