@@ -1,0 +1,6754 @@
+{
+ "version": 3,
+ "run_id": "react-luna",
+ "hook": {
+  "sha256": "b750b2845d8e9c0e647268e84af269da6d65e04e539b80098842af3f45691274"
+ },
+ "src_modules": {
+  "src/main.py": "0de11dab871574c75f5baa943e04929ac70866372aa64e7838ca4d3fc1595e7a",
+  "src/keys.py": "7d976046656b0d30966cb5f45f5a7ac37a16d624af5c6fe4cb95361a9011d7c5",
+  "src/preprocess.py": "8b3024f90cfe9f23f55d6627be68106bbfceb12691b31da0219d34a605b4f202",
+  "src/runner.py": "be0a8103209b076f81c66605ac31ad29a5a325130aba32d26d9cce9cbc0ed030",
+  "src/train.py": "ae2f291a9f43ae7ec8452af1caa0a7dbbf40282fb911ec920735a8d6cc73be5e"
+ },
+ "loaded_file_hashes": {
+  "_virtualenv": {
+   "file": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/.venv/lib/python3.11/site-packages/_virtualenv.py",
+   "sha256": "cfb3db86aaa53bb62b5ff764970bec2d71c9228590a0ebec57f6ec926cc0bf1a"
+  },
+  "_cyutility": {
+   "file": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/.venv/lib/python3.11/site-packages/pandas/_libs/_cyutility.cpython-311-aarch64-linux-gnu.so",
+   "sha256": "828d3ac367683461d99f8324f286fc967df635a9e473ce22e379537950e60fd9"
+  },
+  "_csparsetools": {
+   "file": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/.venv/lib/python3.11/site-packages/scipy/sparse/_csparsetools.cpython-311-aarch64-linux-gnu.so",
+   "sha256": "285d6bd4be66cc7c6aa8f764f02af822f3e3ef0861909c802ac6b747b4d672d8"
+  },
+  "scigym": {
+   "file": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/.venv/lib/python3.11/site-packages/scigym/__init__.py",
+   "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "scigym.api.api": {
+   "file": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/.venv/lib/python3.11/site-packages/scigym/api/api.py",
+   "sha256": "671a56010ef14f5a1746cea5db46a9d5087b30df4f37ecb96dbb1c6bf0b1dffd"
+  },
+  "scigym.api.constants": {
+   "file": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/.venv/lib/python3.11/site-packages/scigym/api/constants.py",
+   "sha256": "51c3cade87faf00409322fefb16d1190b9363097896741e15dc136755df93adf"
+  },
+  "scigym.api.exceptions": {
+   "file": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/.venv/lib/python3.11/site-packages/scigym/api/exceptions.py",
+   "sha256": "c04157e5e88e4e07f88b8f2efe08ecf051e13644e0cf264b897ce30cedec7837"
+  },
+  "scigym.api": {
+   "file": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/.venv/lib/python3.11/site-packages/scigym/api/__init__.py",
+   "sha256": "58f68efbeb4d17ac6876c59cbde5cf5e5401832a4a39b5085930594b831d7650"
+  },
+  "scigym.actions.code": {
+   "file": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/.venv/lib/python3.11/site-packages/scigym/actions/code.py",
+   "sha256": "3c2b194556ac502f835663b80f22eb4e5ed1d8d10302e7eca37f65c024737352"
+  },
+  "libcombine": {
+   "file": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/.venv/lib/python3.11/site-packages/libcombine.py",
+   "sha256": "a04bf2f324f0f0b4ec2a878c0b9a54f046cdc5ba11c42993022afbc758a8f830"
+  },
+  "_moduleTNC": {
+   "file": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/.venv/lib/python3.11/site-packages/scipy/optimize/_moduleTNC.cpython-311-aarch64-linux-gnu.so",
+   "sha256": "b11b021d5d14bfbf108cee5ef6fb5ed07ae31946e205b8e15b6d10e0c2ecf3de"
+  },
+  "scigym.utils.main": {
+   "file": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/.venv/lib/python3.11/site-packages/scigym/utils/main.py",
+   "sha256": "3ebef173b63916900fe11ced45159a8e67b2a07890b51241761bc9e292d48960"
+  },
+  "scigym.utils.id_scrambler": {
+   "file": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/.venv/lib/python3.11/site-packages/scigym/utils/id_scrambler.py",
+   "sha256": "7e0d1f8864c64260365a7345bd1a74dd23279123a5005bac6de1b8536c9e832b"
+  },
+  "scigym.utils.sr_graph": {
+   "file": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/.venv/lib/python3.11/site-packages/scigym/utils/sr_graph.py",
+   "sha256": "ba226d197cf17e8c778fef911cbf1efa5bdc906afa1de87a26d01d7681938311"
+  },
+  "scigym.utils": {
+   "file": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/.venv/lib/python3.11/site-packages/scigym/utils/__init__.py",
+   "sha256": "9cf59bae86c2128eb0198f56e6288c0d1efe4140c498639fe6642c2cc73f84e5"
+  },
+  "scigym.data.sbml": {
+   "file": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/.venv/lib/python3.11/site-packages/scigym/data/sbml.py",
+   "sha256": "8f201d4e6a90baeb9821b0273466edd48587347257b67286be28265586af48fc"
+  },
+  "scigym.data.question": {
+   "file": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/.venv/lib/python3.11/site-packages/scigym/data/question.py",
+   "sha256": "cd9aeea5d3701a74f852b316b28513b1901b8d4e556619f090eed195fd059384"
+  },
+  "scigym.data.simulator": {
+   "file": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/.venv/lib/python3.11/site-packages/scigym/data/simulator.py",
+   "sha256": "f6aecc9cebaff5d3d769f39f114778d8d693cb22965a87673c8438ac933f942d"
+  },
+  "scigym.data": {
+   "file": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/.venv/lib/python3.11/site-packages/scigym/data/__init__.py",
+   "sha256": "a8d2d06c6d71f96b983e201837cefa2f70f392fcb123b2869321989e55ec4278"
+  },
+  "scigym.actions.experiment": {
+   "file": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/.venv/lib/python3.11/site-packages/scigym/actions/experiment.py",
+   "sha256": "5934855cb1375f89c5657541efb2c4eb6131fcbf4aad17c40702cfd7fb24fff9"
+  },
+  "scigym.actions.routines": {
+   "file": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/.venv/lib/python3.11/site-packages/scigym/actions/routines.py",
+   "sha256": "36fee55ef243957b83abfb972acd2811e9897b4ed087fea25aca329dea8ce782"
+  },
+  "scigym.actions": {
+   "file": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/.venv/lib/python3.11/site-packages/scigym/actions/__init__.py",
+   "sha256": "9b7b1c1aefbbb8a2bd73a8b2c6922a846be9c7ad1d0ddd25808bbf9fd53867a4"
+  },
+  "_ni_label": {
+   "file": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/.venv/lib/python3.11/site-packages/scipy/ndimage/_ni_label.cpython-311-aarch64-linux-gnu.so",
+   "sha256": "0bbd37f2d6293397c7ef0ee3e4666f4f6f65b0c2113c31ca90e9d44743845eab"
+  },
+  "scigym.eval.utils": {
+   "file": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/.venv/lib/python3.11/site-packages/scigym/eval/utils.py",
+   "sha256": "4937e2dc81f462376fa3c41d27520440d5b9c0906487492920c2015a84ff17ad"
+  },
+  "scigym.eval.evaluator": {
+   "file": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/.venv/lib/python3.11/site-packages/scigym/eval/evaluator.py",
+   "sha256": "8d90fcf888f441ab8d37f5f549efa1d388dc663640c351e2a6c512ec53161c76"
+  },
+  "scigym.eval": {
+   "file": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/.venv/lib/python3.11/site-packages/scigym/eval/__init__.py",
+   "sha256": "1e3867ad24ed52979ba389e4790b5d092f4868c1f4f5f4dbeaa68eac3086f828"
+  },
+  "scigym.controller": {
+   "file": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/.venv/lib/python3.11/site-packages/scigym/controller.py",
+   "sha256": "a95a103fddc0045d99e302cbf88854a9e2a46bd52e1c9ffb4ca439ab03f66828"
+  }
+ },
+ "redefinitions": {},
+ "extensions": {
+  "__main__.OpenAICompatible": {
+   "bases": [
+    "scigym.api.api.LLM",
+    "scigym.api.api.ModelProvider"
+   ],
+   "overrides": [
+    "initialize",
+    "get_messages",
+    "get_response"
+   ]
+  }
+ },
+ "calls": {
+  "__main__.main": {
+   "calls": 3,
+   "args": [],
+   "samples": [
+    {
+     "args": [],
+     "ret": {
+      "value": null
+     }
+    },
+    {
+     "args": [],
+     "ret": {
+      "value": null
+     }
+    },
+    {
+     "args": [],
+     "ret": {
+      "value": null
+     }
+    }
+   ]
+  },
+  "__main__.cli_args": {
+   "calls": 1,
+   "args": [],
+   "samples": [
+    {
+     "args": [],
+     "ret": {
+      "value": {
+       "mode": "pilot",
+       "results_dir": ".research/results",
+       "run": "react-luna"
+      }
+     }
+    }
+   ]
+  },
+  "yaml.safe_load": {
+   "calls": 5,
+   "args": [
+    {
+     "name": "stream",
+     "calls": 5,
+     "length_min": 5,
+     "length_max": 17,
+     "type": "TextIOWrapper|str",
+     "distinct": 3,
+     "values": [
+      {
+       "value": "react-luna",
+       "calls": 1
+      },
+      {
+       "value": ".research/results",
+       "calls": 1
+      },
+      {
+       "value": "pilot",
+       "calls": 1
+      }
+     ]
+    }
+   ],
+   "samples": [
+    {
+     "args": [
+      {
+       "name": "stream",
+       "value": "react-luna"
+      }
+     ],
+     "ret": {
+      "value": "react-luna"
+     }
+    },
+    {
+     "args": [
+      {
+       "name": "stream",
+       "value": ".research/results"
+      }
+     ],
+     "ret": {
+      "value": ".research/results"
+     }
+    },
+    {
+     "args": [
+      {
+       "name": "stream",
+       "value": "pilot"
+      }
+     ],
+     "ret": {
+      "value": "pilot"
+     }
+    }
+   ]
+  },
+  "src.preprocess.instances": {
+   "calls": 1,
+   "args": [
+    {
+     "name": "data_root",
+     "calls": 1,
+     "length_min": 16,
+     "length_max": 16,
+     "type": "str",
+     "distinct": 1,
+     "values": [
+      {
+       "value": "data/scigym_sbml",
+       "calls": 1
+      }
+     ]
+    },
+    {
+     "name": "split",
+     "calls": 1,
+     "length_min": 5,
+     "length_max": 5,
+     "type": "str",
+     "distinct": 1,
+     "values": [
+      {
+       "value": "small",
+       "calls": 1
+      }
+     ]
+    },
+    {
+     "name": "mode",
+     "calls": 1,
+     "length_min": 5,
+     "length_max": 5,
+     "type": "str",
+     "distinct": 1,
+     "values": [
+      {
+       "value": "pilot",
+       "calls": 1
+      }
+     ]
+    },
+    {
+     "name": "n_instances",
+     "calls": 1,
+     "min": 2,
+     "max": 2,
+     "type": "int",
+     "distinct": 1,
+     "values": [
+      {
+       "value": 2,
+       "calls": 1
+      }
+     ]
+    }
+   ],
+   "samples": [
+    {
+     "args": [
+      {
+       "name": "data_root",
+       "value": "data/scigym_sbml"
+      },
+      {
+       "name": "split",
+       "value": "small"
+      },
+      {
+       "name": "mode",
+       "value": "pilot"
+      },
+      {
+       "name": "n_instances",
+       "value": 2
+      }
+     ],
+     "ret": {
+      "truncated": true,
+      "type": "list",
+      "len": 2
+     }
+    }
+   ]
+  },
+  "src.preprocess.download_split": {
+   "calls": 1,
+   "args": [
+    {
+     "name": "split",
+     "calls": 1,
+     "length_min": 5,
+     "length_max": 5,
+     "type": "str",
+     "distinct": 1,
+     "values": [
+      {
+       "value": "small",
+       "calls": 1
+      }
+     ]
+    },
+    {
+     "name": "root",
+     "calls": 1,
+     "type": "PosixPath"
+    }
+   ],
+   "samples": [
+    {
+     "args": [
+      {
+       "name": "split",
+       "value": "small"
+      },
+      {
+       "name": "root",
+       "truncated": true,
+       "type": "PosixPath"
+      }
+     ],
+     "ret": {
+      "value": null
+     }
+    }
+   ]
+  },
+  "datasets.load.load_dataset": {
+   "calls": 1,
+   "args": [
+    {
+     "name": "path",
+     "calls": 1,
+     "length_min": 18,
+     "length_max": 18,
+     "type": "str",
+     "distinct": 1,
+     "values": [
+      {
+       "value": "h4duan/scigym-sbml",
+       "calls": 1
+      }
+     ]
+    },
+    {
+     "name": "name",
+     "calls": 1,
+     "type": "NoneType",
+     "distinct": 1,
+     "values": [
+      {
+       "value": null,
+       "calls": 1
+      }
+     ]
+    },
+    {
+     "name": "data_dir",
+     "calls": 1,
+     "type": "NoneType",
+     "distinct": 1,
+     "values": [
+      {
+       "value": null,
+       "calls": 1
+      }
+     ]
+    },
+    {
+     "name": "data_files",
+     "calls": 1,
+     "type": "NoneType",
+     "distinct": 1,
+     "values": [
+      {
+       "value": null,
+       "calls": 1
+      }
+     ]
+    },
+    {
+     "name": "split",
+     "calls": 1,
+     "length_min": 5,
+     "length_max": 5,
+     "type": "str",
+     "distinct": 1,
+     "values": [
+      {
+       "value": "small",
+       "calls": 1
+      }
+     ]
+    },
+    {
+     "name": "cache_dir",
+     "calls": 1,
+     "type": "NoneType",
+     "distinct": 1,
+     "values": [
+      {
+       "value": null,
+       "calls": 1
+      }
+     ]
+    },
+    {
+     "name": "features",
+     "calls": 1,
+     "type": "NoneType",
+     "distinct": 1,
+     "values": [
+      {
+       "value": null,
+       "calls": 1
+      }
+     ]
+    },
+    {
+     "name": "download_config",
+     "calls": 1,
+     "type": "NoneType",
+     "distinct": 1,
+     "values": [
+      {
+       "value": null,
+       "calls": 1
+      }
+     ]
+    },
+    {
+     "name": "download_mode",
+     "calls": 1,
+     "type": "NoneType",
+     "distinct": 1,
+     "values": [
+      {
+       "value": null,
+       "calls": 1
+      }
+     ]
+    },
+    {
+     "name": "verification_mode",
+     "calls": 1,
+     "type": "NoneType",
+     "distinct": 1,
+     "values": [
+      {
+       "value": null,
+       "calls": 1
+      }
+     ]
+    },
+    {
+     "name": "keep_in_memory",
+     "calls": 1,
+     "type": "NoneType",
+     "distinct": 1,
+     "values": [
+      {
+       "value": null,
+       "calls": 1
+      }
+     ]
+    },
+    {
+     "name": "save_infos",
+     "calls": 1,
+     "type": "bool",
+     "distinct": 1,
+     "values": [
+      {
+       "value": false,
+       "calls": 1
+      }
+     ]
+    },
+    {
+     "name": "revision",
+     "calls": 1,
+     "type": "NoneType",
+     "distinct": 1,
+     "values": [
+      {
+       "value": null,
+       "calls": 1
+      }
+     ]
+    },
+    {
+     "name": "token",
+     "calls": 1,
+     "type": "NoneType",
+     "distinct": 1,
+     "values": [
+      {
+       "value": null,
+       "calls": 1
+      }
+     ]
+    },
+    {
+     "name": "streaming",
+     "calls": 1,
+     "type": "bool",
+     "distinct": 1,
+     "values": [
+      {
+       "value": false,
+       "calls": 1
+      }
+     ]
+    },
+    {
+     "name": "num_proc",
+     "calls": 1,
+     "type": "NoneType",
+     "distinct": 1,
+     "values": [
+      {
+       "value": null,
+       "calls": 1
+      }
+     ]
+    },
+    {
+     "name": "storage_options",
+     "calls": 1,
+     "type": "NoneType",
+     "distinct": 1,
+     "values": [
+      {
+       "value": null,
+       "calls": 1
+      }
+     ]
+    },
+    {
+     "name": "trust_remote_code",
+     "calls": 1,
+     "type": "NoneType",
+     "distinct": 1,
+     "values": [
+      {
+       "value": null,
+       "calls": 1
+      }
+     ]
+    },
+    {
+     "name": "config_kwargs",
+     "calls": 1,
+     "length_min": 0,
+     "length_max": 0,
+     "type": "dict",
+     "distinct": 1,
+     "values": [
+      {
+       "value": {},
+       "calls": 1
+      }
+     ]
+    }
+   ],
+   "samples": [
+    {
+     "args": [
+      {
+       "name": "path",
+       "value": "h4duan/scigym-sbml"
+      },
+      {
+       "name": "name",
+       "value": null
+      },
+      {
+       "name": "data_dir",
+       "value": null
+      },
+      {
+       "name": "data_files",
+       "value": null
+      },
+      {
+       "name": "split",
+       "value": "small"
+      },
+      {
+       "name": "cache_dir",
+       "value": null
+      },
+      {
+       "name": "features",
+       "value": null
+      },
+      {
+       "name": "download_config",
+       "value": null
+      },
+      {
+       "name": "download_mode",
+       "value": null
+      },
+      {
+       "name": "verification_mode",
+       "value": null
+      },
+      {
+       "name": "keep_in_memory",
+       "value": null
+      },
+      {
+       "name": "save_infos",
+       "value": false
+      },
+      {
+       "name": "revision",
+       "value": null
+      },
+      {
+       "name": "token",
+       "value": null
+      },
+      {
+       "name": "streaming",
+       "value": false
+      },
+      {
+       "name": "num_proc",
+       "value": null
+      },
+      {
+       "name": "storage_options",
+       "value": null
+      },
+      {
+       "name": "trust_remote_code",
+       "value": null
+      },
+      {
+       "name": "config_kwargs",
+       "value": {}
+      }
+     ],
+     "ret": {
+      "truncated": true,
+      "type": "Dataset",
+      "len": 137
+     }
+    }
+   ]
+  },
+  "src.preprocess.spaced": {
+   "calls": 1,
+   "args": [
+    {
+     "name": "found",
+     "calls": 1,
+     "length_min": 137,
+     "length_max": 137,
+     "type": "list"
+    },
+    {
+     "name": "n",
+     "calls": 1,
+     "min": 2,
+     "max": 2,
+     "type": "int",
+     "distinct": 1,
+     "values": [
+      {
+       "value": 2,
+       "calls": 1
+      }
+     ]
+    }
+   ],
+   "samples": [
+    {
+     "args": [
+      {
+       "name": "found",
+       "truncated": true,
+       "type": "list",
+       "len": 137
+      },
+      {
+       "name": "n",
+       "value": 2
+      }
+     ],
+     "ret": {
+      "truncated": true,
+      "type": "list",
+      "len": 2
+     }
+    }
+   ]
+  },
+  "src.runner.run_all": {
+   "calls": 3,
+   "args": [
+    {
+     "name": "todo",
+     "calls": 3,
+     "length_min": 2,
+     "length_max": 2,
+     "type": "list"
+    },
+    {
+     "name": "run_dir",
+     "calls": 3,
+     "type": "PosixPath"
+    },
+    {
+     "name": "cfg",
+     "calls": 3,
+     "type": "SimpleNamespace"
+    },
+    {
+     "name": "method",
+     "calls": 3,
+     "length_min": 5,
+     "length_max": 5,
+     "type": "str",
+     "distinct": 1,
+     "values": [
+      {
+       "value": "react",
+       "calls": 3
+      }
+     ]
+    },
+    {
+     "name": "workers",
+     "calls": 3,
+     "min": 16,
+     "max": 16,
+     "type": "int",
+     "distinct": 1,
+     "values": [
+      {
+       "value": 16,
+       "calls": 3
+      }
+     ]
+    },
+    {
+     "name": "instance_timeout",
+     "calls": 3,
+     "min": 14400,
+     "max": 14400,
+     "type": "int",
+     "distinct": 1,
+     "values": [
+      {
+       "value": 14400,
+       "calls": 3
+      }
+     ]
+    },
+    {
+     "name": "stall_timeout",
+     "calls": 3,
+     "min": 3600,
+     "max": 3600,
+     "type": "int",
+     "distinct": 1,
+     "values": [
+      {
+       "value": 3600,
+       "calls": 3
+      }
+     ]
+    }
+   ],
+   "samples": [
+    {
+     "args": [
+      {
+       "name": "todo",
+       "truncated": true,
+       "type": "list",
+       "len": 2
+      },
+      {
+       "name": "run_dir",
+       "truncated": true,
+       "type": "PosixPath"
+      },
+      {
+       "name": "cfg",
+       "truncated": true,
+       "type": "SimpleNamespace"
+      },
+      {
+       "name": "method",
+       "value": "react"
+      },
+      {
+       "name": "workers",
+       "value": 16
+      },
+      {
+       "name": "instance_timeout",
+       "value": 14400
+      },
+      {
+       "name": "stall_timeout",
+       "value": 3600
+      }
+     ],
+     "ret": {
+      "value": [
+       0,
+       1
+      ]
+     }
+    },
+    {
+     "args": [
+      {
+       "name": "todo",
+       "truncated": true,
+       "type": "list",
+       "len": 2
+      },
+      {
+       "name": "run_dir",
+       "truncated": true,
+       "type": "PosixPath"
+      },
+      {
+       "name": "cfg",
+       "truncated": true,
+       "type": "SimpleNamespace"
+      },
+      {
+       "name": "method",
+       "value": "react"
+      },
+      {
+       "name": "workers",
+       "value": 16
+      },
+      {
+       "name": "instance_timeout",
+       "value": 14400
+      },
+      {
+       "name": "stall_timeout",
+       "value": 3600
+      }
+     ],
+     "ret": {
+      "value": [
+       0,
+       0
+      ]
+     }
+    },
+    {
+     "args": [
+      {
+       "name": "todo",
+       "truncated": true,
+       "type": "list",
+       "len": 2
+      },
+      {
+       "name": "run_dir",
+       "truncated": true,
+       "type": "PosixPath"
+      },
+      {
+       "name": "cfg",
+       "truncated": true,
+       "type": "SimpleNamespace"
+      },
+      {
+       "name": "method",
+       "value": "react"
+      },
+      {
+       "name": "workers",
+       "value": 16
+      },
+      {
+       "name": "instance_timeout",
+       "value": 14400
+      },
+      {
+       "name": "stall_timeout",
+       "value": 3600
+      }
+     ],
+     "ret": {
+      "value": [
+       0,
+       0
+      ]
+     }
+    }
+   ]
+  },
+  "src.runner.run_instance": {
+   "calls": 6,
+   "args": [
+    {
+     "name": "cfg",
+     "calls": 6,
+     "type": "SimpleNamespace"
+    },
+    {
+     "name": "run_dir",
+     "calls": 6,
+     "type": "PosixPath"
+    },
+    {
+     "name": "instance",
+     "calls": 6,
+     "type": "PosixPath"
+    },
+    {
+     "name": "method",
+     "calls": 6,
+     "length_min": 5,
+     "length_max": 5,
+     "type": "str",
+     "distinct": 1,
+     "values": [
+      {
+       "value": "react",
+       "calls": 6
+      }
+     ]
+    },
+    {
+     "name": "instance_timeout",
+     "calls": 6,
+     "min": 14400,
+     "max": 14400,
+     "type": "int",
+     "distinct": 1,
+     "values": [
+      {
+       "value": 14400,
+       "calls": 6
+      }
+     ]
+    },
+    {
+     "name": "stall_timeout",
+     "calls": 6,
+     "min": 3600,
+     "max": 3600,
+     "type": "int",
+     "distinct": 1,
+     "values": [
+      {
+       "value": 3600,
+       "calls": 6
+      }
+     ]
+    }
+   ],
+   "samples": [
+    {
+     "args": [
+      {
+       "name": "cfg",
+       "truncated": true,
+       "type": "SimpleNamespace"
+      },
+      {
+       "name": "run_dir",
+       "truncated": true,
+       "type": "PosixPath"
+      },
+      {
+       "name": "instance",
+       "truncated": true,
+       "type": "PosixPath"
+      },
+      {
+       "name": "method",
+       "value": "react"
+      },
+      {
+       "name": "instance_timeout",
+       "value": 14400
+      },
+      {
+       "name": "stall_timeout",
+       "value": 3600
+      }
+     ],
+     "ret": {
+      "value": 0
+     }
+    },
+    {
+     "args": [
+      {
+       "name": "cfg",
+       "truncated": true,
+       "type": "SimpleNamespace"
+      },
+      {
+       "name": "run_dir",
+       "truncated": true,
+       "type": "PosixPath"
+      },
+      {
+       "name": "instance",
+       "truncated": true,
+       "type": "PosixPath"
+      },
+      {
+       "name": "method",
+       "value": "react"
+      },
+      {
+       "name": "instance_timeout",
+       "value": 14400
+      },
+      {
+       "name": "stall_timeout",
+       "value": 3600
+      }
+     ],
+     "ret": {
+      "value": 1
+     }
+    },
+    {
+     "args": [
+      {
+       "name": "cfg",
+       "truncated": true,
+       "type": "SimpleNamespace"
+      },
+      {
+       "name": "run_dir",
+       "truncated": true,
+       "type": "PosixPath"
+      },
+      {
+       "name": "instance",
+       "truncated": true,
+       "type": "PosixPath"
+      },
+      {
+       "name": "method",
+       "value": "react"
+      },
+      {
+       "name": "instance_timeout",
+       "value": 14400
+      },
+      {
+       "name": "stall_timeout",
+       "value": 3600
+      }
+     ],
+     "ret": {
+      "value": 0
+     }
+    }
+   ]
+  },
+  "src.runner.instance_args": {
+   "calls": 3,
+   "args": [
+    {
+     "name": "cfg",
+     "calls": 3,
+     "type": "SimpleNamespace"
+    },
+    {
+     "name": "instance",
+     "calls": 3,
+     "type": "PosixPath"
+    },
+    {
+     "name": "out",
+     "calls": 3,
+     "type": "PosixPath"
+    }
+   ],
+   "samples": [
+    {
+     "args": [
+      {
+       "name": "cfg",
+       "truncated": true,
+       "type": "SimpleNamespace"
+      },
+      {
+       "name": "instance",
+       "truncated": true,
+       "type": "PosixPath"
+      },
+      {
+       "name": "out",
+       "truncated": true,
+       "type": "PosixPath"
+      }
+     ],
+     "ret": {
+      "truncated": true,
+      "type": "dict",
+      "len": 15,
+      "sha256": "4ace2d3cad8bf0d2077f94b67fe3897b7ad36610d93e9fe3be9fee34105672b0"
+     }
+    },
+    {
+     "args": [
+      {
+       "name": "cfg",
+       "truncated": true,
+       "type": "SimpleNamespace"
+      },
+      {
+       "name": "instance",
+       "truncated": true,
+       "type": "PosixPath"
+      },
+      {
+       "name": "out",
+       "truncated": true,
+       "type": "PosixPath"
+      }
+     ],
+     "ret": {
+      "truncated": true,
+      "type": "dict",
+      "len": 15,
+      "sha256": "92ed100d0d76dcf384474c6c9eab7d45ca38ccfd9a537efd024c2739dfd4124d"
+     }
+    },
+    {
+     "args": [
+      {
+       "name": "cfg",
+       "truncated": true,
+       "type": "SimpleNamespace"
+      },
+      {
+       "name": "instance",
+       "truncated": true,
+       "type": "PosixPath"
+      },
+      {
+       "name": "out",
+       "truncated": true,
+       "type": "PosixPath"
+      }
+     ],
+     "ret": {
+      "truncated": true,
+      "type": "dict",
+      "len": 15,
+      "sha256": "92ed100d0d76dcf384474c6c9eab7d45ca38ccfd9a537efd024c2739dfd4124d"
+     }
+    }
+   ]
+  },
+  "src.runner.checkpoint": {
+   "calls": 2,
+   "args": [
+    {
+     "name": "run_dir",
+     "calls": 2,
+     "type": "PosixPath"
+    },
+    {
+     "name": "name",
+     "calls": 2,
+     "length_min": 15,
+     "length_max": 15,
+     "type": "str",
+     "distinct": 2,
+     "values": [
+      {
+       "value": "BIOMD0000000027",
+       "calls": 1
+      },
+      {
+       "value": "BIOMD0000000742",
+       "calls": 1
+      }
+     ]
+    }
+   ],
+   "samples": [
+    {
+     "args": [
+      {
+       "name": "run_dir",
+       "truncated": true,
+       "type": "PosixPath"
+      },
+      {
+       "name": "name",
+       "value": "BIOMD0000000027"
+      }
+     ],
+     "ret": {
+      "value": null
+     }
+    },
+    {
+     "args": [
+      {
+       "name": "run_dir",
+       "truncated": true,
+       "type": "PosixPath"
+      },
+      {
+       "name": "name",
+       "value": "BIOMD0000000742"
+      }
+     ],
+     "ret": {
+      "value": null
+     }
+    }
+   ]
+  },
+  "scigym.controller.Controller.__init__": {
+   "calls": 2,
+   "args": [
+    {
+     "name": "path_to_sbml_cfg",
+     "calls": 2,
+     "length_min": 38,
+     "length_max": 38,
+     "type": "str",
+     "distinct": 2,
+     "values": [
+      {
+       "value": "data/scigym_sbml/small/BIOMD0000000027",
+       "calls": 1
+      },
+      {
+       "value": "data/scigym_sbml/small/BIOMD0000000742",
+       "calls": 1
+      }
+     ]
+    },
+    {
+     "name": "max_iterations",
+     "calls": 2,
+     "min": 20,
+     "max": 20,
+     "type": "int",
+     "distinct": 1,
+     "values": [
+      {
+       "value": 20,
+       "calls": 2
+      }
+     ]
+    },
+    {
+     "name": "test_memorize",
+     "calls": 2,
+     "type": "bool",
+     "distinct": 1,
+     "values": [
+      {
+       "value": false,
+       "calls": 2
+      }
+     ]
+    },
+    {
+     "name": "output_directory",
+     "calls": 2,
+     "length_min": 54,
+     "length_max": 54,
+     "type": "str",
+     "distinct": 2,
+     "values": [
+      {
+       "value": ".research/results/react-luna/instances/BIOMD0000000027",
+       "calls": 1
+      },
+      {
+       "value": ".research/results/react-luna/instances/BIOMD0000000742",
+       "calls": 1
+      }
+     ]
+    },
+    {
+     "name": "experiment_actions_path",
+     "calls": 2,
+     "length_min": 37,
+     "length_max": 37,
+     "type": "str",
+     "distinct": 1,
+     "values": [
+      {
+       "value": "prompts/experiment_actions_perturb.md",
+       "calls": 2
+      }
+     ]
+    },
+    {
+     "name": "customized_functions_path",
+     "calls": 2,
+     "length_min": 35,
+     "length_max": 35,
+     "type": "str",
+     "distinct": 1,
+     "values": [
+      {
+       "value": "prompts/customized_functions_sim.md",
+       "calls": 2
+      }
+     ]
+    },
+    {
+     "name": "eval_debug_rounds",
+     "calls": 2,
+     "min": 3,
+     "max": 3,
+     "type": "int",
+     "distinct": 1,
+     "values": [
+      {
+       "value": 3,
+       "calls": 2
+      }
+     ]
+    },
+    {
+     "name": "temperature",
+     "calls": 2,
+     "min": 1.0,
+     "max": 1.0,
+     "type": "float",
+     "distinct": 1,
+     "values": [
+      {
+       "value": 1.0,
+       "calls": 2
+      }
+     ]
+    },
+    {
+     "name": "task_difficulty",
+     "calls": 2,
+     "length_min": 16,
+     "length_max": 16,
+     "type": "str",
+     "distinct": 1,
+     "values": [
+      {
+       "value": "fully_observable",
+       "calls": 2
+      }
+     ]
+    }
+   ],
+   "samples": [
+    {
+     "args": [
+      {
+       "name": "path_to_sbml_cfg",
+       "value": "data/scigym_sbml/small/BIOMD0000000027"
+      },
+      {
+       "name": "max_iterations",
+       "value": 20
+      },
+      {
+       "name": "test_memorize",
+       "value": false
+      },
+      {
+       "name": "output_directory",
+       "value": ".research/results/react-luna/instances/BIOMD0000000027"
+      },
+      {
+       "name": "experiment_actions_path",
+       "value": "prompts/experiment_actions_perturb.md"
+      },
+      {
+       "name": "customized_functions_path",
+       "value": "prompts/customized_functions_sim.md"
+      },
+      {
+       "name": "eval_debug_rounds",
+       "value": 3
+      },
+      {
+       "name": "temperature",
+       "value": 1.0
+      },
+      {
+       "name": "task_difficulty",
+       "value": "fully_observable"
+      }
+     ],
+     "ret": {
+      "value": null
+     }
+    },
+    {
+     "args": [
+      {
+       "name": "path_to_sbml_cfg",
+       "value": "data/scigym_sbml/small/BIOMD0000000742"
+      },
+      {
+       "name": "max_iterations",
+       "value": 20
+      },
+      {
+       "name": "test_memorize",
+       "value": false
+      },
+      {
+       "name": "output_directory",
+       "value": ".research/results/react-luna/instances/BIOMD0000000742"
+      },
+      {
+       "name": "experiment_actions_path",
+       "value": "prompts/experiment_actions_perturb.md"
+      },
+      {
+       "name": "customized_functions_path",
+       "value": "prompts/customized_functions_sim.md"
+      },
+      {
+       "name": "eval_debug_rounds",
+       "value": 3
+      },
+      {
+       "name": "temperature",
+       "value": 1.0
+      },
+      {
+       "name": "task_difficulty",
+       "value": "fully_observable"
+      }
+     ],
+     "ret": {
+      "value": null
+     }
+    }
+   ]
+  },
+  "scigym.api.api.LLM.__init__": {
+   "calls": 2,
+   "args": [
+    {
+     "name": "model_name",
+     "calls": 2,
+     "length_min": 17,
+     "length_max": 17,
+     "type": "str",
+     "distinct": 1,
+     "values": [
+      {
+       "value": "openai/gpt-6-luna",
+       "calls": 2
+      }
+     ]
+    },
+    {
+     "name": "api_key",
+     "calls": 2,
+     "length_min": 0,
+     "length_max": 0,
+     "type": "str",
+     "distinct": 1,
+     "values": [
+      {
+       "value": "",
+       "calls": 2
+      }
+     ]
+    },
+    {
+     "name": "system_prompt",
+     "calls": 2,
+     "length_min": 5499,
+     "length_max": 5499,
+     "type": "str",
+     "distinct": 1,
+     "values": [
+      {
+       "truncated": true,
+       "type": "str",
+       "len": 5499,
+       "sha256": "f062f3114fbad2ac40f0e8100611419724668a5132b0c31ae6eccfd0fd3fd20b",
+       "calls": 2
+      }
+     ]
+    },
+    {
+     "name": "temperature",
+     "calls": 2,
+     "min": 1.0,
+     "max": 1.0,
+     "type": "float",
+     "distinct": 1,
+     "values": [
+      {
+       "value": 1.0,
+       "calls": 2
+      }
+     ]
+    },
+    {
+     "name": "max_length",
+     "calls": 2,
+     "min": 32768,
+     "max": 32768,
+     "type": "int",
+     "distinct": 1,
+     "values": [
+      {
+       "value": 32768,
+       "calls": 2
+      }
+     ]
+    },
+    {
+     "name": "args",
+     "calls": 2,
+     "length_min": 0,
+     "length_max": 0,
+     "type": "tuple",
+     "distinct": 1,
+     "values": [
+      {
+       "value": [],
+       "calls": 2
+      }
+     ]
+    },
+    {
+     "name": "kwargs",
+     "calls": 2,
+     "length_min": 1,
+     "length_max": 1,
+     "type": "dict",
+     "distinct": 1,
+     "values": [
+      {
+       "value": {
+        "base_url": "https://ai-gateway.vercel.sh/v1"
+       },
+       "calls": 2
+      }
+     ]
+    }
+   ],
+   "samples": [
+    {
+     "args": [
+      {
+       "name": "model_name",
+       "value": "openai/gpt-6-luna"
+      },
+      {
+       "name": "api_key",
+       "value": ""
+      },
+      {
+       "name": "system_prompt",
+       "truncated": true,
+       "type": "str",
+       "len": 5499,
+       "sha256": "f062f3114fbad2ac40f0e8100611419724668a5132b0c31ae6eccfd0fd3fd20b"
+      },
+      {
+       "name": "temperature",
+       "value": 1.0
+      },
+      {
+       "name": "max_length",
+       "value": 32768
+      },
+      {
+       "name": "args",
+       "value": []
+      },
+      {
+       "name": "kwargs",
+       "value": {
+        "base_url": "https://ai-gateway.vercel.sh/v1"
+       }
+      }
+     ],
+     "ret": {
+      "value": null
+     }
+    },
+    {
+     "args": [
+      {
+       "name": "model_name",
+       "value": "openai/gpt-6-luna"
+      },
+      {
+       "name": "api_key",
+       "value": ""
+      },
+      {
+       "name": "system_prompt",
+       "truncated": true,
+       "type": "str",
+       "len": 5499,
+       "sha256": "f062f3114fbad2ac40f0e8100611419724668a5132b0c31ae6eccfd0fd3fd20b"
+      },
+      {
+       "name": "temperature",
+       "value": 1.0
+      },
+      {
+       "name": "max_length",
+       "value": 32768
+      },
+      {
+       "name": "args",
+       "value": []
+      },
+      {
+       "name": "kwargs",
+       "value": {
+        "base_url": "https://ai-gateway.vercel.sh/v1"
+       }
+      }
+     ],
+     "ret": {
+      "value": null
+     }
+    }
+   ]
+  },
+  "__main__.OpenAICompatible.initialize": {
+   "calls": 2,
+   "args": [
+    {
+     "name": "base_url",
+     "calls": 2,
+     "length_min": 31,
+     "length_max": 31,
+     "type": "str",
+     "distinct": 1,
+     "values": [
+      {
+       "value": "https://ai-gateway.vercel.sh/v1",
+       "calls": 2
+      }
+     ]
+    }
+   ],
+   "samples": [
+    {
+     "args": [
+      {
+       "name": "base_url",
+       "value": "https://ai-gateway.vercel.sh/v1"
+      }
+     ],
+     "ret": {
+      "value": null
+     }
+    },
+    {
+     "args": [
+      {
+       "name": "base_url",
+       "value": "https://ai-gateway.vercel.sh/v1"
+      }
+     ],
+     "ret": {
+      "value": null
+     }
+    }
+   ]
+  },
+  "openai._client.OpenAI.__init__": {
+   "calls": 2,
+   "args": [
+    {
+     "name": "api_key",
+     "calls": 2,
+     "length_min": 60,
+     "length_max": 60,
+     "type": "str",
+     "distinct": 1,
+     "values": [
+      {
+       "redacted": "VERCEL_AI_GATEWAY_API_KEY",
+       "len": 60,
+       "calls": 2
+      }
+     ]
+    },
+    {
+     "name": "organization",
+     "calls": 2,
+     "type": "NoneType",
+     "distinct": 1,
+     "values": [
+      {
+       "value": null,
+       "calls": 2
+      }
+     ]
+    },
+    {
+     "name": "project",
+     "calls": 2,
+     "type": "NoneType",
+     "distinct": 1,
+     "values": [
+      {
+       "value": null,
+       "calls": 2
+      }
+     ]
+    },
+    {
+     "name": "base_url",
+     "calls": 2,
+     "length_min": 31,
+     "length_max": 31,
+     "type": "str",
+     "distinct": 1,
+     "values": [
+      {
+       "value": "https://ai-gateway.vercel.sh/v1",
+       "calls": 2
+      }
+     ]
+    },
+    {
+     "name": "websocket_base_url",
+     "calls": 2,
+     "type": "NoneType",
+     "distinct": 1,
+     "values": [
+      {
+       "value": null,
+       "calls": 2
+      }
+     ]
+    },
+    {
+     "name": "timeout",
+     "calls": 2,
+     "min": 1800,
+     "max": 1800,
+     "type": "int",
+     "distinct": 1,
+     "values": [
+      {
+       "value": 1800,
+       "calls": 2
+      }
+     ]
+    },
+    {
+     "name": "max_retries",
+     "calls": 2,
+     "min": 1,
+     "max": 1,
+     "type": "int",
+     "distinct": 1,
+     "values": [
+      {
+       "value": 1,
+       "calls": 2
+      }
+     ]
+    },
+    {
+     "name": "default_headers",
+     "calls": 2,
+     "type": "NoneType",
+     "distinct": 1,
+     "values": [
+      {
+       "value": null,
+       "calls": 2
+      }
+     ]
+    },
+    {
+     "name": "default_query",
+     "calls": 2,
+     "type": "NoneType",
+     "distinct": 1,
+     "values": [
+      {
+       "value": null,
+       "calls": 2
+      }
+     ]
+    },
+    {
+     "name": "http_client",
+     "calls": 2,
+     "type": "NoneType",
+     "distinct": 1,
+     "values": [
+      {
+       "value": null,
+       "calls": 2
+      }
+     ]
+    },
+    {
+     "name": "_strict_response_validation",
+     "calls": 2,
+     "type": "bool",
+     "distinct": 1,
+     "values": [
+      {
+       "value": false,
+       "calls": 2
+      }
+     ]
+    }
+   ],
+   "samples": [
+    {
+     "args": [
+      {
+       "name": "api_key",
+       "redacted": "VERCEL_AI_GATEWAY_API_KEY",
+       "len": 60
+      },
+      {
+       "name": "organization",
+       "value": null
+      },
+      {
+       "name": "project",
+       "value": null
+      },
+      {
+       "name": "base_url",
+       "value": "https://ai-gateway.vercel.sh/v1"
+      },
+      {
+       "name": "websocket_base_url",
+       "value": null
+      },
+      {
+       "name": "timeout",
+       "value": 1800
+      },
+      {
+       "name": "max_retries",
+       "value": 1
+      },
+      {
+       "name": "default_headers",
+       "value": null
+      },
+      {
+       "name": "default_query",
+       "value": null
+      },
+      {
+       "name": "http_client",
+       "value": null
+      },
+      {
+       "name": "_strict_response_validation",
+       "value": false
+      }
+     ],
+     "ret": {
+      "value": null
+     }
+    },
+    {
+     "args": [
+      {
+       "name": "api_key",
+       "redacted": "VERCEL_AI_GATEWAY_API_KEY",
+       "len": 60
+      },
+      {
+       "name": "organization",
+       "value": null
+      },
+      {
+       "name": "project",
+       "value": null
+      },
+      {
+       "name": "base_url",
+       "value": "https://ai-gateway.vercel.sh/v1"
+      },
+      {
+       "name": "websocket_base_url",
+       "value": null
+      },
+      {
+       "name": "timeout",
+       "value": 1800
+      },
+      {
+       "name": "max_retries",
+       "value": 1
+      },
+      {
+       "name": "default_headers",
+       "value": null
+      },
+      {
+       "name": "default_query",
+       "value": null
+      },
+      {
+       "name": "http_client",
+       "value": null
+      },
+      {
+       "name": "_strict_response_validation",
+       "value": false
+      }
+     ],
+     "ret": {
+      "value": null
+     }
+    }
+   ]
+  },
+  "scigym.controller.Controller.run_benchmark": {
+   "calls": 2,
+   "args": [
+    {
+     "name": "model",
+     "calls": 2,
+     "type": "OpenAICompatible"
+    }
+   ],
+   "samples": [
+    {
+     "args": [
+      {
+       "name": "model",
+       "truncated": true,
+       "type": "OpenAICompatible"
+      }
+     ],
+     "ret": {
+      "value": null
+     }
+    },
+    {
+     "args": [
+      {
+       "name": "model",
+       "truncated": true,
+       "type": "OpenAICompatible"
+      }
+     ],
+     "ret": {
+      "value": null
+     }
+    }
+   ]
+  },
+  "__main__.OpenAICompatible.get_response": {
+   "calls": 41,
+   "args": [
+    {
+     "name": "user_message",
+     "calls": 41,
+     "length_min": 774,
+     "length_max": 4793,
+     "type": "str",
+     "distinct": 41,
+     "values": [
+      {
+       "truncated": true,
+       "type": "str",
+       "len": 1385,
+       "sha256": "d55e0db6088159876f35ad52dd433bb72289a496b5d0b9865150159b93c46a06",
+       "calls": 1
+      },
+      {
+       "truncated": true,
+       "type": "str",
+       "len": 3518,
+       "sha256": "b8675d0f576be1b79af4d3fe7677731debde670f8cbdf5e3f718ce2cc8d56187",
+       "calls": 1
+      },
+      {
+       "truncated": true,
+       "type": "str",
+       "len": 3531,
+       "sha256": "8f533ead9f13da6dc88c022573d2dc190305fceb2ac1673540416a18313d2cc4",
+       "calls": 1
+      },
+      {
+       "truncated": true,
+       "type": "str",
+       "len": 4793,
+       "sha256": "48958c7b30022ef994c4c448199f0541997546f4d114d42d7dc93a412002036e",
+       "calls": 1
+      },
+      {
+       "truncated": true,
+       "type": "str",
+       "len": 3557,
+       "sha256": "4e5df94ea44a6768683f69f85049fe9493555c1c969e5c3d67fa7269e8af0834",
+       "calls": 1
+      },
+      {
+       "truncated": true,
+       "type": "str",
+       "len": 3944,
+       "sha256": "6cf45402066e9510e9f1ae8fc5c06162e377822d747f09036a5b14718d296bfb",
+       "calls": 1
+      },
+      {
+       "truncated": true,
+       "type": "str",
+       "len": 3583,
+       "sha256": "4166b940458fe969759edcf8077ae2f24869764492ea2695357bda2ba9e52e4c",
+       "calls": 1
+      },
+      {
+       "truncated": true,
+       "type": "str",
+       "len": 3596,
+       "sha256": "500f469cb5738aa72888f5b66bdaad9dbe58d04f6641ee518f9d508c680a867a",
+       "calls": 1
+      },
+      {
+       "truncated": true,
+       "type": "str",
+       "len": 3609,
+       "sha256": "97528c53aca8434a64d42096325ed7afca2bda1572dbb746c78d35ed702451fa",
+       "calls": 1
+      },
+      {
+       "truncated": true,
+       "type": "str",
+       "len": 3622,
+       "sha256": "3fbd813f02843be6e03b6c2d1888bda2cd1aa93a82f883a32422bdc269602d07",
+       "calls": 1
+      },
+      {
+       "truncated": true,
+       "type": "str",
+       "len": 4430,
+       "sha256": "59a232e3d0ffa73d18c581d08a304842d3f195fbcf9fe4d184b820cc3c7deb04",
+       "calls": 1
+      },
+      {
+       "truncated": true,
+       "type": "str",
+       "len": 3653,
+       "sha256": "384cc2d885d57d6d0c41557f59682d45dfa8f00a60ad3f5b4757777267c7cdb0",
+       "calls": 1
+      },
+      {
+       "truncated": true,
+       "type": "str",
+       "len": 1002,
+       "sha256": "1ef14df456218dd337b8ee4c73f630eed9d428cfd8aac3605ef269595eea68dd",
+       "calls": 1
+      },
+      {
+       "truncated": true,
+       "type": "str",
+       "len": 3666,
+       "sha256": "5a644e899c33aedbc5f8b499de425744259693e373c30c9c0af8d49c10c40a2f",
+       "calls": 1
+      },
+      {
+       "truncated": true,
+       "type": "str",
+       "len": 3680,
+       "sha256": "866209e4de75b365838d1d27d48eb44e1449d06007422c5e7c9aae744123ee1c",
+       "calls": 1
+      },
+      {
+       "truncated": true,
+       "type": "str",
+       "len": 3694,
+       "sha256": "23b20a565804a67b4e2fe57ee4cd3cfbb81f4b83df55b50d5bb1fa0edba58acf",
+       "calls": 1
+      },
+      {
+       "truncated": true,
+       "type": "str",
+       "len": 832,
+       "sha256": "681ab847d8ebe14ae1096b4e3be160a915107e9d6d79e33998a2fc2f1fe60602",
+       "calls": 1
+      },
+      {
+       "truncated": true,
+       "type": "str",
+       "len": 983,
+       "sha256": "b9237afdbea1c339371c1537367b087bdc78082f008a1eaaeba09bea2cb90828",
+       "calls": 1
+      },
+      {
+       "truncated": true,
+       "type": "str",
+       "len": 3708,
+       "sha256": "3ae67ad31bc1ee77b270fedfe59e65561a46a3c4dd1e5424740bb92432fe7092",
+       "calls": 1
+      },
+      {
+       "truncated": true,
+       "type": "str",
+       "len": 3722,
+       "sha256": "554e1bff175c8cbf562551e6ac8253a48d5753a413604d154b116b3b11db7860",
+       "calls": 1
+      },
+      {
+       "truncated": true,
+       "type": "str",
+       "len": 2823,
+       "sha256": "14a6cad43f73d67ff1b5235bc3c7993fb516c80588829b1be0e6ffd969d98f1e",
+       "calls": 1
+      },
+      {
+       "truncated": true,
+       "type": "str",
+       "len": 2463,
+       "sha256": "1591acb3ff29085e83235b60da434932df666b8d9f991838f30a1bf858ef09a7",
+       "calls": 1
+      },
+      {
+       "truncated": true,
+       "type": "str",
+       "len": 2476,
+       "sha256": "d8246dc1b35d7ea5f1e0bed1197a04eda8b8fd8245b0b630502d040e96ea1619",
+       "calls": 1
+      },
+      {
+       "truncated": true,
+       "type": "str",
+       "len": 2489,
+       "sha256": "bf752143598fbe2474185f3ccaf55acfbcabe2af2f923744ddb437da8e85a592",
+       "calls": 1
+      },
+      {
+       "truncated": true,
+       "type": "str",
+       "len": 2247,
+       "sha256": "6653be3dbb17addc4853397240ffc883b7dce64027107b955ebaf1cad804eb09",
+       "calls": 1
+      },
+      {
+       "truncated": true,
+       "type": "str",
+       "len": 2515,
+       "sha256": "eeaf3d8c611ad104570dd7091bc8ce7c9195b6ac3dc11880711f4190dae688ac",
+       "calls": 1
+      },
+      {
+       "truncated": true,
+       "type": "str",
+       "len": 2528,
+       "sha256": "55d4ef4056ae3f209b10162c0f604517fc5fa3f4f66335de1dab22172bd1de21",
+       "calls": 1
+      },
+      {
+       "truncated": true,
+       "type": "str",
+       "len": 2246,
+       "sha256": "deef47fd2f32c378d29739b71ec9d056a1fc6965be1049838b91c63631716866",
+       "calls": 1
+      },
+      {
+       "truncated": true,
+       "type": "str",
+       "len": 2541,
+       "sha256": "eec21c12ab480762c0597829a40d35245fbe7571f08f371dbc205e85f5a6af24",
+       "calls": 1
+      },
+      {
+       "truncated": true,
+       "type": "str",
+       "len": 2554,
+       "sha256": "b073b8271a75352cf2e58436f3c448e3c4e1c2240010f7eb46e54b7583446de2",
+       "calls": 1
+      },
+      {
+       "truncated": true,
+       "type": "str",
+       "len": 2568,
+       "sha256": "248282d925774eee96056ac575730e588e9048c9b6c65ce87a4a0a473b31ca9e",
+       "calls": 1
+      },
+      {
+       "truncated": true,
+       "type": "str",
+       "len": 2585,
+       "sha256": "ad940f53c4aa3eb738d0d02a0f45a34e4e4ed682fefdb69bc625da63a7764048",
+       "calls": 1
+      },
+      {
+       "truncated": true,
+       "type": "str",
+       "len": 2343,
+       "sha256": "f36f224fe4eb4fdf41a334d34dcb065cc55d367e0a9704322fa5c72b29756748",
+       "calls": 1
+      },
+      {
+       "truncated": true,
+       "type": "str",
+       "len": 2612,
+       "sha256": "a0295aedd99f45eac8233d03b1c48c273f9d7fe815058506a3d1ade826d464c7",
+       "calls": 1
+      },
+      {
+       "truncated": true,
+       "type": "str",
+       "len": 976,
+       "sha256": "e69b59e0f212902d2545ca110a449cfc3f305bec11a7d397272cd64207c3702b",
+       "calls": 1
+      },
+      {
+       "truncated": true,
+       "type": "str",
+       "len": 2626,
+       "sha256": "33b551e30696aeadae5a20d89364088e3f1555010f6024f5c1abe73bf5e043de",
+       "calls": 1
+      },
+      {
+       "truncated": true,
+       "type": "str",
+       "len": 972,
+       "sha256": "d2542adf757669b1ab992223e6e7782702733c99947139bf8cb4533b6735a073",
+       "calls": 1
+      },
+      {
+       "truncated": true,
+       "type": "str",
+       "len": 774,
+       "sha256": "b2d9332dea3803d6cc6ad562da50d3ef4ee2743ae2159c4c4939e16c0d847c7e",
+       "calls": 1
+      },
+      {
+       "truncated": true,
+       "type": "str",
+       "len": 1465,
+       "sha256": "0ae08d4cf4b4e6f2f7c94697b785173949591bd6723b84166c235993a0617cf7",
+       "calls": 1
+      },
+      {
+       "truncated": true,
+       "type": "str",
+       "len": 2640,
+       "sha256": "138ec17c6c2fb74d9062a6be60b3cbc1f6d2dbcad3481ac0e29108ff05a46bd2",
+       "calls": 1
+      },
+      {
+       "truncated": true,
+       "type": "str",
+       "len": 2654,
+       "sha256": "e6d8c11d03f130ff6be41c919b19895f647d0448093ae6c6b656a95fa9dcc97d",
+       "calls": 1
+      }
+     ]
+    }
+   ],
+   "samples": [
+    {
+     "args": [
+      {
+       "name": "user_message",
+       "truncated": true,
+       "type": "str",
+       "len": 1385,
+       "sha256": "d55e0db6088159876f35ad52dd433bb72289a496b5d0b9865150159b93c46a06"
+      }
+     ],
+     "ret": {
+      "truncated": true,
+      "type": "tuple",
+      "len": 2,
+      "sha256": "93ec6a66505fc9a645fce4488b145847050c84aa098d220f528f07016c5ef3a3"
+     }
+    },
+    {
+     "args": [
+      {
+       "name": "user_message",
+       "truncated": true,
+       "type": "str",
+       "len": 3518,
+       "sha256": "b8675d0f576be1b79af4d3fe7677731debde670f8cbdf5e3f718ce2cc8d56187"
+      }
+     ],
+     "ret": {
+      "truncated": true,
+      "type": "tuple",
+      "len": 2,
+      "sha256": "54c4de597395a08502597bff512c4cf5262f1d66c86bd8d2d02992a230a28f7a"
+     }
+    },
+    {
+     "args": [
+      {
+       "name": "user_message",
+       "truncated": true,
+       "type": "str",
+       "len": 3531,
+       "sha256": "8f533ead9f13da6dc88c022573d2dc190305fceb2ac1673540416a18313d2cc4"
+      }
+     ],
+     "ret": {
+      "truncated": true,
+      "type": "tuple",
+      "len": 2,
+      "sha256": "2dc52b49d29fb61f9e5360c27cddbf538fcb6edeaaca769fba17b8b881f60152"
+     }
+    }
+   ]
+  },
+  "__main__.OpenAICompatible.add_message": {
+   "calls": 82,
+   "args": [
+    {
+     "name": "role",
+     "calls": 82,
+     "length_min": 4,
+     "length_max": 9,
+     "type": "str",
+     "distinct": 2,
+     "values": [
+      {
+       "value": "user",
+       "calls": 41
+      },
+      {
+       "value": "assistant",
+       "calls": 41
+      }
+     ]
+    },
+    {
+     "name": "content",
+     "calls": 82,
+     "length_min": 252,
+     "length_max": 4793,
+     "type": "str",
+     "distinct": 82,
+     "values": [
+      {
+       "truncated": true,
+       "type": "str",
+       "len": 1385,
+       "sha256": "d55e0db6088159876f35ad52dd433bb72289a496b5d0b9865150159b93c46a06",
+       "calls": 1
+      },
+      {
+       "truncated": true,
+       "type": "str",
+       "len": 272,
+       "sha256": "1a84f1011f914f86658b5f396816234f4dcaa98cb86bf2b4371700270ea02e2f",
+       "calls": 1
+      },
+      {
+       "truncated": true,
+       "type": "str",
+       "len": 3518,
+       "sha256": "b8675d0f576be1b79af4d3fe7677731debde670f8cbdf5e3f718ce2cc8d56187",
+       "calls": 1
+      },
+      {
+       "truncated": true,
+       "type": "str",
+       "len": 623,
+       "sha256": "55765e9e1564988a8efa449cba8f28c34be7cf7858ac3438e5809b13ff43e726",
+       "calls": 1
+      },
+      {
+       "truncated": true,
+       "type": "str",
+       "len": 3531,
+       "sha256": "8f533ead9f13da6dc88c022573d2dc190305fceb2ac1673540416a18313d2cc4",
+       "calls": 1
+      },
+      {
+       "truncated": true,
+       "type": "str",
+       "len": 1430,
+       "sha256": "ac7505e2f73919bb2d6859f587768d6bcb3e72d40d25e8697be3cd5c19c76d17",
+       "calls": 1
+      },
+      {
+       "truncated": true,
+       "type": "str",
+       "len": 4793,
+       "sha256": "48958c7b30022ef994c4c448199f0541997546f4d114d42d7dc93a412002036e",
+       "calls": 1
+      },
+      {
+       "truncated": true,
+       "type": "str",
+       "len": 582,
+       "sha256": "35bc60888c47ca2b0f20071223b02a3b7390799639cf6e4986ce40f7599a2a52",
+       "calls": 1
+      },
+      {
+       "truncated": true,
+       "type": "str",
+       "len": 3557,
+       "sha256": "4e5df94ea44a6768683f69f85049fe9493555c1c969e5c3d67fa7269e8af0834",
+       "calls": 1
+      },
+      {
+       "truncated": true,
+       "type": "str",
+       "len": 2391,
+       "sha256": "abac16cfe7a9bf00e197110b37214c48f33659196db60d9fbcf8b61418da77ab",
+       "calls": 1
+      },
+      {
+       "truncated": true,
+       "type": "str",
+       "len": 3944,
+       "sha256": "6cf45402066e9510e9f1ae8fc5c06162e377822d747f09036a5b14718d296bfb",
+       "calls": 1
+      },
+      {
+       "truncated": true,
+       "type": "str",
+       "len": 641,
+       "sha256": "077a486ff62f54da66fd0182f7a2634ab4a4c01c95198cb84ac2b6977bd71fd4",
+       "calls": 1
+      },
+      {
+       "truncated": true,
+       "type": "str",
+       "len": 3583,
+       "sha256": "4166b940458fe969759edcf8077ae2f24869764492ea2695357bda2ba9e52e4c",
+       "calls": 1
+      },
+      {
+       "truncated": true,
+       "type": "str",
+       "len": 631,
+       "sha256": "66265bee5062213abe8911a5ebc1776d7503c6c61677aa0117a85f0a981ec615",
+       "calls": 1
+      },
+      {
+       "truncated": true,
+       "type": "str",
+       "len": 3596,
+       "sha256": "500f469cb5738aa72888f5b66bdaad9dbe58d04f6641ee518f9d508c680a867a",
+       "calls": 1
+      },
+      {
+       "truncated": true,
+       "type": "str",
+       "len": 614,
+       "sha256": "e3fa5cf9c68bc6a89202dfd0ad96ce897beac9e8f75b6ee8f4a8bd04ae0e2a88",
+       "calls": 1
+      },
+      {
+       "truncated": true,
+       "type": "str",
+       "len": 3609,
+       "sha256": "97528c53aca8434a64d42096325ed7afca2bda1572dbb746c78d35ed702451fa",
+       "calls": 1
+      },
+      {
+       "truncated": true,
+       "type": "str",
+       "len": 675,
+       "sha256": "e5cba1b3d2c157739d1c4599a73ac9d7a90352991db982443d63fe094f940fdf",
+       "calls": 1
+      },
+      {
+       "truncated": true,
+       "type": "str",
+       "len": 3622,
+       "sha256": "3fbd813f02843be6e03b6c2d1888bda2cd1aa93a82f883a32422bdc269602d07",
+       "calls": 1
+      },
+      {
+       "truncated": true,
+       "type": "str",
+       "len": 1162,
+       "sha256": "5fbc2caf4008633be32935f58dabc43c0ebaa4bc6c5ffd13facae2fa5c2076e3",
+       "calls": 1
+      },
+      {
+       "truncated": true,
+       "type": "str",
+       "len": 4430,
+       "sha256": "59a232e3d0ffa73d18c581d08a304842d3f195fbcf9fe4d184b820cc3c7deb04",
+       "calls": 1
+      },
+      {
+       "truncated": true,
+       "type": "str",
+       "len": 604,
+       "sha256": "a6358873d67e3a216bd8b63d1dc9b78b5922c8b5818f8a5b5bf70e1f04dabb32",
+       "calls": 1
+      },
+      {
+       "truncated": true,
+       "type": "str",
+       "len": 3653,
+       "sha256": "384cc2d885d57d6d0c41557f59682d45dfa8f00a60ad3f5b4757777267c7cdb0",
+       "calls": 1
+      },
+      {
+       "truncated": true,
+       "type": "str",
+       "len": 2023,
+       "sha256": "ed94dfab0698df9635692c4225f610710e208e36fbd01dbbe3bcd8288470350a",
+       "calls": 1
+      },
+      {
+       "truncated": true,
+       "type": "str",
+       "len": 1002,
+       "sha256": "1ef14df456218dd337b8ee4c73f630eed9d428cfd8aac3605ef269595eea68dd",
+       "calls": 1
+      },
+      {
+       "truncated": true,
+       "type": "str",
+       "len": 583,
+       "sha256": "d64c4807a4efff1b3d7998f1b4f0c0ee780e3f8a918254233175328b544c9ba5",
+       "calls": 1
+      },
+      {
+       "truncated": true,
+       "type": "str",
+       "len": 3666,
+       "sha256": "5a644e899c33aedbc5f8b499de425744259693e373c30c9c0af8d49c10c40a2f",
+       "calls": 1
+      },
+      {
+       "truncated": true,
+       "type": "str",
+       "len": 556,
+       "sha256": "6479de40ddccc76e9b87deb377b50838fc685eacc79e1cb7cead04be32ac3196",
+       "calls": 1
+      },
+      {
+       "truncated": true,
+       "type": "str",
+       "len": 3680,
+       "sha256": "866209e4de75b365838d1d27d48eb44e1449d06007422c5e7c9aae744123ee1c",
+       "calls": 1
+      },
+      {
+       "truncated": true,
+       "type": "str",
+       "len": 678,
+       "sha256": "cc6da04d2b6969e3fbc4cf84c8c7d309344124ca3e13a4451af8c76aca56359e",
+       "calls": 1
+      },
+      {
+       "truncated": true,
+       "type": "str",
+       "len": 3694,
+       "sha256": "23b20a565804a67b4e2fe57ee4cd3cfbb81f4b83df55b50d5bb1fa0edba58acf",
+       "calls": 1
+      },
+      {
+       "truncated": true,
+       "type": "str",
+       "len": 2329,
+       "sha256": "550322524cc49d449ce2c3a93187bddded7cb9f66a3721a9c1023cbb04a0e45c",
+       "calls": 1
+      },
+      {
+       "truncated": true,
+       "type": "str",
+       "len": 832,
+       "sha256": "681ab847d8ebe14ae1096b4e3be160a915107e9d6d79e33998a2fc2f1fe60602",
+       "calls": 1
+      },
+      {
+       "truncated": true,
+       "type": "str",
+       "len": 1719,
+       "sha256": "528e13f04112e23cd0e9b1453292647affd4839787d9bd76ed13e20d2a31c21f",
+       "calls": 1
+      },
+      {
+       "truncated": true,
+       "type": "str",
+       "len": 983,
+       "sha256": "b9237afdbea1c339371c1537367b087bdc78082f008a1eaaeba09bea2cb90828",
+       "calls": 1
+      },
+      {
+       "truncated": true,
+       "type": "str",
+       "len": 614,
+       "sha256": "f1387a6e6f615779cb6e941c624119919b177eaca26c00e7a6d75a23851bf646",
+       "calls": 1
+      },
+      {
+       "truncated": true,
+       "type": "str",
+       "len": 3708,
+       "sha256": "3ae67ad31bc1ee77b270fedfe59e65561a46a3c4dd1e5424740bb92432fe7092",
+       "calls": 1
+      },
+      {
+       "truncated": true,
+       "type": "str",
+       "len": 518,
+       "sha256": "fef43bfb59a14fb8914e43d567f49b7f03792b1fc39dbf4b8a9e2f97c28132f2",
+       "calls": 1
+      },
+      {
+       "truncated": true,
+       "type": "str",
+       "len": 3722,
+       "sha256": "554e1bff175c8cbf562551e6ac8253a48d5753a413604d154b116b3b11db7860",
+       "calls": 1
+      },
+      {
+       "truncated": true,
+       "type": "str",
+       "len": 2092,
+       "sha256": "221d2c96fb8fe54048de82c9563a4d0e741ac48d85d3b9376fdc0cadc748fc02",
+       "calls": 1
+      },
+      {
+       "truncated": true,
+       "type": "str",
+       "len": 2823,
+       "sha256": "14a6cad43f73d67ff1b5235bc3c7993fb516c80588829b1be0e6ffd969d98f1e",
+       "calls": 1
+      },
+      {
+       "truncated": true,
+       "type": "str",
+       "len": 252,
+       "sha256": "337a3f6187940465dca0e681e82f215c2631bfb63c7f5cdffdf6f43d46702be9",
+       "calls": 1
+      },
+      {
+       "truncated": true,
+       "type": "str",
+       "len": 2463,
+       "sha256": "1591acb3ff29085e83235b60da434932df666b8d9f991838f30a1bf858ef09a7",
+       "calls": 1
+      },
+      {
+       "truncated": true,
+       "type": "str",
+       "len": 512,
+       "sha256": "402146ba81990c704b357b9872aba2afae448c5f9c609be60af623a50c707f7e",
+       "calls": 1
+      },
+      {
+       "truncated": true,
+       "type": "str",
+       "len": 2476,
+       "sha256": "d8246dc1b35d7ea5f1e0bed1197a04eda8b8fd8245b0b630502d040e96ea1619",
+       "calls": 1
+      },
+      {
+       "truncated": true,
+       "type": "str",
+       "len": 500,
+       "sha256": "8ba5e3e5060467df5b80cc3c3c66830c2962ca6cbf63aa224be4d964dd5b86ec",
+       "calls": 1
+      },
+      {
+       "truncated": true,
+       "type": "str",
+       "len": 2489,
+       "sha256": "bf752143598fbe2474185f3ccaf55acfbcabe2af2f923744ddb437da8e85a592",
+       "calls": 1
+      },
+      {
+       "truncated": true,
+       "type": "str",
+       "len": 478,
+       "sha256": "0fba1f6b9516ee91cf7b835c2dc07930d3762a9410312247bb5c7e62a80167fc",
+       "calls": 1
+      },
+      {
+       "truncated": true,
+       "type": "str",
+       "len": 2247,
+       "sha256": "6653be3dbb17addc4853397240ffc883b7dce64027107b955ebaf1cad804eb09",
+       "calls": 1
+      },
+      {
+       "truncated": true,
+       "type": "str",
+       "len": 472,
+       "sha256": "3f235d64a74329c444256276fe59cba2fecb6f604749176ccd8aee5b8c4883af",
+       "calls": 1
+      }
+     ]
+    }
+   ],
+   "samples": [
+    {
+     "args": [
+      {
+       "name": "role",
+       "value": "user"
+      },
+      {
+       "name": "content",
+       "truncated": true,
+       "type": "str",
+       "len": 1385,
+       "sha256": "d55e0db6088159876f35ad52dd433bb72289a496b5d0b9865150159b93c46a06"
+      }
+     ],
+     "ret": {
+      "value": null
+     }
+    },
+    {
+     "args": [
+      {
+       "name": "role",
+       "value": "assistant"
+      },
+      {
+       "name": "content",
+       "truncated": true,
+       "type": "str",
+       "len": 272,
+       "sha256": "1a84f1011f914f86658b5f396816234f4dcaa98cb86bf2b4371700270ea02e2f"
+      }
+     ],
+     "ret": {
+      "value": null
+     }
+    },
+    {
+     "args": [
+      {
+       "name": "role",
+       "value": "user"
+      },
+      {
+       "name": "content",
+       "truncated": true,
+       "type": "str",
+       "len": 3518,
+       "sha256": "b8675d0f576be1b79af4d3fe7677731debde670f8cbdf5e3f718ce2cc8d56187"
+      }
+     ],
+     "ret": {
+      "value": null
+     }
+    }
+   ]
+  },
+  "openai._utils._utils.required_args.<locals>.inner.<locals>.wrapper": {
+   "calls": 41,
+   "args": [
+    {
+     "name": "args",
+     "calls": 41,
+     "length_min": 1,
+     "length_max": 1,
+     "type": "tuple"
+    },
+    {
+     "name": "kwargs",
+     "calls": 41,
+     "length_min": 4,
+     "length_max": 4,
+     "type": "dict",
+     "distinct": 41,
+     "values": [
+      {
+       "truncated": true,
+       "type": "dict",
+       "len": 4,
+       "sha256": "67ccec90d2b37113daa2d82026a91930bb29ae22ceed5a83a431f604466def09",
+       "calls": 1
+      },
+      {
+       "truncated": true,
+       "type": "dict",
+       "len": 4,
+       "sha256": "34d08928a006bd23a4928140f8b1413fbd40982681ec5b47a50865dd75b36004",
+       "calls": 1
+      },
+      {
+       "truncated": true,
+       "type": "dict",
+       "len": 4,
+       "sha256": "856e59344194e71bd6aa08d43fb1ed494928e4bf69b25839a7a4f3f1f5dd14f1",
+       "calls": 1
+      },
+      {
+       "truncated": true,
+       "type": "dict",
+       "len": 4,
+       "sha256": "e98bebd5f7d97d077331a4a125d7066933e45df444653fadfc920145999226f4",
+       "calls": 1
+      },
+      {
+       "truncated": true,
+       "type": "dict",
+       "len": 4,
+       "sha256": "3859ecbd9cea782592907ba10b8451f62d9a93f7f9d59d232e16707a18fdb08f",
+       "calls": 1
+      },
+      {
+       "truncated": true,
+       "type": "dict",
+       "len": 4,
+       "sha256": "51ddc9f253aa513eba78822d7295ef98103357a41b887a962f6564880ecc3e58",
+       "calls": 1
+      },
+      {
+       "truncated": true,
+       "type": "dict",
+       "len": 4,
+       "sha256": "202c16ee8602d63a34b903eee3353a7b989f88824c049a3c1c980853a888977d",
+       "calls": 1
+      },
+      {
+       "truncated": true,
+       "type": "dict",
+       "len": 4,
+       "sha256": "f44bde3e7c01ffb05f3ccd4ec822dbbf7a14f659630c26f873e729b556d18845",
+       "calls": 1
+      },
+      {
+       "truncated": true,
+       "type": "dict",
+       "len": 4,
+       "sha256": "04f442eedc716417cdc8f227cb33f858c9d6edd8c3ba5545769e22b2c98ab2ac",
+       "calls": 1
+      },
+      {
+       "truncated": true,
+       "type": "dict",
+       "len": 4,
+       "sha256": "31670381f818a7ea2786f74b934fee14495e0ed83f929f402427c936d844409f",
+       "calls": 1
+      },
+      {
+       "truncated": true,
+       "type": "dict",
+       "len": 4,
+       "sha256": "039cc6ecc7e2dfd504847afc637524fe66e66ad60c6a6fdcf2ad61196d3a682c",
+       "calls": 1
+      },
+      {
+       "truncated": true,
+       "type": "dict",
+       "len": 4,
+       "sha256": "d4e17d143182087272db5477f990abc6e85fd3e2f030d603f01037428d01b523",
+       "calls": 1
+      },
+      {
+       "truncated": true,
+       "type": "dict",
+       "len": 4,
+       "sha256": "692166662b6d21ee8862e880a30cf5d3f880ca3e4fbf8f5e0609da1e3a432a3e",
+       "calls": 1
+      },
+      {
+       "truncated": true,
+       "type": "dict",
+       "len": 4,
+       "sha256": "aee2e4e9551a9685151052a462af2b1958e13667c4a6c7b022cca72220d3bcdd",
+       "calls": 1
+      },
+      {
+       "truncated": true,
+       "type": "dict",
+       "len": 4,
+       "sha256": "4a0d98086fa0023c7161a044fe2686b74cb622e0114a7b38fff6db8f6a9efdbe",
+       "calls": 1
+      },
+      {
+       "truncated": true,
+       "type": "dict",
+       "len": 4,
+       "sha256": "7380eddd540e5cb944178880e66339b90e2d0c31dd4c65d30a5fdecd9b8bfe2e",
+       "calls": 1
+      },
+      {
+       "truncated": true,
+       "type": "dict",
+       "len": 4,
+       "sha256": "ce3fb688c5ad738748d4ea9b07bdea03cff9aa3c4041badd8661aeacdbe65f8c",
+       "calls": 1
+      },
+      {
+       "truncated": true,
+       "type": "dict",
+       "len": 4,
+       "sha256": "e33063848571b710d758886b3ed318352f5a4cb426428f54e2979643603d2822",
+       "calls": 1
+      },
+      {
+       "truncated": true,
+       "type": "dict",
+       "len": 4,
+       "sha256": "a197a5662e83e23c425fa62915d850e4a02a3c23ac71d49e3685d2c4a6067135",
+       "calls": 1
+      },
+      {
+       "truncated": true,
+       "type": "dict",
+       "len": 4,
+       "sha256": "1b88fbc3635187a36d69095d71c5a4eae8771eb9f48ce1c266d8afb38a94827e",
+       "calls": 1
+      },
+      {
+       "truncated": true,
+       "type": "dict",
+       "len": 4,
+       "sha256": "f0120f0da24137f798ba37fc516da73eacbed4682cd5c9ec5731c8da7e06b4a7",
+       "calls": 1
+      },
+      {
+       "truncated": true,
+       "type": "dict",
+       "len": 4,
+       "sha256": "9084b495b886842de8385e6e859d2c8542331ee3fea3d8ff06a6080edf3a3728",
+       "calls": 1
+      },
+      {
+       "truncated": true,
+       "type": "dict",
+       "len": 4,
+       "sha256": "0bcde3054a2ea5ba85ea8d248d46da929bbb081d5009079868a31b1034b7b6e3",
+       "calls": 1
+      },
+      {
+       "truncated": true,
+       "type": "dict",
+       "len": 4,
+       "sha256": "ee619e7aaeacd1110d27f294cd6ff8476089c51087cd9854899b25a316d936fd",
+       "calls": 1
+      },
+      {
+       "truncated": true,
+       "type": "dict",
+       "len": 4,
+       "sha256": "00d62fa9f635423d56560e929e0abf2df441b4cdd998def04b3230a04ef771df",
+       "calls": 1
+      },
+      {
+       "truncated": true,
+       "type": "dict",
+       "len": 4,
+       "sha256": "32fd387e96240e6d79db2bc91907bbc6bcd6a55080e07d218bd7ec22c10feafb",
+       "calls": 1
+      },
+      {
+       "truncated": true,
+       "type": "dict",
+       "len": 4,
+       "sha256": "418e24ba77865440579d57daa84ea9c71a3668cbb4613597d2f2c3b4439f86b7",
+       "calls": 1
+      },
+      {
+       "truncated": true,
+       "type": "dict",
+       "len": 4,
+       "sha256": "3ba7c686548410618273a01c5c54c630e872644069a4534989b2622ff866b1d2",
+       "calls": 1
+      },
+      {
+       "truncated": true,
+       "type": "dict",
+       "len": 4,
+       "sha256": "7afe7afc3275f753befe8a419d9dd50bb25a06e460efc3b6058003f46bea2fb2",
+       "calls": 1
+      },
+      {
+       "truncated": true,
+       "type": "dict",
+       "len": 4,
+       "sha256": "d56802beb6372350a91a027f69df25036da01f2aea3fd7d0695decc97ec22c36",
+       "calls": 1
+      },
+      {
+       "truncated": true,
+       "type": "dict",
+       "len": 4,
+       "sha256": "a898237fed4b71c18cef19e9729f3da9b198c6c63811568fcb7467cef6aae9e5",
+       "calls": 1
+      },
+      {
+       "truncated": true,
+       "type": "dict",
+       "len": 4,
+       "sha256": "b5a527d6d4d86ef92a3b8765211d5b2807c4029f245abfc2e0d79b5e2dfe8422",
+       "calls": 1
+      },
+      {
+       "truncated": true,
+       "type": "dict",
+       "len": 4,
+       "sha256": "8a3b8edfdc2d4d6778be9fa36bb0dfadde4f61a53d27711ab4db9ddcdda77d44",
+       "calls": 1
+      },
+      {
+       "truncated": true,
+       "type": "dict",
+       "len": 4,
+       "sha256": "22fc3d5d3fc19e0549a8500f6356ba566f761aa8a79486fd0a2bbf885da86dd6",
+       "calls": 1
+      },
+      {
+       "truncated": true,
+       "type": "dict",
+       "len": 4,
+       "sha256": "c63590d2a90870da029943db7f6e7c4b2e6837cf0c98332e21a9a4f6ddeb1924",
+       "calls": 1
+      },
+      {
+       "truncated": true,
+       "type": "dict",
+       "len": 4,
+       "sha256": "efe7c74fee1a0be2f8ae612ed9b2a1087b60b218c2120b4ecd81c6fc1ff75347",
+       "calls": 1
+      },
+      {
+       "truncated": true,
+       "type": "dict",
+       "len": 4,
+       "sha256": "51916cbdac756a70c44e14c31b67f71c2c38dde4aae23954930fa31e6d897761",
+       "calls": 1
+      },
+      {
+       "truncated": true,
+       "type": "dict",
+       "len": 4,
+       "sha256": "ce2c196ebbde94789e38e33e34fb0e561474c2792b75097c2f30cc164fa087e5",
+       "calls": 1
+      },
+      {
+       "truncated": true,
+       "type": "dict",
+       "len": 4,
+       "sha256": "74bfcb16aafaa6a5fa5ab9e46f0989a840a9cf3fa381cda8e18acb1a29cb6b02",
+       "calls": 1
+      },
+      {
+       "truncated": true,
+       "type": "dict",
+       "len": 4,
+       "sha256": "b9499930f7eed58fdef1ebcffdb49daa22946401dc910f3e27ad5d2f80cbd508",
+       "calls": 1
+      },
+      {
+       "truncated": true,
+       "type": "dict",
+       "len": 4,
+       "sha256": "137bbfef9396ad3bd584eb11b5619e6cff19ab29672c16d1a8558042bbd1a4b9",
+       "calls": 1
+      }
+     ]
+    }
+   ],
+   "samples": [
+    {
+     "args": [
+      {
+       "name": "args",
+       "truncated": true,
+       "type": "tuple",
+       "len": 1
+      },
+      {
+       "name": "kwargs",
+       "truncated": true,
+       "type": "dict",
+       "len": 4,
+       "sha256": "67ccec90d2b37113daa2d82026a91930bb29ae22ceed5a83a431f604466def09"
+      }
+     ],
+     "ret": {
+      "truncated": true,
+      "type": "ChatCompletion"
+     }
+    },
+    {
+     "args": [
+      {
+       "name": "args",
+       "truncated": true,
+       "type": "tuple",
+       "len": 1
+      },
+      {
+       "name": "kwargs",
+       "truncated": true,
+       "type": "dict",
+       "len": 4,
+       "sha256": "34d08928a006bd23a4928140f8b1413fbd40982681ec5b47a50865dd75b36004"
+      }
+     ],
+     "ret": {
+      "truncated": true,
+      "type": "ChatCompletion"
+     }
+    },
+    {
+     "args": [
+      {
+       "name": "args",
+       "truncated": true,
+       "type": "tuple",
+       "len": 1
+      },
+      {
+       "name": "kwargs",
+       "truncated": true,
+       "type": "dict",
+       "len": 4,
+       "sha256": "856e59344194e71bd6aa08d43fb1ed494928e4bf69b25839a7a4f3f1f5dd14f1"
+      }
+     ],
+     "ret": {
+      "truncated": true,
+      "type": "ChatCompletion"
+     }
+    }
+   ]
+  },
+  "__main__.OpenAICompatible.get_messages": {
+   "calls": 4,
+   "args": [],
+   "samples": [
+    {
+     "args": [],
+     "ret": {
+      "truncated": true,
+      "type": "list",
+      "len": 41
+     }
+    },
+    {
+     "args": [],
+     "ret": {
+      "truncated": true,
+      "type": "list",
+      "len": 41
+     }
+    },
+    {
+     "args": [],
+     "ret": {
+      "truncated": true,
+      "type": "list",
+      "len": 43
+     }
+    }
+   ]
+  }
+ },
+ "reaches": {
+  "opens": {
+   "config/config.yaml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/main.py:68",
+    "r": 1
+   },
+   "config/run/react-luna.yaml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/main.py:70",
+    "r": 1
+   },
+   "/tmp": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:7",
+    "None": 2
+   },
+   "/data1/rkp00041/rku00122/.cache/huggingface/token": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:9",
+    "r": 13
+   },
+   "/data1/rkp00041/rku00122/.cache/huggingface/.agent_harnesses.json": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:9",
+    "r": 1
+   },
+   "/data1/rkp00041/rku00122/.cache/huggingface/hub/datasets--h4duan--scigym-sbml/refs/main": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:9",
+    "r": 1
+   },
+   "/data1/rkp00041/rku00122/.cache/huggingface/hub/datasets--h4duan--scigym-sbml/trees/dbb10c12a33427e8e05ebbac66de690c65b6acae.json": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:9",
+    "r": 3
+   },
+   "/data1/rkp00041/rku00122/.cache/huggingface/hub/datasets--h4duan--scigym-sbml/snapshots/dbb10c12a33427e8e05ebbac66de690c65b6acae/README.md": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:9",
+    "r": 1
+   },
+   "/data1/rkp00041/rku00122/.cache/huggingface/datasets/_data1_rkp00041_rku00122_.cache_huggingface_datasets_h4duan___scigym-sbml_default_0.0.0_dbb10c12a33427e8e05ebbac66de690c65b6acae.lock": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:9",
+    "None": 1
+   },
+   "/data1/rkp00041/rku00122/.cache/huggingface/datasets/h4duan___scigym-sbml/default/0.0.0/dbb10c12a33427e8e05ebbac66de690c65b6acae/dataset_info.json": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:9",
+    "r": 2
+   },
+   "/data1/rkp00041/rku00122/.cache/huggingface/datasets/h4duan___scigym-sbml/default/0.0.0/dbb10c12a33427e8e05ebbac66de690c65b6acae_builder.lock": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:9",
+    "None": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000932/truth.xml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:12",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000932/partial.xml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:13",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000932/truth.sedml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:14",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000184/truth.xml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:12",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000184/partial.xml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:13",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000184/truth.sedml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:14",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000894/truth.xml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:12",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000894/partial.xml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:13",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000894/truth.sedml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:14",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000624/truth.xml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:12",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000624/partial.xml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:13",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000624/truth.sedml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:14",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000319/truth.xml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:12",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000319/partial.xml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:13",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000319/truth.sedml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:14",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000001031/truth.xml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:12",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000001031/partial.xml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:13",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000001031/truth.sedml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:14",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000031/truth.xml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:12",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000031/partial.xml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:13",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000031/truth.sedml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:14",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000919/truth.xml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:12",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000919/partial.xml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:13",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000919/truth.sedml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:14",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000001022/truth.xml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:12",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000001022/partial.xml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:13",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000001022/truth.sedml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:14",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000079/truth.xml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:12",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000079/partial.xml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:13",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000079/truth.sedml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:14",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000813/truth.xml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:12",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000813/partial.xml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:13",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000813/truth.sedml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:14",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000914/truth.xml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:12",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000914/partial.xml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:13",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000914/truth.sedml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:14",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000772/truth.xml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:12",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000772/partial.xml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:13",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000772/truth.sedml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:14",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000821/truth.xml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:12",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000821/partial.xml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:13",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000821/truth.sedml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:14",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000036/truth.xml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:12",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000036/partial.xml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:13",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000036/truth.sedml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:14",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000041/truth.xml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:12",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000041/partial.xml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:13",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000041/truth.sedml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:14",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000363/truth.xml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:12",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000363/partial.xml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:13",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000363/truth.sedml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:14",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000001036/truth.xml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:12",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000001036/partial.xml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:13",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000001036/truth.sedml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:14",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000629/truth.xml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:12",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000629/partial.xml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:13",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000629/truth.sedml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:14",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000753/truth.xml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:12",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000753/partial.xml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:13",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000753/truth.sedml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:14",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000893/truth.xml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:12",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000893/partial.xml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:13",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000893/truth.sedml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:14",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000970/truth.xml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:12",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000970/partial.xml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:13",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000970/truth.sedml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:14",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000899/truth.xml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:12",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000899/partial.xml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:13",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000899/truth.sedml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:14",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000877/truth.xml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:12",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000877/partial.xml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:13",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000877/truth.sedml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:14",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000800/truth.xml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:12",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000800/partial.xml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:13",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000800/truth.sedml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:14",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000084/truth.xml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:12",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000084/partial.xml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:13",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000084/truth.sedml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:14",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000785/truth.xml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:12",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000785/partial.xml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:13",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000785/truth.sedml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:14",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000935/truth.xml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:12",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000935/partial.xml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:13",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000935/truth.sedml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:14",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000838/truth.xml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:12",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000838/partial.xml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:13",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000838/truth.sedml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:14",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000462/truth.xml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:12",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000462/partial.xml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:13",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000462/truth.sedml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:14",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000486/truth.xml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:12",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000486/partial.xml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:13",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000486/truth.sedml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:14",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000322/truth.xml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:12",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000322/partial.xml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:13",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000322/truth.sedml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:14",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000258/truth.xml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:12",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000258/partial.xml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:13",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000258/truth.sedml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:14",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000001045/truth.xml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:12",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000001045/partial.xml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:13",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000001045/truth.sedml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:14",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000001038/truth.xml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:12",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000001038/partial.xml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:13",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000001038/truth.sedml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:14",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000080/truth.xml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:12",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000080/partial.xml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:13",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000080/truth.sedml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:14",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000909/truth.xml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:12",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000909/partial.xml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:13",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000909/truth.sedml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:14",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000454/truth.xml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:12",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000454/partial.xml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:13",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000454/truth.sedml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:14",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000897/truth.xml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:12",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000897/partial.xml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:13",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000897/truth.sedml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:14",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000001013/truth.xml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:12",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000001013/partial.xml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:13",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000001013/truth.sedml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:14",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000922/truth.xml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:12",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000922/partial.xml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:13",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000922/truth.sedml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:14",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000045/truth.xml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:12",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000045/partial.xml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:13",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000045/truth.sedml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:14",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000733/truth.xml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:12",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000733/partial.xml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:13",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000733/truth.sedml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:14",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000910/truth.xml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:12",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000910/partial.xml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:13",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000910/truth.sedml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:14",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000967/truth.xml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:12",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000967/partial.xml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:13",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000967/truth.sedml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:14",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000405/truth.xml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:12",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000405/partial.xml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:13",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000405/truth.sedml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:14",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000591/truth.xml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:12",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000591/partial.xml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:13",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000591/truth.sedml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:14",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000231/truth.xml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:12",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000231/partial.xml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:13",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000231/truth.sedml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:14",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000795/truth.xml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:12",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000795/partial.xml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:13",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000795/truth.sedml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:14",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000771/truth.xml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:12",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000771/partial.xml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:13",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000771/truth.sedml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:14",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000459/truth.xml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:12",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000459/partial.xml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:13",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000459/truth.sedml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:14",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000001035/truth.xml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:12",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000001035/partial.xml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:13",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000001035/truth.sedml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:14",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000360/truth.xml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:12",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000360/partial.xml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:13",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000360/truth.sedml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:14",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000283/truth.xml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:12",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000283/partial.xml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:13",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000283/truth.sedml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:14",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000657/truth.xml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:12",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000657/partial.xml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:13",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000657/truth.sedml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:14",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000001048/truth.xml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:12",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000001048/partial.xml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:13",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000001048/truth.sedml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:14",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000485/truth.xml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:12",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000485/partial.xml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:13",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000485/truth.sedml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:14",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000156/truth.xml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:12",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000156/partial.xml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:13",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000156/truth.sedml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:14",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000461/truth.xml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:12",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000461/partial.xml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:13",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000461/truth.sedml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:14",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000762/truth.xml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:12",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000762/partial.xml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:13",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000762/truth.sedml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:14",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000001037/truth.xml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:12",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000001037/partial.xml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:13",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000001037/truth.sedml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:14",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000758/truth.xml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:12",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000758/partial.xml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:13",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000758/truth.sedml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:14",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000876/truth.xml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:12",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000876/partial.xml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:13",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000876/truth.sedml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:14",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000906/truth.xml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:12",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000906/partial.xml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:13",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000906/truth.sedml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:14",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000892/truth.xml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:12",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000892/partial.xml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:13",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000892/truth.sedml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:14",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000760/truth.xml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:12",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000760/partial.xml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:13",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000760/truth.sedml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:14",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000487/truth.xml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:12",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000487/partial.xml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:13",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000487/truth.sedml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:14",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000001024/truth.xml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:12",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000001024/partial.xml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:13",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000001024/truth.sedml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:14",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000191/truth.xml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:12",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000191/partial.xml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:13",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000191/truth.sedml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:14",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000072/truth.xml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:12",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000072/partial.xml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:13",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000072/truth.sedml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:14",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000435/truth.xml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:12",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000435/partial.xml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:13",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000435/truth.sedml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:14",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000233/truth.xml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:12",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000233/partial.xml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:13",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000233/truth.sedml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:14",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000001016/truth.xml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:12",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000001016/partial.xml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:13",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000001016/truth.sedml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:14",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000927/truth.xml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:12",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000927/partial.xml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:13",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000927/truth.sedml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:14",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000957/truth.xml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:12",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000957/partial.xml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:13",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000957/truth.sedml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:14",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000920/truth.xml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:12",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000920/partial.xml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:13",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000920/truth.sedml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:14",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000827/truth.xml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:12",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000827/partial.xml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:13",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000827/truth.sedml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:14",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000850/truth.xml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:12",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000850/partial.xml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:13",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000850/truth.sedml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:14",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000912/truth.xml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:12",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000912/partial.xml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:13",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000912/truth.sedml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:14",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000438/truth.xml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:12",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000438/partial.xml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:13",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000438/truth.sedml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:14",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000001023/truth.xml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:12",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000001023/partial.xml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:13",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000001023/truth.sedml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:14",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000029/truth.xml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:12",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000029/partial.xml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:13",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000029/truth.sedml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:14",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000159/truth.xml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:12",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000159/partial.xml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:13",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000159/truth.sedml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:14",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000413/truth.xml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:12",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000413/partial.xml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:13",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000413/truth.sedml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:14",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000357/truth.xml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:12",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000357/partial.xml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:13",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000357/truth.sedml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:14",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000767/truth.xml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:12",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000767/partial.xml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:13",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000767/truth.sedml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:14",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000783/truth.xml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:12",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000783/partial.xml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:13",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000783/truth.sedml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:14",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000082/truth.xml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:12",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000082/partial.xml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:13",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000082/truth.sedml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:14",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000456/truth.xml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:12",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000456/partial.xml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:13",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000456/truth.sedml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:14",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000066/truth.xml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:12",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000066/partial.xml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:13",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000066/truth.sedml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:14",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000755/truth.xml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:12",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000755/partial.xml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:13",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000755/truth.sedml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:14",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000728/truth.xml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:12",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000728/partial.xml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:13",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000728/truth.sedml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:14",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000891/truth.xml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:12",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000891/partial.xml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:13",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000891/truth.sedml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:14",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000458/truth.xml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:12",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000458/partial.xml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:13",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000458/truth.sedml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:14",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000068/truth.xml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:12",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000068/partial.xml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:13",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000068/truth.sedml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:14",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000282/truth.xml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:12",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000282/partial.xml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:13",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000282/truth.sedml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:14",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000361/truth.xml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:12",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000361/partial.xml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:13",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000361/truth.sedml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:14",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000937/truth.xml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:12",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000937/partial.xml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:13",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000937/truth.sedml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:14",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000460/truth.xml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:12",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000460/partial.xml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:13",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000460/truth.sedml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:14",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000027/truth.xml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:12",
+    "w": 1,
+    "r": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000027/partial.xml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:13",
+    "w": 1,
+    "r": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000027/truth.sedml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:14",
+    "w": 1,
+    "r": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000157/truth.xml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:12",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000157/partial.xml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:13",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000157/truth.sedml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:14",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000484/truth.xml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:12",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000484/partial.xml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:13",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000484/truth.sedml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:14",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000830/truth.xml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:12",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000830/partial.xml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:13",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000830/truth.sedml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:14",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000847/truth.xml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:12",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000847/partial.xml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:13",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000847/truth.sedml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:14",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000359/truth.xml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:12",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000359/partial.xml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:13",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000359/truth.sedml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:14",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000763/truth.xml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:12",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000763/partial.xml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:13",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000763/truth.sedml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:14",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000888/truth.xml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:12",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000888/partial.xml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:13",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000888/truth.sedml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:14",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000916/truth.xml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:12",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000916/partial.xml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:13",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000916/truth.sedml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:14",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000882/truth.xml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:12",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000882/partial.xml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:13",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000882/truth.sedml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:14",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000192/truth.xml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:12",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000192/partial.xml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:13",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000192/truth.sedml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:14",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000742/truth.xml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:12",
+    "w": 1,
+    "r": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000742/partial.xml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:13",
+    "w": 1,
+    "r": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000742/truth.sedml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:14",
+    "w": 1,
+    "r": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000043/truth.xml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:12",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000043/partial.xml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:13",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000043/truth.sedml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:14",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000799/truth.xml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:12",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000799/partial.xml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:13",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000799/truth.sedml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:14",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000777/truth.xml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:12",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000777/partial.xml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:13",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000777/truth.sedml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:14",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000793/truth.xml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:12",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000793/partial.xml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:13",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000793/truth.sedml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:14",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000573/truth.xml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:12",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000573/partial.xml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:13",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000573/truth.sedml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:14",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000039/truth.xml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:12",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000039/partial.xml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:13",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000039/truth.sedml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:14",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000044/truth.xml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:12",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000044/partial.xml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:13",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000044/truth.sedml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:14",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000923/truth.xml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:12",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000923/partial.xml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:13",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000923/truth.sedml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:14",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000732/truth.xml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:12",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000732/partial.xml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:13",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000732/truth.sedml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:14",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000001057/truth.xml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:12",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000001057/partial.xml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:13",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000001057/truth.sedml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:14",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000092/truth.xml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:12",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000092/partial.xml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:13",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000092/truth.sedml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:14",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000966/truth.xml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:12",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000966/partial.xml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:13",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000966/truth.sedml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:14",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000885/truth.xml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:12",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000885/partial.xml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:13",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000885/truth.sedml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:14",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000911/truth.xml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:12",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000911/partial.xml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:13",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000911/truth.sedml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:14",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000098/truth.xml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:12",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000098/partial.xml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:13",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000098/truth.sedml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:14",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000076/truth.xml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:12",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000076/partial.xml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:13",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000076/truth.sedml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:14",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000329/truth.xml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:12",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000329/partial.xml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:13",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000329/truth.sedml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:14",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000224/truth.xml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:12",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000224/partial.xml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:13",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000224/truth.sedml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:14",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000663/truth.xml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:12",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000663/partial.xml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:13",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000663/truth.sedml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:14",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000713/truth.xml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:12",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000713/partial.xml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:13",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000713/truth.sedml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:14",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000323/truth.xml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:12",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000323/partial.xml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:13",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000323/truth.sedml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:14",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000483/truth.xml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:12",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000483/partial.xml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:13",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000483/truth.sedml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:14",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000626/truth.xml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:12",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000626/partial.xml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:13",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000626/truth.sedml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:14",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000878/truth.xml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:12",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000878/partial.xml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:13",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000878/truth.sedml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:14",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000455/truth.xml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:12",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000455/partial.xml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:13",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000455/truth.sedml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:14",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000902/truth.xml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:12",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000902/partial.xml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:13",
+    "w": 1
+   },
+   "data/scigym_sbml/small/BIOMD0000000902/truth.sedml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/preprocess.py:14",
+    "w": 1
+   },
+   ".research/results/react-luna/instances/BIOMD0000000027/stdout.txt": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/runner.py:46",
+    "a": 1,
+    "r": 2
+   },
+   ".research/results/react-luna/instances/BIOMD0000000742/stdout.txt": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/runner.py:46",
+    "a": 2,
+    "r": 3
+   },
+   ".research/results/react-luna/instances/BIOMD0000000027/codes": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/runner.py:78",
+    "None": 1
+   },
+   ".research/results/react-luna/checkpoints/BIOMD0000000027.tar.gz": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/runner.py:81",
+    "w": 1
+   },
+   ".research/results/react-luna/instances/BIOMD0000000027/chat_history.yaml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/runner.py:82",
+    "r": 3,
+    "w": 2
+   },
+   ".research/results/react-luna/instances/BIOMD0000000027/evaluation.json": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/runner.py:82",
+    "r": 2,
+    "w": 1
+   },
+   ".research/results/react-luna/instances/BIOMD0000000027/experiment_request.json": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/runner.py:82",
+    "r": 2,
+    "w": 1
+   },
+   ".research/results/react-luna/instances/BIOMD0000000027/final_model.xml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/runner.py:82",
+    "r": 3,
+    "w": 1
+   },
+   ".research/results/react-luna/instances/BIOMD0000000027/tokens.json": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/runner.py:82",
+    "r": 3,
+    "w": 1
+   },
+   ".research/results/react-luna/instances/BIOMD0000000742/codes": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/runner.py:78",
+    "None": 1
+   },
+   ".research/results/react-luna/checkpoints/BIOMD0000000742.tar.gz": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/runner.py:81",
+    "w": 1
+   },
+   ".research/results/react-luna/instances/BIOMD0000000742/chat_history.yaml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/runner.py:82",
+    "r": 3,
+    "w": 2
+   },
+   ".research/results/react-luna/instances/BIOMD0000000742/evaluation.json": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/runner.py:82",
+    "r": 2,
+    "w": 1
+   },
+   ".research/results/react-luna/instances/BIOMD0000000742/experiment_request.json": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/runner.py:82",
+    "r": 2,
+    "w": 1
+   },
+   ".research/results/react-luna/instances/BIOMD0000000742/final_model.xml": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/runner.py:82",
+    "r": 3,
+    "w": 1
+   },
+   ".research/results/react-luna/instances/BIOMD0000000742/tokens.json": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/runner.py:82",
+    "r": 3,
+    "w": 1
+   },
+   ".research/results/react-luna/eval_inputs/scigym_small.json.gz": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/main.py:112",
+    "w": 1
+   },
+   ".research/results/react-luna/tokens.json": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/main.py:120",
+    "w": 1
+   },
+   ".research/results/react-luna/instances.tar.gz": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/main.py:122",
+    "w": 1
+   },
+   ".research/results/react-luna/instances": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/main.py:124",
+    "None": 1
+   },
+   "BIOMD0000000742": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/main.py:124",
+    "None": 1
+   },
+   "BIOMD0000000027": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/main.py:124",
+    "None": 1
+   },
+   ".research/results/react-luna/checkpoints": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/main.py:125",
+    "None": 1
+   },
+   "/home/rku00122/.cache/matplotlib/fontlist-v390.json": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/train.py:19",
+    "r": 2
+   },
+   "/etc/os-release": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/train.py:47",
+    "r": 2
+   },
+   ".research/results/react-luna/instances/BIOMD0000000027/chat_history_readable.txt": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/train.py:113",
+    "w": 2
+   },
+   ".research/results/react-luna/instances/BIOMD0000000027/codes/iteration_2.py": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/train.py:113",
+    "w": 1
+   },
+   ".research/results/react-luna/instances/BIOMD0000000027/codes/iteration_4.py": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/train.py:113",
+    "w": 1
+   },
+   ".research/results/react-luna/instances/BIOMD0000000027/codes/iteration_9.py": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/train.py:113",
+    "w": 1
+   },
+   ".research/results/react-luna/instances/BIOMD0000000027/codes/iteration_11.py": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/train.py:113",
+    "w": 1
+   },
+   ".research/results/react-luna/instances/BIOMD0000000027/codes/iteration_15.py": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/train.py:113",
+    "w": 1
+   },
+   ".research/results/react-luna/instances/BIOMD0000000027/codes/iteration_16.py": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/train.py:113",
+    "w": 1
+   },
+   ".research/results/react-luna/instances/BIOMD0000000027/codes/iteration_2_result.txt": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/train.py:113",
+    "w": 1
+   },
+   ".research/results/react-luna/instances/BIOMD0000000027/codes/iteration_4_result.txt": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/train.py:113",
+    "w": 1
+   },
+   ".research/results/react-luna/instances/BIOMD0000000027/codes/iteration_9_result.txt": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/train.py:113",
+    "w": 1
+   },
+   ".research/results/react-luna/instances/BIOMD0000000027/codes/iteration_11_result.txt": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/train.py:113",
+    "w": 1
+   },
+   ".research/results/react-luna/instances/BIOMD0000000027/codes/iteration_15_result.txt": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/train.py:113",
+    "w": 1
+   },
+   ".research/results/react-luna/instances/BIOMD0000000027/codes/iteration_16_result.txt": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/train.py:113",
+    "w": 1
+   },
+   ".research/results/react-luna/instances/BIOMD0000000742/chat_history_readable.txt": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/train.py:113",
+    "w": 2
+   },
+   ".research/results/react-luna/instances/BIOMD0000000742/codes/iteration_6.py": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/train.py:113",
+    "w": 1
+   },
+   ".research/results/react-luna/instances/BIOMD0000000742/codes/iteration_13.py": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/train.py:113",
+    "w": 1
+   },
+   ".research/results/react-luna/instances/BIOMD0000000742/codes/iteration_15.py": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/train.py:113",
+    "w": 1
+   },
+   ".research/results/react-luna/instances/BIOMD0000000742/codes/iteration_16.py": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/train.py:113",
+    "w": 1
+   },
+   ".research/results/react-luna/instances/BIOMD0000000742/codes/iteration_17.py": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/train.py:113",
+    "w": 1
+   },
+   ".research/results/react-luna/instances/BIOMD0000000742/codes/iteration_6_result.txt": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/train.py:113",
+    "w": 1
+   },
+   ".research/results/react-luna/instances/BIOMD0000000742/codes/iteration_13_result.txt": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/train.py:113",
+    "w": 1
+   },
+   ".research/results/react-luna/instances/BIOMD0000000742/codes/iteration_15_result.txt": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/train.py:113",
+    "w": 1
+   },
+   ".research/results/react-luna/instances/BIOMD0000000742/codes/iteration_16_result.txt": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/train.py:113",
+    "w": 1
+   },
+   ".research/results/react-luna/instances/BIOMD0000000742/codes/iteration_17_result.txt": {
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/train.py:113",
+    "w": 1
+   }
+  },
+  "connects": {
+   "3.164.110.3:443": 1,
+   "52.217.231.176:443": 1,
+   "3.173.197.65:443": 1,
+   "64.239.123.1:443": 1,
+   "64.239.123.193:443": 1,
+   "64.239.123.65:443": 2
+  },
+  "getaddrinfo": {
+   "huggingface.co": 1,
+   "s3.amazonaws.com": 1,
+   "datasets-server.huggingface.co": 1,
+   "ai-gateway.vercel.sh": 4
+  },
+  "spawns": [
+   {
+    "event": "subprocess.Popen",
+    "argv": [
+     "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/.venv/bin/python3",
+     "-m",
+     "src.train",
+     "{\"instance_dir\": \"data/scigym_sbml/small/BIOMD0000000027\", \"out_dir\": \".research/results/react-luna/instances/BIOMD0000000027\", \"src.runner.run_all.method\": \"react\", \"src.preprocess.instances.split\": \"small\", \"src.preprocess.instances.n_instances\": 2, \"scigym.api.api.LLM.__init__.model_name\": \"openai/gpt-6-luna\", \"scigym.controller.Controller.__init__.max_iterations\": 20, \"scigym.controller.Controller.__init__.eval_debug_rounds\": 3, \"scigym.controller.Controller.__init__.temperature\": 1.0, \"scigym.api.api.LLM.__init__.temperature\": 1.0, \"scigym.api.api.LLM.__init__.max_length\": 32768, \"openai._client.OpenAI.__init__.base_url\": \"https://ai-gateway.vercel.sh/v1\", \"src.runner.run_all.workers\": 16, \"src.runner.run_all.instance_timeout\": 14400, \"src.runner.run_all.stall_timeout\": 3600}"
+    ],
+    "hooked": true,
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/runner.py:47",
+    "n": 1
+   },
+   {
+    "event": "subprocess.Popen",
+    "argv": [
+     "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/.venv/bin/python3",
+     "-m",
+     "src.train",
+     "{\"instance_dir\": \"data/scigym_sbml/small/BIOMD0000000742\", \"out_dir\": \".research/results/react-luna/instances/BIOMD0000000742\", \"src.runner.run_all.method\": \"react\", \"src.preprocess.instances.split\": \"small\", \"src.preprocess.instances.n_instances\": 2, \"scigym.api.api.LLM.__init__.model_name\": \"openai/gpt-6-luna\", \"scigym.controller.Controller.__init__.max_iterations\": 20, \"scigym.controller.Controller.__init__.eval_debug_rounds\": 3, \"scigym.controller.Controller.__init__.temperature\": 1.0, \"scigym.api.api.LLM.__init__.temperature\": 1.0, \"scigym.api.api.LLM.__init__.max_length\": 32768, \"openai._client.OpenAI.__init__.base_url\": \"https://ai-gateway.vercel.sh/v1\", \"src.runner.run_all.workers\": 16, \"src.runner.run_all.instance_timeout\": 14400, \"src.runner.run_all.stall_timeout\": 3600}"
+    ],
+    "hooked": true,
+    "experiment_code": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/runner.py:47",
+    "n": 2
+   }
+  ],
+  "env_changes": {},
+  "execs": {},
+  "tamper": []
+ },
+ "errors": [],
+ "processes": [
+  {
+   "pid": 123924,
+   "ppid": 123916,
+   "argv": [
+    "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/main.py",
+    "run=react-luna",
+    "results_dir=.research/results",
+    "mode=pilot"
+   ],
+   "cwd": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433",
+   "python": "3.11.16",
+   "env": [
+    {
+     "name": "AIRAS_EVAL_TASKS",
+     "value": ""
+    },
+    {
+     "name": "AIRAS_OBSERVE_DIR",
+     "value": "/tmp/tmp.hkkPgpZbvZ"
+    },
+    {
+     "name": "AIRAS_SECRET_NAMES",
+     "truncated": true,
+     "type": "str",
+     "len": 230,
+     "sha256": "3a524db8755e0b70e722fe8ed7c1447ab1b2d095d4c79c5ecf8ab5c963444536"
+    },
+    {
+     "name": "APPTAINER_APPNAME",
+     "value": ""
+    },
+    {
+     "name": "APPTAINER_BIND",
+     "value": "/data1/rkp00041,/shared/software/apptainer,/data1/rkp00041/rku00122/.cache/huggingface"
+    },
+    {
+     "name": "APPTAINER_COMMAND",
+     "value": "run"
+    },
+    {
+     "name": "APPTAINER_CONTAINER",
+     "value": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/.seyval/image.sif"
+    },
+    {
+     "name": "APPTAINER_ENVIRONMENT",
+     "value": "/.singularity.d/env/91-environment.sh"
+    },
+    {
+     "name": "APPTAINER_NAME",
+     "value": "image.sif"
+    },
+    {
+     "name": "BASH_ENV",
+     "value": "/usr/share/lmod/lmod/init/bash"
+    },
+    {
+     "name": "CUDA_VISIBLE_DEVICES",
+     "value": "0"
+    },
+    {
+     "name": "DBUS_SESSION_BUS_ADDRESS",
+     "redacted": "DBUS_SESSION_BUS_ADDRESS",
+     "len": 30
+    },
+    {
+     "name": "DEBUGINFOD_URLS",
+     "value": "https://debuginfod.ubuntu.com "
+    },
+    {
+     "name": "ENVIRONMENT",
+     "value": "BATCH"
+    },
+    {
+     "name": "GPG_KEY",
+     "redacted": "GPG_KEY",
+     "len": 40
+    },
+    {
+     "name": "HF_HOME",
+     "value": "/data1/rkp00041/rku00122/.cache/huggingface"
+    },
+    {
+     "name": "HOME",
+     "value": "/home/rku00122"
+    },
+    {
+     "name": "HOSTNAME",
+     "value": "c247"
+    },
+    {
+     "name": "HYDRA_BOOTSTRAP",
+     "value": "slurm"
+    },
+    {
+     "name": "HYDRA_LAUNCHER_EXTRA_ARGS",
+     "value": "--external-launcher"
+    },
+    {
+     "name": "I_MPI_HYDRA_BOOTSTRAP",
+     "value": "slurm"
+    },
+    {
+     "name": "I_MPI_HYDRA_BOOTSTRAP_EXEC_EXTRA_ARGS",
+     "value": "--external-launcher"
+    },
+    {
+     "name": "KMP_DUPLICATE_LIB_OK",
+     "value": "True"
+    },
+    {
+     "name": "LANG",
+     "value": "C.UTF-8"
+    },
+    {
+     "name": "LD_LIBRARY_PATH",
+     "value": "/.singularity.d/libs"
+    },
+    {
+     "name": "LEAN_DIR",
+     "value": "lean"
+    },
+    {
+     "name": "LMOD_CMD",
+     "value": "/usr/share/lmod/lmod/libexec/lmod"
+    },
+    {
+     "name": "LMOD_DIR",
+     "value": "/usr/share/lmod/lmod/libexec"
+    },
+    {
+     "name": "LMOD_PKG",
+     "value": "/usr/share/lmod/lmod"
+    },
+    {
+     "name": "LMOD_ROOT",
+     "value": "/usr/share/lmod"
+    },
+    {
+     "name": "LMOD_SETTARG_FULL_SUPPORT",
+     "value": "no"
+    },
+    {
+     "name": "LMOD_VERSION",
+     "value": "8.6.19"
+    },
+    {
+     "name": "LMOD_sys",
+     "value": "Linux"
+    },
+    {
+     "name": "LOGNAME",
+     "value": "rku00122"
+    },
+    {
+     "name": "MAKEFLAGS",
+     "value": " -- RUN_ID=react-luna MODE=pilot"
+    },
+    {
+     "name": "MAKELEVEL",
+     "value": "2"
+    },
+    {
+     "name": "MANPATH",
+     "value": "/usr/share/lmod/lmod/share/man:"
+    },
+    {
+     "name": "MFLAGS",
+     "value": ""
+    },
+    {
+     "name": "MODE",
+     "value": "pilot"
+    },
+    {
+     "name": "MODULEPATH",
+     "value": "/shared/software/modulefiles:/etc/lmod/modules:/usr/share/lmod/lmod/modulefiles"
+    },
+    {
+     "name": "MODULEPATH_ROOT",
+     "value": "/usr/share/modulefiles"
+    },
+    {
+     "name": "MODULESHOME",
+     "value": "/usr/share/lmod/lmod"
+    },
+    {
+     "name": "NVIDIA_API_KEY",
+     "redacted": "NVIDIA_API_KEY",
+     "len": 70
+    },
+    {
+     "name": "OLDPWD",
+     "value": "/home/rku00122"
+    },
+    {
+     "name": "OMPI_MCA_plm_slurm_args",
+     "value": "--external-launcher"
+    },
+    {
+     "name": "OPENDDE_ROOT_DIR",
+     "value": "/data1/rkp00041/rku00122/opendde-multinode/opendde_data"
+    },
+    {
+     "name": "PATH",
+     "value": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/.venv/bin:/usr/local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+    },
+    {
+     "name": "PIP_DISABLE_PIP_VERSION_CHECK",
+     "value": "1"
+    },
+    {
+     "name": "PIP_NO_CACHE_DIR",
+     "value": "1"
+    },
+    {
+     "name": "PROMPT_COMMAND",
+     "value": "PS1=\"Apptainer> \"; unset PROMPT_COMMAND"
+    },
+    {
+     "name": "PRTE_MCA_plm_slurm_args",
+     "value": "--external-launcher"
+    },
+    {
+     "name": "PWD",
+     "value": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433"
+    },
+    {
+     "name": "PYTHONDONTWRITEBYTECODE",
+     "value": "1"
+    },
+    {
+     "name": "PYTHONPATH",
+     "value": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/.airas:/opt/autoscilab"
+    },
+    {
+     "name": "PYTHONUNBUFFERED",
+     "value": "1"
+    },
+    {
+     "name": "PYTHON_SHA256",
+     "value": "91bcdebfdde239a003ae93738a7fce0f9230fee5c4bc2b86f6e6e8c6f98aabe8"
+    },
+    {
+     "name": "PYTHON_VERSION",
+     "value": "3.11.16"
+    },
+    {
+     "name": "RESULTS_DIR",
+     "value": ".research/results"
+    },
+    {
+     "name": "RIKYU_API_KEY",
+     "redacted": "RIKYU_API_KEY",
+     "len": 25
+    },
+    {
+     "name": "RUN_ID",
+     "value": "react-luna"
+    },
+    {
+     "name": "SHELL",
+     "value": "/bin/bash"
+    },
+    {
+     "name": "SHLVL",
+     "value": "2"
+    },
+    {
+     "name": "SINGULARITY_BIND",
+     "value": "/data1/rkp00041,/shared/software/apptainer,/data1/rkp00041/rku00122/.cache/huggingface"
+    },
+    {
+     "name": "SINGULARITY_CONTAINER",
+     "value": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/.seyval/image.sif"
+    },
+    {
+     "name": "SINGULARITY_ENVIRONMENT",
+     "value": "/.singularity.d/env/91-environment.sh"
+    },
+    {
+     "name": "SINGULARITY_NAME",
+     "value": "image.sif"
+    },
+    {
+     "name": "SLURMD_NODENAME",
+     "value": "c247"
+    },
+    {
+     "name": "SLURM_CLUSTER_NAME",
+     "value": "ai4s"
+    },
+    {
+     "name": "SLURM_CONF",
+     "value": "/var/spool/slurmd/conf-cache/slurm.conf"
+    },
+    {
+     "name": "SLURM_CONF_SERVER",
+     "value": "sctl1:6817,sctl2:6817"
+    },
+    {
+     "name": "SLURM_CPUS_ON_NODE",
+     "value": "32"
+    },
+    {
+     "name": "SLURM_GPUS",
+     "value": "1"
+    },
+    {
+     "name": "SLURM_GPUS_ON_NODE",
+     "value": "1"
+    },
+    {
+     "name": "SLURM_GTIDS",
+     "value": "0"
+    },
+    {
+     "name": "SLURM_JOBID",
+     "value": "175041"
+    },
+    {
+     "name": "SLURM_JOB_ACCOUNT",
+     "value": "rkp00041"
+    },
+    {
+     "name": "SLURM_JOB_CPUS_PER_NODE",
+     "value": "32"
+    },
+    {
+     "name": "SLURM_JOB_END_TIME",
+     "value": "1792044345"
+    },
+    {
+     "name": "SLURM_JOB_GID",
+     "value": "200000"
+    },
+    {
+     "name": "SLURM_JOB_GPUS",
+     "value": "1"
+    },
+    {
+     "name": "SLURM_JOB_ID",
+     "value": "175041"
+    },
+    {
+     "name": "SLURM_JOB_NAME",
+     "value": "seyval-843251a1-f2ff-4a8c-b93b-5251ed781433"
+    },
+    {
+     "name": "SLURM_JOB_NODELIST",
+     "value": "c247"
+    },
+    {
+     "name": "SLURM_JOB_NUM_NODES",
+     "value": "1"
+    },
+    {
+     "name": "SLURM_JOB_PARTITION",
+     "value": "gpu"
+    },
+    {
+     "name": "SLURM_JOB_QOS",
+     "value": "normal"
+    },
+    {
+     "name": "SLURM_JOB_START_TIME",
+     "value": "1792001145"
+    },
+    {
+     "name": "SLURM_JOB_UID",
+     "value": "100121"
+    },
+    {
+     "name": "SLURM_JOB_USER",
+     "value": "rku00122"
+    },
+    {
+     "name": "SLURM_LOCALID",
+     "value": "0"
+    },
+    {
+     "name": "SLURM_MEM_PER_NODE",
+     "value": "409600"
+    },
+    {
+     "name": "SLURM_NNODES",
+     "value": "1"
+    },
+    {
+     "name": "SLURM_NODEID",
+     "value": "0"
+    },
+    {
+     "name": "SLURM_NODELIST",
+     "value": "c247"
+    },
+    {
+     "name": "SLURM_OOM_KILL_STEP",
+     "value": "0"
+    },
+    {
+     "name": "SLURM_PRIO_PROCESS",
+     "value": "0"
+    },
+    {
+     "name": "SLURM_PROCID",
+     "value": "0"
+    },
+    {
+     "name": "SLURM_SUBMIT_DIR",
+     "value": "/home/rku00122"
+    },
+    {
+     "name": "SLURM_SUBMIT_HOST",
+     "value": "c001"
+    },
+    {
+     "name": "SLURM_TASKS_PER_NODE",
+     "value": "32"
+    },
+    {
+     "name": "SLURM_TASK_PID",
+     "value": "119451"
+    },
+    {
+     "name": "SLURM_TOPOLOGY_ADDR",
+     "value": "spine1.leaf_c240.c247"
+    },
+    {
+     "name": "SLURM_TOPOLOGY_ADDR_PATTERN",
+     "value": "switch.switch.node"
+    },
+    {
+     "name": "SSH_CLIENT",
+     "value": "54.150.218.111 1805 22"
+    },
+    {
+     "name": "SSH_CONNECTION",
+     "value": "54.150.218.111 1805 10.134.70.2 22"
+    },
+    {
+     "name": "TMPDIR",
+     "value": "/tmp"
+    },
+    {
+     "name": "TRITON_LIBCUDA_PATH",
+     "value": "/.singularity.d/libs"
+    },
+    {
+     "name": "USER",
+     "value": "rku00122"
+    },
+    {
+     "name": "USER_PATH",
+     "truncated": true,
+     "type": "str",
+     "len": 325,
+     "sha256": "ec432e2ab40cbdf0e1cf2ab6cdbed640239e2ec44485d192391905809645d1b5"
+    },
+    {
+     "name": "UV",
+     "value": "/usr/local/bin/uv"
+    },
+    {
+     "name": "UV_NO_SYNC",
+     "value": "1"
+    },
+    {
+     "name": "UV_RUN_RECURSION_DEPTH",
+     "value": "1"
+    },
+    {
+     "name": "VERCEL_AI_GATEWAY_API_KEY",
+     "redacted": "VERCEL_AI_GATEWAY_API_KEY",
+     "len": 60
+    },
+    {
+     "name": "VIRTUAL_ENV",
+     "value": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/.venv"
+    },
+    {
+     "name": "WANDB_API_KEY",
+     "redacted": "WANDB_API_KEY",
+     "len": 86
+    },
+    {
+     "name": "XDG_RUNTIME_DIR",
+     "value": "/run/user/100121"
+    },
+    {
+     "name": "XDG_SESSION_CLASS",
+     "redacted": "XDG_SESSION_CLASS",
+     "len": 4
+    },
+    {
+     "name": "XDG_SESSION_ID",
+     "redacted": "XDG_SESSION_ID",
+     "len": 5
+    },
+    {
+     "name": "XDG_SESSION_TYPE",
+     "redacted": "XDG_SESSION_TYPE",
+     "len": 3
+    },
+    {
+     "name": "_",
+     "value": "/usr/bin/make"
+    },
+    {
+     "name": "_ModuleTable001_",
+     "truncated": true,
+     "type": "str",
+     "len": 388,
+     "sha256": "cc15770ae1b2c0ee2081ad90348f9df8104354631584911f0f0b1e12a6338ec4"
+    },
+    {
+     "name": "_ModuleTable_Sz_",
+     "value": "1"
+    },
+    {
+     "name": "__LMOD_REF_COUNT_MODULEPATH",
+     "value": "/shared/software/modulefiles:2;/etc/lmod/modules:1;/usr/share/lmod/lmod/modulefiles:1"
+    }
+   ],
+   "started": 1792001451.2537627,
+   "ended": 1792005697.1475444
+  },
+  {
+   "pid": 123975,
+   "ppid": 123924,
+   "argv": [
+    "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/train.py",
+    "{\"instance_dir\": \"data/scigym_sbml/small/BIOMD0000000027\", \"out_dir\": \".research/results/react-luna/instances/BIOMD0000000027\", \"src.runner.run_all.method\": \"react\", \"src.preprocess.instances.split\": \"small\", \"src.preprocess.instances.n_instances\": 2, \"scigym.api.api.LLM.__init__.model_name\": \"openai/gpt-6-luna\", \"scigym.controller.Controller.__init__.max_iterations\": 20, \"scigym.controller.Controller.__init__.eval_debug_rounds\": 3, \"scigym.controller.Controller.__init__.temperature\": 1.0, \"scigym.api.api.LLM.__init__.temperature\": 1.0, \"scigym.api.api.LLM.__init__.max_length\": 32768, \"openai._client.OpenAI.__init__.base_url\": \"https://ai-gateway.vercel.sh/v1\", \"src.runner.run_all.workers\": 16, \"src.runner.run_all.instance_timeout\": 14400, \"src.runner.run_all.stall_timeout\": 3600}"
+   ],
+   "cwd": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433",
+   "python": "3.11.16",
+   "env": [
+    {
+     "name": "AIRAS_EVAL_TASKS",
+     "value": ""
+    },
+    {
+     "name": "AIRAS_OBSERVE_DIR",
+     "value": "/tmp/tmp.hkkPgpZbvZ"
+    },
+    {
+     "name": "AIRAS_SECRET_NAMES",
+     "truncated": true,
+     "type": "str",
+     "len": 230,
+     "sha256": "3a524db8755e0b70e722fe8ed7c1447ab1b2d095d4c79c5ecf8ab5c963444536"
+    },
+    {
+     "name": "APPTAINER_APPNAME",
+     "value": ""
+    },
+    {
+     "name": "APPTAINER_BIND",
+     "value": "/data1/rkp00041,/shared/software/apptainer,/data1/rkp00041/rku00122/.cache/huggingface"
+    },
+    {
+     "name": "APPTAINER_COMMAND",
+     "value": "run"
+    },
+    {
+     "name": "APPTAINER_CONTAINER",
+     "value": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/.seyval/image.sif"
+    },
+    {
+     "name": "APPTAINER_ENVIRONMENT",
+     "value": "/.singularity.d/env/91-environment.sh"
+    },
+    {
+     "name": "APPTAINER_NAME",
+     "value": "image.sif"
+    },
+    {
+     "name": "BASH_ENV",
+     "value": "/usr/share/lmod/lmod/init/bash"
+    },
+    {
+     "name": "CUDA_VISIBLE_DEVICES",
+     "value": "0"
+    },
+    {
+     "name": "DBUS_SESSION_BUS_ADDRESS",
+     "redacted": "DBUS_SESSION_BUS_ADDRESS",
+     "len": 30
+    },
+    {
+     "name": "DEBUGINFOD_URLS",
+     "value": "https://debuginfod.ubuntu.com "
+    },
+    {
+     "name": "ENVIRONMENT",
+     "value": "BATCH"
+    },
+    {
+     "name": "GPG_KEY",
+     "redacted": "GPG_KEY",
+     "len": 40
+    },
+    {
+     "name": "HF_HOME",
+     "value": "/data1/rkp00041/rku00122/.cache/huggingface"
+    },
+    {
+     "name": "HOME",
+     "value": "/home/rku00122"
+    },
+    {
+     "name": "HOSTNAME",
+     "value": "c247"
+    },
+    {
+     "name": "HYDRA_BOOTSTRAP",
+     "value": "slurm"
+    },
+    {
+     "name": "HYDRA_LAUNCHER_EXTRA_ARGS",
+     "value": "--external-launcher"
+    },
+    {
+     "name": "I_MPI_HYDRA_BOOTSTRAP",
+     "value": "slurm"
+    },
+    {
+     "name": "I_MPI_HYDRA_BOOTSTRAP_EXEC_EXTRA_ARGS",
+     "value": "--external-launcher"
+    },
+    {
+     "name": "KMP_DUPLICATE_LIB_OK",
+     "value": "True"
+    },
+    {
+     "name": "KMP_INIT_AT_FORK",
+     "value": "FALSE"
+    },
+    {
+     "name": "LANG",
+     "value": "C.UTF-8"
+    },
+    {
+     "name": "LD_LIBRARY_PATH",
+     "value": "/.singularity.d/libs"
+    },
+    {
+     "name": "LEAN_DIR",
+     "value": "lean"
+    },
+    {
+     "name": "LMOD_CMD",
+     "value": "/usr/share/lmod/lmod/libexec/lmod"
+    },
+    {
+     "name": "LMOD_DIR",
+     "value": "/usr/share/lmod/lmod/libexec"
+    },
+    {
+     "name": "LMOD_PKG",
+     "value": "/usr/share/lmod/lmod"
+    },
+    {
+     "name": "LMOD_ROOT",
+     "value": "/usr/share/lmod"
+    },
+    {
+     "name": "LMOD_SETTARG_FULL_SUPPORT",
+     "value": "no"
+    },
+    {
+     "name": "LMOD_VERSION",
+     "value": "8.6.19"
+    },
+    {
+     "name": "LMOD_sys",
+     "value": "Linux"
+    },
+    {
+     "name": "LOGNAME",
+     "value": "rku00122"
+    },
+    {
+     "name": "MAKEFLAGS",
+     "value": " -- RUN_ID=react-luna MODE=pilot"
+    },
+    {
+     "name": "MAKELEVEL",
+     "value": "2"
+    },
+    {
+     "name": "MANPATH",
+     "value": "/usr/share/lmod/lmod/share/man:"
+    },
+    {
+     "name": "MFLAGS",
+     "value": ""
+    },
+    {
+     "name": "MODE",
+     "value": "pilot"
+    },
+    {
+     "name": "MODULEPATH",
+     "value": "/shared/software/modulefiles:/etc/lmod/modules:/usr/share/lmod/lmod/modulefiles"
+    },
+    {
+     "name": "MODULEPATH_ROOT",
+     "value": "/usr/share/modulefiles"
+    },
+    {
+     "name": "MODULESHOME",
+     "value": "/usr/share/lmod/lmod"
+    },
+    {
+     "name": "NVIDIA_API_KEY",
+     "redacted": "NVIDIA_API_KEY",
+     "len": 70
+    },
+    {
+     "name": "OLDPWD",
+     "value": "/home/rku00122"
+    },
+    {
+     "name": "OMPI_MCA_plm_slurm_args",
+     "value": "--external-launcher"
+    },
+    {
+     "name": "OPENDDE_ROOT_DIR",
+     "value": "/data1/rkp00041/rku00122/opendde-multinode/opendde_data"
+    },
+    {
+     "name": "PATH",
+     "value": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/.venv/bin:/usr/local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+    },
+    {
+     "name": "PIP_DISABLE_PIP_VERSION_CHECK",
+     "value": "1"
+    },
+    {
+     "name": "PIP_NO_CACHE_DIR",
+     "value": "1"
+    },
+    {
+     "name": "PROMPT_COMMAND",
+     "value": "PS1=\"Apptainer> \"; unset PROMPT_COMMAND"
+    },
+    {
+     "name": "PRTE_MCA_plm_slurm_args",
+     "value": "--external-launcher"
+    },
+    {
+     "name": "PWD",
+     "value": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433"
+    },
+    {
+     "name": "PYTHONDONTWRITEBYTECODE",
+     "value": "1"
+    },
+    {
+     "name": "PYTHONPATH",
+     "value": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/.airas:/opt/autoscilab"
+    },
+    {
+     "name": "PYTHONUNBUFFERED",
+     "value": "1"
+    },
+    {
+     "name": "PYTHON_SHA256",
+     "value": "91bcdebfdde239a003ae93738a7fce0f9230fee5c4bc2b86f6e6e8c6f98aabe8"
+    },
+    {
+     "name": "PYTHON_VERSION",
+     "value": "3.11.16"
+    },
+    {
+     "name": "RESULTS_DIR",
+     "value": ".research/results"
+    },
+    {
+     "name": "RIKYU_API_KEY",
+     "redacted": "RIKYU_API_KEY",
+     "len": 25
+    },
+    {
+     "name": "RUN_ID",
+     "value": "react-luna"
+    },
+    {
+     "name": "SHELL",
+     "value": "/bin/bash"
+    },
+    {
+     "name": "SHLVL",
+     "value": "2"
+    },
+    {
+     "name": "SINGULARITY_BIND",
+     "value": "/data1/rkp00041,/shared/software/apptainer,/data1/rkp00041/rku00122/.cache/huggingface"
+    },
+    {
+     "name": "SINGULARITY_CONTAINER",
+     "value": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/.seyval/image.sif"
+    },
+    {
+     "name": "SINGULARITY_ENVIRONMENT",
+     "value": "/.singularity.d/env/91-environment.sh"
+    },
+    {
+     "name": "SINGULARITY_NAME",
+     "value": "image.sif"
+    },
+    {
+     "name": "SLURMD_NODENAME",
+     "value": "c247"
+    },
+    {
+     "name": "SLURM_CLUSTER_NAME",
+     "value": "ai4s"
+    },
+    {
+     "name": "SLURM_CONF",
+     "value": "/var/spool/slurmd/conf-cache/slurm.conf"
+    },
+    {
+     "name": "SLURM_CONF_SERVER",
+     "value": "sctl1:6817,sctl2:6817"
+    },
+    {
+     "name": "SLURM_CPUS_ON_NODE",
+     "value": "32"
+    },
+    {
+     "name": "SLURM_GPUS",
+     "value": "1"
+    },
+    {
+     "name": "SLURM_GPUS_ON_NODE",
+     "value": "1"
+    },
+    {
+     "name": "SLURM_GTIDS",
+     "value": "0"
+    },
+    {
+     "name": "SLURM_JOBID",
+     "value": "175041"
+    },
+    {
+     "name": "SLURM_JOB_ACCOUNT",
+     "value": "rkp00041"
+    },
+    {
+     "name": "SLURM_JOB_CPUS_PER_NODE",
+     "value": "32"
+    },
+    {
+     "name": "SLURM_JOB_END_TIME",
+     "value": "1792044345"
+    },
+    {
+     "name": "SLURM_JOB_GID",
+     "value": "200000"
+    },
+    {
+     "name": "SLURM_JOB_GPUS",
+     "value": "1"
+    },
+    {
+     "name": "SLURM_JOB_ID",
+     "value": "175041"
+    },
+    {
+     "name": "SLURM_JOB_NAME",
+     "value": "seyval-843251a1-f2ff-4a8c-b93b-5251ed781433"
+    },
+    {
+     "name": "SLURM_JOB_NODELIST",
+     "value": "c247"
+    },
+    {
+     "name": "SLURM_JOB_NUM_NODES",
+     "value": "1"
+    },
+    {
+     "name": "SLURM_JOB_PARTITION",
+     "value": "gpu"
+    },
+    {
+     "name": "SLURM_JOB_QOS",
+     "value": "normal"
+    },
+    {
+     "name": "SLURM_JOB_START_TIME",
+     "value": "1792001145"
+    },
+    {
+     "name": "SLURM_JOB_UID",
+     "value": "100121"
+    },
+    {
+     "name": "SLURM_JOB_USER",
+     "value": "rku00122"
+    },
+    {
+     "name": "SLURM_LOCALID",
+     "value": "0"
+    },
+    {
+     "name": "SLURM_MEM_PER_NODE",
+     "value": "409600"
+    },
+    {
+     "name": "SLURM_NNODES",
+     "value": "1"
+    },
+    {
+     "name": "SLURM_NODEID",
+     "value": "0"
+    },
+    {
+     "name": "SLURM_NODELIST",
+     "value": "c247"
+    },
+    {
+     "name": "SLURM_OOM_KILL_STEP",
+     "value": "0"
+    },
+    {
+     "name": "SLURM_PRIO_PROCESS",
+     "value": "0"
+    },
+    {
+     "name": "SLURM_PROCID",
+     "value": "0"
+    },
+    {
+     "name": "SLURM_SUBMIT_DIR",
+     "value": "/home/rku00122"
+    },
+    {
+     "name": "SLURM_SUBMIT_HOST",
+     "value": "c001"
+    },
+    {
+     "name": "SLURM_TASKS_PER_NODE",
+     "value": "32"
+    },
+    {
+     "name": "SLURM_TASK_PID",
+     "value": "119451"
+    },
+    {
+     "name": "SLURM_TOPOLOGY_ADDR",
+     "value": "spine1.leaf_c240.c247"
+    },
+    {
+     "name": "SLURM_TOPOLOGY_ADDR_PATTERN",
+     "value": "switch.switch.node"
+    },
+    {
+     "name": "SSH_CLIENT",
+     "value": "54.150.218.111 1805 22"
+    },
+    {
+     "name": "SSH_CONNECTION",
+     "value": "54.150.218.111 1805 10.134.70.2 22"
+    },
+    {
+     "name": "TMPDIR",
+     "value": "/tmp"
+    },
+    {
+     "name": "TRITON_LIBCUDA_PATH",
+     "value": "/.singularity.d/libs"
+    },
+    {
+     "name": "USER",
+     "value": "rku00122"
+    },
+    {
+     "name": "USER_PATH",
+     "truncated": true,
+     "type": "str",
+     "len": 325,
+     "sha256": "ec432e2ab40cbdf0e1cf2ab6cdbed640239e2ec44485d192391905809645d1b5"
+    },
+    {
+     "name": "UV",
+     "value": "/usr/local/bin/uv"
+    },
+    {
+     "name": "UV_NO_SYNC",
+     "value": "1"
+    },
+    {
+     "name": "UV_RUN_RECURSION_DEPTH",
+     "value": "1"
+    },
+    {
+     "name": "VERCEL_AI_GATEWAY_API_KEY",
+     "redacted": "VERCEL_AI_GATEWAY_API_KEY",
+     "len": 60
+    },
+    {
+     "name": "VIRTUAL_ENV",
+     "value": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/.venv"
+    },
+    {
+     "name": "WANDB_API_KEY",
+     "redacted": "WANDB_API_KEY",
+     "len": 86
+    },
+    {
+     "name": "XDG_RUNTIME_DIR",
+     "value": "/run/user/100121"
+    },
+    {
+     "name": "XDG_SESSION_CLASS",
+     "redacted": "XDG_SESSION_CLASS",
+     "len": 4
+    },
+    {
+     "name": "XDG_SESSION_ID",
+     "redacted": "XDG_SESSION_ID",
+     "len": 5
+    },
+    {
+     "name": "XDG_SESSION_TYPE",
+     "redacted": "XDG_SESSION_TYPE",
+     "len": 3
+    },
+    {
+     "name": "_",
+     "value": "/usr/bin/make"
+    },
+    {
+     "name": "_ModuleTable001_",
+     "truncated": true,
+     "type": "str",
+     "len": 388,
+     "sha256": "cc15770ae1b2c0ee2081ad90348f9df8104354631584911f0f0b1e12a6338ec4"
+    },
+    {
+     "name": "_ModuleTable_Sz_",
+     "value": "1"
+    },
+    {
+     "name": "__LMOD_REF_COUNT_MODULEPATH",
+     "value": "/shared/software/modulefiles:2;/etc/lmod/modules:1;/usr/share/lmod/lmod/modulefiles:1"
+    }
+   ],
+   "started": 1792001463.981496,
+   "ended": 1792002444.5629218
+  },
+  {
+   "pid": 137179,
+   "ppid": 123924,
+   "argv": [
+    "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/src/train.py",
+    "{\"instance_dir\": \"data/scigym_sbml/small/BIOMD0000000742\", \"out_dir\": \".research/results/react-luna/instances/BIOMD0000000742\", \"src.runner.run_all.method\": \"react\", \"src.preprocess.instances.split\": \"small\", \"src.preprocess.instances.n_instances\": 2, \"scigym.api.api.LLM.__init__.model_name\": \"openai/gpt-6-luna\", \"scigym.controller.Controller.__init__.max_iterations\": 20, \"scigym.controller.Controller.__init__.eval_debug_rounds\": 3, \"scigym.controller.Controller.__init__.temperature\": 1.0, \"scigym.api.api.LLM.__init__.temperature\": 1.0, \"scigym.api.api.LLM.__init__.max_length\": 32768, \"openai._client.OpenAI.__init__.base_url\": \"https://ai-gateway.vercel.sh/v1\", \"src.runner.run_all.workers\": 16, \"src.runner.run_all.instance_timeout\": 14400, \"src.runner.run_all.stall_timeout\": 3600}"
+   ],
+   "cwd": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433",
+   "python": "3.11.16",
+   "env": [
+    {
+     "name": "AIRAS_EVAL_TASKS",
+     "value": ""
+    },
+    {
+     "name": "AIRAS_OBSERVE_DIR",
+     "value": "/tmp/tmp.hkkPgpZbvZ"
+    },
+    {
+     "name": "AIRAS_SECRET_NAMES",
+     "truncated": true,
+     "type": "str",
+     "len": 230,
+     "sha256": "3a524db8755e0b70e722fe8ed7c1447ab1b2d095d4c79c5ecf8ab5c963444536"
+    },
+    {
+     "name": "APPTAINER_APPNAME",
+     "value": ""
+    },
+    {
+     "name": "APPTAINER_BIND",
+     "value": "/data1/rkp00041,/shared/software/apptainer,/data1/rkp00041/rku00122/.cache/huggingface"
+    },
+    {
+     "name": "APPTAINER_COMMAND",
+     "value": "run"
+    },
+    {
+     "name": "APPTAINER_CONTAINER",
+     "value": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/.seyval/image.sif"
+    },
+    {
+     "name": "APPTAINER_ENVIRONMENT",
+     "value": "/.singularity.d/env/91-environment.sh"
+    },
+    {
+     "name": "APPTAINER_NAME",
+     "value": "image.sif"
+    },
+    {
+     "name": "BASH_ENV",
+     "value": "/usr/share/lmod/lmod/init/bash"
+    },
+    {
+     "name": "CUDA_VISIBLE_DEVICES",
+     "value": "0"
+    },
+    {
+     "name": "DBUS_SESSION_BUS_ADDRESS",
+     "redacted": "DBUS_SESSION_BUS_ADDRESS",
+     "len": 30
+    },
+    {
+     "name": "DEBUGINFOD_URLS",
+     "value": "https://debuginfod.ubuntu.com "
+    },
+    {
+     "name": "ENVIRONMENT",
+     "value": "BATCH"
+    },
+    {
+     "name": "GPG_KEY",
+     "redacted": "GPG_KEY",
+     "len": 40
+    },
+    {
+     "name": "HF_HOME",
+     "value": "/data1/rkp00041/rku00122/.cache/huggingface"
+    },
+    {
+     "name": "HOME",
+     "value": "/home/rku00122"
+    },
+    {
+     "name": "HOSTNAME",
+     "value": "c247"
+    },
+    {
+     "name": "HYDRA_BOOTSTRAP",
+     "value": "slurm"
+    },
+    {
+     "name": "HYDRA_LAUNCHER_EXTRA_ARGS",
+     "value": "--external-launcher"
+    },
+    {
+     "name": "I_MPI_HYDRA_BOOTSTRAP",
+     "value": "slurm"
+    },
+    {
+     "name": "I_MPI_HYDRA_BOOTSTRAP_EXEC_EXTRA_ARGS",
+     "value": "--external-launcher"
+    },
+    {
+     "name": "KMP_DUPLICATE_LIB_OK",
+     "value": "True"
+    },
+    {
+     "name": "KMP_INIT_AT_FORK",
+     "value": "FALSE"
+    },
+    {
+     "name": "LANG",
+     "value": "C.UTF-8"
+    },
+    {
+     "name": "LD_LIBRARY_PATH",
+     "value": "/.singularity.d/libs"
+    },
+    {
+     "name": "LEAN_DIR",
+     "value": "lean"
+    },
+    {
+     "name": "LMOD_CMD",
+     "value": "/usr/share/lmod/lmod/libexec/lmod"
+    },
+    {
+     "name": "LMOD_DIR",
+     "value": "/usr/share/lmod/lmod/libexec"
+    },
+    {
+     "name": "LMOD_PKG",
+     "value": "/usr/share/lmod/lmod"
+    },
+    {
+     "name": "LMOD_ROOT",
+     "value": "/usr/share/lmod"
+    },
+    {
+     "name": "LMOD_SETTARG_FULL_SUPPORT",
+     "value": "no"
+    },
+    {
+     "name": "LMOD_VERSION",
+     "value": "8.6.19"
+    },
+    {
+     "name": "LMOD_sys",
+     "value": "Linux"
+    },
+    {
+     "name": "LOGNAME",
+     "value": "rku00122"
+    },
+    {
+     "name": "MAKEFLAGS",
+     "value": " -- RUN_ID=react-luna MODE=pilot"
+    },
+    {
+     "name": "MAKELEVEL",
+     "value": "2"
+    },
+    {
+     "name": "MANPATH",
+     "value": "/usr/share/lmod/lmod/share/man:"
+    },
+    {
+     "name": "MFLAGS",
+     "value": ""
+    },
+    {
+     "name": "MODE",
+     "value": "pilot"
+    },
+    {
+     "name": "MODULEPATH",
+     "value": "/shared/software/modulefiles:/etc/lmod/modules:/usr/share/lmod/lmod/modulefiles"
+    },
+    {
+     "name": "MODULEPATH_ROOT",
+     "value": "/usr/share/modulefiles"
+    },
+    {
+     "name": "MODULESHOME",
+     "value": "/usr/share/lmod/lmod"
+    },
+    {
+     "name": "NVIDIA_API_KEY",
+     "redacted": "NVIDIA_API_KEY",
+     "len": 70
+    },
+    {
+     "name": "OLDPWD",
+     "value": "/home/rku00122"
+    },
+    {
+     "name": "OMPI_MCA_plm_slurm_args",
+     "value": "--external-launcher"
+    },
+    {
+     "name": "OPENDDE_ROOT_DIR",
+     "value": "/data1/rkp00041/rku00122/opendde-multinode/opendde_data"
+    },
+    {
+     "name": "PATH",
+     "value": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/.venv/bin:/usr/local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+    },
+    {
+     "name": "PIP_DISABLE_PIP_VERSION_CHECK",
+     "value": "1"
+    },
+    {
+     "name": "PIP_NO_CACHE_DIR",
+     "value": "1"
+    },
+    {
+     "name": "PROMPT_COMMAND",
+     "value": "PS1=\"Apptainer> \"; unset PROMPT_COMMAND"
+    },
+    {
+     "name": "PRTE_MCA_plm_slurm_args",
+     "value": "--external-launcher"
+    },
+    {
+     "name": "PWD",
+     "value": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433"
+    },
+    {
+     "name": "PYTHONDONTWRITEBYTECODE",
+     "value": "1"
+    },
+    {
+     "name": "PYTHONPATH",
+     "value": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/.airas:/opt/autoscilab"
+    },
+    {
+     "name": "PYTHONUNBUFFERED",
+     "value": "1"
+    },
+    {
+     "name": "PYTHON_SHA256",
+     "value": "91bcdebfdde239a003ae93738a7fce0f9230fee5c4bc2b86f6e6e8c6f98aabe8"
+    },
+    {
+     "name": "PYTHON_VERSION",
+     "value": "3.11.16"
+    },
+    {
+     "name": "RESULTS_DIR",
+     "value": ".research/results"
+    },
+    {
+     "name": "RIKYU_API_KEY",
+     "redacted": "RIKYU_API_KEY",
+     "len": 25
+    },
+    {
+     "name": "RUN_ID",
+     "value": "react-luna"
+    },
+    {
+     "name": "SHELL",
+     "value": "/bin/bash"
+    },
+    {
+     "name": "SHLVL",
+     "value": "2"
+    },
+    {
+     "name": "SINGULARITY_BIND",
+     "value": "/data1/rkp00041,/shared/software/apptainer,/data1/rkp00041/rku00122/.cache/huggingface"
+    },
+    {
+     "name": "SINGULARITY_CONTAINER",
+     "value": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/.seyval/image.sif"
+    },
+    {
+     "name": "SINGULARITY_ENVIRONMENT",
+     "value": "/.singularity.d/env/91-environment.sh"
+    },
+    {
+     "name": "SINGULARITY_NAME",
+     "value": "image.sif"
+    },
+    {
+     "name": "SLURMD_NODENAME",
+     "value": "c247"
+    },
+    {
+     "name": "SLURM_CLUSTER_NAME",
+     "value": "ai4s"
+    },
+    {
+     "name": "SLURM_CONF",
+     "value": "/var/spool/slurmd/conf-cache/slurm.conf"
+    },
+    {
+     "name": "SLURM_CONF_SERVER",
+     "value": "sctl1:6817,sctl2:6817"
+    },
+    {
+     "name": "SLURM_CPUS_ON_NODE",
+     "value": "32"
+    },
+    {
+     "name": "SLURM_GPUS",
+     "value": "1"
+    },
+    {
+     "name": "SLURM_GPUS_ON_NODE",
+     "value": "1"
+    },
+    {
+     "name": "SLURM_GTIDS",
+     "value": "0"
+    },
+    {
+     "name": "SLURM_JOBID",
+     "value": "175041"
+    },
+    {
+     "name": "SLURM_JOB_ACCOUNT",
+     "value": "rkp00041"
+    },
+    {
+     "name": "SLURM_JOB_CPUS_PER_NODE",
+     "value": "32"
+    },
+    {
+     "name": "SLURM_JOB_END_TIME",
+     "value": "1792044345"
+    },
+    {
+     "name": "SLURM_JOB_GID",
+     "value": "200000"
+    },
+    {
+     "name": "SLURM_JOB_GPUS",
+     "value": "1"
+    },
+    {
+     "name": "SLURM_JOB_ID",
+     "value": "175041"
+    },
+    {
+     "name": "SLURM_JOB_NAME",
+     "value": "seyval-843251a1-f2ff-4a8c-b93b-5251ed781433"
+    },
+    {
+     "name": "SLURM_JOB_NODELIST",
+     "value": "c247"
+    },
+    {
+     "name": "SLURM_JOB_NUM_NODES",
+     "value": "1"
+    },
+    {
+     "name": "SLURM_JOB_PARTITION",
+     "value": "gpu"
+    },
+    {
+     "name": "SLURM_JOB_QOS",
+     "value": "normal"
+    },
+    {
+     "name": "SLURM_JOB_START_TIME",
+     "value": "1792001145"
+    },
+    {
+     "name": "SLURM_JOB_UID",
+     "value": "100121"
+    },
+    {
+     "name": "SLURM_JOB_USER",
+     "value": "rku00122"
+    },
+    {
+     "name": "SLURM_LOCALID",
+     "value": "0"
+    },
+    {
+     "name": "SLURM_MEM_PER_NODE",
+     "value": "409600"
+    },
+    {
+     "name": "SLURM_NNODES",
+     "value": "1"
+    },
+    {
+     "name": "SLURM_NODEID",
+     "value": "0"
+    },
+    {
+     "name": "SLURM_NODELIST",
+     "value": "c247"
+    },
+    {
+     "name": "SLURM_OOM_KILL_STEP",
+     "value": "0"
+    },
+    {
+     "name": "SLURM_PRIO_PROCESS",
+     "value": "0"
+    },
+    {
+     "name": "SLURM_PROCID",
+     "value": "0"
+    },
+    {
+     "name": "SLURM_SUBMIT_DIR",
+     "value": "/home/rku00122"
+    },
+    {
+     "name": "SLURM_SUBMIT_HOST",
+     "value": "c001"
+    },
+    {
+     "name": "SLURM_TASKS_PER_NODE",
+     "value": "32"
+    },
+    {
+     "name": "SLURM_TASK_PID",
+     "value": "119451"
+    },
+    {
+     "name": "SLURM_TOPOLOGY_ADDR",
+     "value": "spine1.leaf_c240.c247"
+    },
+    {
+     "name": "SLURM_TOPOLOGY_ADDR_PATTERN",
+     "value": "switch.switch.node"
+    },
+    {
+     "name": "SSH_CLIENT",
+     "value": "54.150.218.111 1805 22"
+    },
+    {
+     "name": "SSH_CONNECTION",
+     "value": "54.150.218.111 1805 10.134.70.2 22"
+    },
+    {
+     "name": "TMPDIR",
+     "value": "/tmp"
+    },
+    {
+     "name": "TRITON_LIBCUDA_PATH",
+     "value": "/.singularity.d/libs"
+    },
+    {
+     "name": "USER",
+     "value": "rku00122"
+    },
+    {
+     "name": "USER_PATH",
+     "truncated": true,
+     "type": "str",
+     "len": 325,
+     "sha256": "ec432e2ab40cbdf0e1cf2ab6cdbed640239e2ec44485d192391905809645d1b5"
+    },
+    {
+     "name": "UV",
+     "value": "/usr/local/bin/uv"
+    },
+    {
+     "name": "UV_NO_SYNC",
+     "value": "1"
+    },
+    {
+     "name": "UV_RUN_RECURSION_DEPTH",
+     "value": "1"
+    },
+    {
+     "name": "VERCEL_AI_GATEWAY_API_KEY",
+     "redacted": "VERCEL_AI_GATEWAY_API_KEY",
+     "len": 60
+    },
+    {
+     "name": "VIRTUAL_ENV",
+     "value": "/data1/rkp00041/rku00122/843251a1-f2ff-4a8c-b93b-5251ed781433/.venv"
+    },
+    {
+     "name": "WANDB_API_KEY",
+     "redacted": "WANDB_API_KEY",
+     "len": 86
+    },
+    {
+     "name": "XDG_RUNTIME_DIR",
+     "value": "/run/user/100121"
+    },
+    {
+     "name": "XDG_SESSION_CLASS",
+     "redacted": "XDG_SESSION_CLASS",
+     "len": 4
+    },
+    {
+     "name": "XDG_SESSION_ID",
+     "redacted": "XDG_SESSION_ID",
+     "len": 5
+    },
+    {
+     "name": "XDG_SESSION_TYPE",
+     "redacted": "XDG_SESSION_TYPE",
+     "len": 3
+    },
+    {
+     "name": "_",
+     "value": "/usr/bin/make"
+    },
+    {
+     "name": "_ModuleTable001_",
+     "truncated": true,
+     "type": "str",
+     "len": 388,
+     "sha256": "cc15770ae1b2c0ee2081ad90348f9df8104354631584911f0f0b1e12a6338ec4"
+    },
+    {
+     "name": "_ModuleTable_Sz_",
+     "value": "1"
+    },
+    {
+     "name": "__LMOD_REF_COUNT_MODULEPATH",
+     "value": "/shared/software/modulefiles:2;/etc/lmod/modules:1;/usr/share/lmod/lmod/modulefiles:1"
+    }
+   ],
+   "started": 1792005214.7254448,
+   "ended": 1792005690.487078
+  }
+ ]
+}
