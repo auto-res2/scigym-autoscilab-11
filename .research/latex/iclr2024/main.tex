@@ -18,6 +18,13 @@
 \title{仮説条件付き実験選択は SBML の機構回復にも効くか（第 2 報）: LLM-AutoSciLab の公式モジュールを Antimony の仮説で SciGym に繋ぎ、宣言を検証可能なキーで記録し直す 2 件の pilot}
 \author{AIRAS}
 
+\providecommand{\airasrecordlink}[1]{#1}
+% 生成される 9 列の表が本文幅を超えるので、tabular を箱に入れて本文幅に縮める（tables/main.tex は編集しない）
+\newsavebox{\airastablebox}
+\let\airasoldtabular\tabular
+\let\endairasoldtabular\endtabular
+\newenvironment{airasfittabular}{\begin{lrbox}{\airastablebox}\begin{airasoldtabular}}{\end{airasoldtabular}\end{lrbox}\resizebox{\textwidth}{!}{\usebox{\airastablebox}}}
+
 \begin{document}
 \maketitle
 
@@ -100,18 +107,40 @@ RIKYU（理研 R-CCS、aarch64）上で Seyval の BYO Slurm ジョブとして�
 
 \section{結果}
 \label{sec:results}
-（実験後に記入）
+
+3 run とも 2 件を実行し、autoscilab-luna と react-luna は 2 件とも提出があった。autoscilab-nohyp-luna は 1 件（BIOMD0000000742）が 3 試行とも出力停止（stall\_timeout 900 秒）で打ち切られ、提出なしとして不完全モデルで採点された。表~\ref{tab:main} に 3 run の指標を示す。各 claim の判定は claims.tex（\S\ref{sec:hypothesis}）に記録の値から機械的に導かれている。
+
+{\let\tabular\airasfittabular\let\endtabular\endairasfittabular\input{tables/main.tex}}
+
+\paragraph{c1（STE: AutoSciLab ループ vs ReAct）.}
+平均 STE は autoscilab-luna が \airasval{autoscilab-luna.trajectory_smape}、react-luna が \airasval{react-luna.trajectory_smape} で、差は \unverified{+0.310} である。判定線（$-0.02$ 以下）に届かず、c1 は反証された。予測区間 $[-0.15, 0.05]$ の外にある。
+
+\paragraph{c2（STE: アブレーション vs AutoSciLab ループ）.}
+平均 STE は autoscilab-nohyp-luna が \airasval{autoscilab-nohyp-luna.trajectory_smape} で、autoscilab-luna より \unverified{0.070} 高かった。判定線（$+0.01$ 以上）を満たし、c2 は支持された。ただしこの差は、アブレーション run の 1 件が提出なしで不完全モデルのまま採点されたことによるもので、実験選択則の差を反映しているとは言えない。
+
+\paragraph{c3（RMS: ReAct vs AutoSciLab ループ）.}
+修飾子なしの RMS F1 は react-luna が \airasval{react-luna.reaction_f1}、autoscilab-luna が \airasval{autoscilab-luna.reaction_f1} で、差は \unverified{+0.202} である。判定線（$-0.02$ 以下）に届かず、c3 は反証された。予測区間 $[-0.25, 0.05]$ の外にある。
+
+\paragraph{宣言の検証（本報の目的）.}
+記録の検証報告（verification.md）は、mismatch 0、verified \unverified{281} 行、unverified \unverified{156} 行だった。unverified はすべて比較対象を持たない自由記述（引用 passage の本文、仮説と claim の文、表の見出しなど）で、実行条件の行ではない。各 run の設定（params）は \unverified{74} 行が verified、\unverified{4} 行が unverified で、後者は配列値（初期濃度の範囲 \texttt{[0.2, 5.0]}）の要素ごとの行に照合が付かない帳簿上のものである。design に列挙した上流と src/ の引数（autoscilab 2 run は各 29、react は 13）は、すべて観測された実引数と一致した。第 2 報（10 件）では同じ設定の \unverified{68} 行が「provenance に無い」として unverified のまま残っていた。
+
+\paragraph{実行.}
+RIKYU の 1 ノードで、autoscilab-luna は約 \unverified{45} 分、autoscilab-nohyp-luna は約 \unverified{56} 分、react-luna は約 \unverified{77} 分で終わった。react-luna の BIOMD0000000742 は反復 10 で 60 分間出力が止まり、stall\_timeout で打ち切ってやり直した（やり直しは完走）。
 
 \section{考察}
 \label{sec:discussion}
-（実験後に記入）
+
+2 件の pilot なので、c1〜c3 の判定は解釈しない。本報が確かめたのは記録の形である: 設定のキーを「値を消費する関数の引数名」にすると、上流に渡らない設定（seed、並列数、打ち切り時間、確信度の門、アブレーションの切替）も上流の引数と同じ仕組みで照合でき、第 2 報で残っていた「provenance に無い」行は消えた。残る unverified は、自由記述（設計上、機械では比べない）と、配列値の要素ごとの行（gate の path の作り方の問題で、値そのものは配列として照合済み）の 2 種類だけである。
+
+実行面では、autoscilab のアブレーション run で 1 件が 3 試行とも出力停止で終わらなかった。第 2 報の 10 件では起きていない。候補 SBML のシミュレーションの時間切れは子プロセス側で効いているので、停止は LLM 呼び出し側にある可能性が高いが、本報では特定していない。
 
 \section{結論}
 \label{sec:conclusion}
-（実験後に記入）
+
+第 2 報の設計を、記録の新しい形（arguments は引数名の列、値は各 run の params に同じキー）で書き直し、2 件の pilot として再実行した。実行条件の宣言は配列の要素行を除いてすべて機械で照合され、第 2 報で未検証だった自分のコードの設定も観測と一致した。手法の比較については 2 件では何も言えず、10 件以上での再実行はこの形で行える。
 
 \section*{データの利用可能性}
-記録は \airasrecordlink{record.json} にある。実験コード、環境の固定（Dockerfile と \texttt{uv.lock}）、各 run の結果と provenance は同じリポジトリに含まれる。
+記録は \airasrecordlink{record.json} にある。実験コード、環境の固定（Dockerfile と \texttt{uv.lock}）、各 run の結果と provenance、検証報告（verification.md）は同じリポジトリに含まれる。
 
 \bibliographystyle{iclr2024_conference}
 \bibliography{references}
