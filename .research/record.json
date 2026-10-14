@@ -42,47 +42,126 @@
         {
           "id": "s1.p1",
           "node_type": "setup",
-          "quote": "The agent may submit its final model and conclude the discovery process at any point, subject to a maximum iteration limit (20 in our benchmark)."
+          "quote": "The agent may submit its final model and conclude the discovery process at any point, subject to a maximum iteration limit (20 in our benchmark).",
+          "judgments": [
+            {
+              "text_sha256": "30096eb006fbdc30e542b7bf6a2865721348fd45c1d3c5befaaeacc8cb4e9b96",
+              "model": "gpt-4.1",
+              "supported": true
+            },
+            {
+              "text_sha256": "bba20d9b36738fc9a7d91696b553aaea2aee236d174400d3a40a3843ab62ff58",
+              "model": "gpt-4.1",
+              "supported": true
+            }
+          ]
         },
         {
           "id": "s1.p2",
           "node_type": "setup",
-          "quote": "If the submitted model is invalid or cannot be simulated, we allow for 3 additional debugging iterations before evaluating against the incomplete SBML structure"
+          "quote": "If the submitted model is invalid or cannot be simulated, we allow for 3 additional debugging iterations before evaluating against the incomplete SBML structure",
+          "judgments": [
+            {
+              "text_sha256": "30096eb006fbdc30e542b7bf6a2865721348fd45c1d3c5befaaeacc8cb4e9b96",
+              "model": "gpt-4.1",
+              "supported": true
+            },
+            {
+              "text_sha256": "bba20d9b36738fc9a7d91696b553aaea2aee236d174400d3a40a3843ab62ff58",
+              "model": "gpt-4.1",
+              "supported": true
+            }
+          ]
         },
         {
           "id": "s1.p3",
           "node_type": "method",
-          "quote": "We implemented a ReAct-style agent (Yao et al., 2023)using a Thoughts-Actions-Observations framework due to its simplicity for comparing performance across different models."
+          "quote": "We implemented a ReAct-style agent (Yao et al., 2023)using a Thoughts-Actions-Observations framework due to its simplicity for comparing performance across different models.",
+          "judgments": [
+            {
+              "text_sha256": "572290fe102cc74150242f6df099e71e001f1b244a7e7ac10aed2414b127573b",
+              "model": "gpt-4.1",
+              "supported": true
+            }
+          ]
         },
         {
           "id": "s1.p4",
           "node_type": "setup",
-          "quote": "In our experiments, we allow agents to use one simple type of perturbations: changing the initial concentrations of a species"
+          "quote": "In our experiments, we allow agents to use one simple type of perturbations: changing the initial concentrations of a species",
+          "judgments": [
+            {
+              "text_sha256": "1b833bcb987ca965d5fdf1ffb4ff6e27c5a6cbf9123d70bb5b099679ce0949c4",
+              "model": "gpt-4.1",
+              "supported": true
+            },
+            {
+              "text_sha256": "db5676a7771f2fa83f8119b174db378395939f25340f02390f518072f6ee9b8c",
+              "model": "gpt-4.1",
+              "supported": true
+            }
+          ]
         },
         {
           "id": "s1.p5",
           "node_type": "definition",
-          "quote": "Simulation Trajectory Error (STE). This metric evaluates how accurately the predicted system matches the dynamic behavior of the true system by comparing time-series trajectories of each species."
+          "quote": "Simulation Trajectory Error (STE). This metric evaluates how accurately the predicted system matches the dynamic behavior of the true system by comparing time-series trajectories of each species.",
+          "judgments": [
+            {
+              "text_sha256": "30096eb006fbdc30e542b7bf6a2865721348fd45c1d3c5befaaeacc8cb4e9b96",
+              "model": "gpt-4.1",
+              "supported": false,
+              "reason": "The citing text adds that STE is a symmetric mean absolute percentage error (SMAPE) over all species' time series, which the quoted passage only partially supports; the SMAPE detail is mentioned in the extended context, but not in this passage alone."
+            }
+          ]
         },
         {
           "id": "s1.p6",
           "node_type": "definition",
-          "quote": "We consider two reactions \"matched\" if they have identical sets of reactants and products. In the second, more stringent version, we additionally require matching modifiers."
+          "quote": "We consider two reactions \"matched\" if they have identical sets of reactants and products. In the second, more stringent version, we additionally require matching modifiers.",
+          "judgments": [
+            {
+              "text_sha256": "30096eb006fbdc30e542b7bf6a2865721348fd45c1d3c5befaaeacc8cb4e9b96",
+              "model": "gpt-4.1",
+              "supported": true
+            }
+          ]
         },
         {
           "id": "s1.p7",
           "node_type": "definition",
-          "quote": "To assess success in recovering the correct system topology, we measure pairwise interactions between all species in the system and calculate F1 score."
+          "quote": "To assess success in recovering the correct system topology, we measure pairwise interactions between all species in the system and calculate F1 score.",
+          "judgments": [
+            {
+              "text_sha256": "cbb4bd18e5b8c7ffc29ff5655cda7fd57b9d0e89e54cc2f9a45f0443f232e2d1",
+              "model": "gpt-4.1",
+              "supported": true
+            }
+          ]
         },
         {
           "id": "s1.p8",
           "node_type": "gap",
-          "quote": "This perturbation type, when strategically designed, provides substantial information about species relationships, reaction types, kinetic laws, and reaction rates."
+          "quote": "This perturbation type, when strategically designed, provides substantial information about species relationships, reaction types, kinetic laws, and reaction rates.",
+          "judgments": [
+            {
+              "text_sha256": "3cc428af316359ba3df2ed7b9a701903713414148b491d7cc3bba5b3bb49350c",
+              "model": "gpt-4.1",
+              "supported": true
+            }
+          ]
         },
         {
           "id": "s1.p9",
           "node_type": "setup",
-          "quote": "Due to computational resource constraints, we restricted our evaluation to SCIGYM-small, with a total of 137 tasks."
+          "quote": "Due to computational resource constraints, we restricted our evaluation to SCIGYM-small, with a total of 137 tasks.",
+          "judgments": [
+            {
+              "text_sha256": "ba4841c3bc134fdd01660f2cc590c3d4c65d45070f60d6688c0baf225e7742da",
+              "model": "gpt-4.1",
+              "supported": true
+            }
+          ]
         },
         {
           "id": "s1.p10",
@@ -93,12 +172,27 @@
         {
           "id": "s1.p11",
           "node_type": "method",
-          "quote": "def run_benchmark(self, model: LLM) -> None:"
+          "quote": "def run_benchmark(self, model: LLM) -> None:",
+          "judgments": [
+            {
+              "text_sha256": "bba20d9b36738fc9a7d91696b553aaea2aee236d174400d3a40a3843ab62ff58",
+              "model": "gpt-4.1",
+              "supported": true
+            }
+          ]
         },
         {
           "id": "s1.p12",
           "node_type": "method",
-          "quote": "def call_simulator(self, config: ExperimentConfig) -> ExperimentResult:"
+          "quote": "def call_simulator(self, config: ExperimentConfig) -> ExperimentResult:",
+          "judgments": [
+            {
+              "text_sha256": "db5676a7771f2fa83f8119b174db378395939f25340f02390f518072f6ee9b8c",
+              "model": "gpt-4.1",
+              "supported": false,
+              "reason": "The citing text makes claims about the function's use as the sole interaction with the correct model and details about return behavior not supported by the quoted function definition alone; context is insufficient."
+            }
+          ]
         }
       ]
     },
@@ -146,47 +240,136 @@
         {
           "id": "s2.p2",
           "node_type": "claim",
-          "quote": "We propose a hypothesis-conditioned acquisition strategy that selects experiments maximizing disagreement among competing hypotheses, improving sample efficiency under fixed budgets."
+          "quote": "We propose a hypothesis-conditioned acquisition strategy that selects experiments maximizing disagreement among competing hypotheses, improving sample efficiency under fixed budgets.",
+          "judgments": [
+            {
+              "text_sha256": "c072f9541c8ee40198f1017eb8d8a7edc795924283f28f1e0c5b376febb7a188",
+              "model": "gpt-4.1",
+              "supported": true
+            }
+          ]
         },
         {
           "id": "s2.p3",
           "node_type": "gap",
-          "quote": "most existing systems are both representation-specific and passive, searching within a predetermined output space, such as equations, materials, or programs, and use LLMs primarily for post-hoc hypothesis generation and refinement over pre-collected, static datasets"
+          "quote": "most existing systems are both representation-specific and passive, searching within a predetermined output space, such as equations, materials, or programs, and use LLMs primarily for post-hoc hypothesis generation and refinement over pre-collected, static datasets",
+          "judgments": [
+            {
+              "text_sha256": "8692f437358e99428fda9eaacc8543f08ecfae883791ee6d4071b9dbba308058",
+              "model": "gpt-4.1",
+              "supported": true
+            }
+          ]
         },
         {
           "id": "s2.p4",
           "node_type": "setup",
-          "quote": "We use GPT-4o-mini as the primary LLM backbone and Qwen/Qwen2.5-7B-Instruct for the smaller models used in adaptive ensembling."
+          "quote": "We use GPT-4o-mini as the primary LLM backbone and Qwen/Qwen2.5-7B-Instruct for the smaller models used in adaptive ensembling.",
+          "judgments": [
+            {
+              "text_sha256": "c87a56e7a8f84d6aaf5c77d9e43c6cac6e9810eb36496dac5561998bc91ed475",
+              "model": "gpt-4.1",
+              "supported": false,
+              "reason": "The cited passage only states which LLMs are used, but the citing text claims that the LLM can 'freely write functional forms', which is not stated or supported in the source passage."
+            },
+            {
+              "text_sha256": "1d815068b8834555198c37a904c110c0f34dfdd2dc0d2b0a4be9efe7a221b703",
+              "model": "gpt-4.1",
+              "supported": true
+            },
+            {
+              "text_sha256": "f8cb050863fda463ff904944edc4f054712859ec0991c1e0bfd695f754ea79b6",
+              "model": "gpt-4.1",
+              "supported": true
+            }
+          ]
         },
         {
           "id": "s2.p5",
           "node_type": "setup",
-          "quote": "the oracle is a noiseless black-box function"
+          "quote": "the oracle is a noiseless black-box function",
+          "judgments": [
+            {
+              "text_sha256": "0087e69bdfa5b5c848c7e7870b2d7475f76771a0e8db5c5ca0954d2f54ac89b6",
+              "model": "gpt-4.1",
+              "supported": true
+            }
+          ]
         },
         {
           "id": "s2.p6",
           "node_type": "method",
-          "quote": "where candidate mechanisms in Ht make maximally divergent predictions"
+          "quote": "where candidate mechanisms in Ht make maximally divergent predictions",
+          "judgments": [
+            {
+              "text_sha256": "64f3dae56d8765d756e9c4dca0dd81dd456963e07f06ba7987d8aff34363fcf8",
+              "model": "gpt-4.1",
+              "supported": true
+            }
+          ]
         },
         {
           "id": "s2.p7",
           "node_type": "result",
-          "quote": "causes a substantial drop across all benchmarks, showing that candidate mechanisms must guide data acquisition under limited oracle budgets"
+          "quote": "causes a substantial drop across all benchmarks, showing that candidate mechanisms must guide data acquisition under limited oracle budgets",
+          "judgments": [
+            {
+              "text_sha256": "b9d2c4df82028021b5a16297600184494e409dcc9213c22cf5a5b9ef59232ca6",
+              "model": "gpt-4.1",
+              "supported": true
+            },
+            {
+              "text_sha256": "948812272cbcd58c8e84002951cac07f1f79d36d1deb79ac09721a8bf35c12bb",
+              "model": "gpt-4.1",
+              "supported": true
+            }
+          ]
         },
         {
           "id": "s2.p8",
           "node_type": "gap",
-          "quote": "Performance also depends on the quality of LLM-generated hypotheses and on the coverage of the parser and refinement backends."
+          "quote": "Performance also depends on the quality of LLM-generated hypotheses and on the coverage of the parser and refinement backends.",
+          "judgments": [
+            {
+              "text_sha256": "0087e69bdfa5b5c848c7e7870b2d7475f76771a0e8db5c5ca0954d2f54ac89b6",
+              "model": "gpt-4.1",
+              "supported": true
+            }
+          ]
         },
         {
           "id": "s2.p9",
           "node_type": "setup",
-          "quote": "In the paper configuration, the smaller ensemble model is sampled in parallel with base ensemble size K = 5"
+          "quote": "In the paper configuration, the smaller ensemble model is sampled in parallel with base ensemble size K = 5",
+          "judgments": [
+            {
+              "text_sha256": "918f356cc09e91f65cc47eaf4aa9b4128dd936854db0d784a48c787c827ab2c4",
+              "model": "gpt-4.1",
+              "supported": true
+            },
+            {
+              "text_sha256": "192658a0761b9fee5b7081f41ebe4cd9200720f08ef681cd186f532d72aff404",
+              "model": "gpt-4.1",
+              "supported": true
+            }
+          ]
         },
         {
           "id": "s2.p10",
           "node_type": "setup",
-          "quote": "Sampling stops when the entropy change between successive batches falls below 0.1, or when the hard cap of Kmax = 20 samples is reached."
+          "quote": "Sampling stops when the entropy change between successive batches falls below 0.1, or when the hard cap of Kmax = 20 samples is reached.",
+          "judgments": [
+            {
+              "text_sha256": "64f3dae56d8765d756e9c4dca0dd81dd456963e07f06ba7987d8aff34363fcf8",
+              "model": "gpt-4.1",
+              "supported": true
+            },
+            {
+              "text_sha256": "6fa21607afb1e5973a322687688ff9aea03f725f4867dfc114b90c5b58a54600",
+              "model": "gpt-4.1",
+              "supported": true
+            }
+          ]
         },
         {
           "id": "s2.p11",
@@ -196,27 +379,77 @@
         {
           "id": "s2.p12",
           "node_type": "setup",
-          "quote": "Once confidence exceeds the threshold (0.9 in the paper configuration), the system switches to a refinement regime, where acquisition is driven by uncertainty sampling"
+          "quote": "Once confidence exceeds the threshold (0.9 in the paper configuration), the system switches to a refinement regime, where acquisition is driven by uncertainty sampling",
+          "judgments": [
+            {
+              "text_sha256": "ff96570003a9433ca9084bdfb3bf05e5ce312ec074362862bf83cc1b8e3c943c",
+              "model": "gpt-4.1",
+              "supported": true
+            },
+            {
+              "text_sha256": "18aef6a125632eebeca1107ebf1f9f00eff414cc9bd880ab078e300757c1944f",
+              "model": "gpt-4.1",
+              "supported": true
+            }
+          ]
         },
         {
           "id": "s2.p13",
           "node_type": "setup",
-          "quote": "ensemble sampling uses a temperature of 1.0 for structural diversity"
+          "quote": "ensemble sampling uses a temperature of 1.0 for structural diversity",
+          "judgments": [
+            {
+              "text_sha256": "653ee159b9c59179a7bdd2f61e50c7455f7b86547104284f5f13bfbe64b23258",
+              "model": "gpt-4.1",
+              "supported": true
+            },
+            {
+              "text_sha256": "f8cb050863fda463ff904944edc4f054712859ec0991c1e0bfd695f754ea79b6",
+              "model": "gpt-4.1",
+              "supported": true
+            }
+          ]
         },
         {
           "id": "s2.p14",
           "node_type": "gap",
-          "quote": "In this adapter we optimize a scalar simulator response rather than"
+          "quote": "In this adapter we optimize a scalar simulator response rather than",
+          "judgments": [
+            {
+              "text_sha256": "0087e69bdfa5b5c848c7e7870b2d7475f76771a0e8db5c5ca0954d2f54ac89b6",
+              "model": "gpt-4.1",
+              "supported": true
+            },
+            {
+              "text_sha256": "2c105a3d865c5faa4fcae0d6d3212fa7ae69690c71d5d6ab9171ff2ab958b8b4",
+              "model": "gpt-4.1",
+              "supported": true
+            }
+          ]
         },
         {
           "id": "s2.p15",
           "node_type": "setup",
-          "quote": "n_candidates: int = 2000,"
+          "quote": "n_candidates: int = 2000,",
+          "judgments": [
+            {
+              "text_sha256": "d5a7b310d286e2fe7826a59b6e70c009d0f55034c3dcdd6b3f98770f54990b29",
+              "model": "gpt-4.1",
+              "supported": true
+            }
+          ]
         },
         {
           "id": "s2.p16",
           "node_type": "setup",
-          "quote": "diversity_weight: float = 0.3,"
+          "quote": "diversity_weight: float = 0.3,",
+          "judgments": [
+            {
+              "text_sha256": "ac60f49073dcd034a6325e632f4ff068c470307c392a690a5aa131a5c2a11546",
+              "model": "gpt-4.1",
+              "supported": true
+            }
+          ]
         },
         {
           "id": "s2.p17",
@@ -231,7 +464,14 @@
         {
           "id": "s2.p19",
           "node_type": "setup",
-          "quote": "max_experiments_per_iter: int = 4"
+          "quote": "max_experiments_per_iter: int = 4",
+          "judgments": [
+            {
+              "text_sha256": "bc5845f89e7b73837cd112a41e43d72aee6ecfd1574c11270e46e06584ad0ced",
+              "model": "gpt-4.1",
+              "supported": true
+            }
+          ]
         },
         {
           "id": "s2.p20",
@@ -246,7 +486,14 @@
         {
           "id": "s2.p22",
           "node_type": "method",
-          "quote": "Selects the most discriminating experiment points given a"
+          "quote": "Selects the most discriminating experiment points given a",
+          "judgments": [
+            {
+              "text_sha256": "11c557a0a11f6b72cae8a05296b2f4986df05206042e9a9d802a7f816b217f55",
+              "model": "gpt-4.1",
+              "supported": true
+            }
+          ]
         },
         {
           "id": "s2.p23",
@@ -266,62 +513,165 @@
         {
           "id": "s2.p26",
           "node_type": "method",
-          "quote": "def run_round("
+          "quote": "def run_round(",
+          "judgments": [
+            {
+              "text_sha256": "d89f006c25ace58388ec0fcfd85791687916af9e10b65e5cb0f86ca003f99de0",
+              "model": "gpt-4.1",
+              "supported": true
+            }
+          ]
         },
         {
           "id": "s2.p27",
           "node_type": "method",
-          "quote": "def from_expressions(cls, expressions: list[str]) -> \"HypothesisDistribution\":"
+          "quote": "def from_expressions(cls, expressions: list[str]) -> \"HypothesisDistribution\":",
+          "judgments": [
+            {
+              "text_sha256": "63df8f4cc13182b0e59894d50f1853eec6f0c6743c184f6a861b99c6bd1f5475",
+              "model": "gpt-4.1",
+              "supported": true
+            }
+          ]
         },
         {
           "id": "s2.p28",
           "node_type": "method",
-          "quote": "skeleton = re.sub(r\"(?<![a-zA-Z_])\\d+\\.?\\d*(?:[eE][+-]?\\d+)?\", \"C\", expr)"
+          "quote": "skeleton = re.sub(r\"(?<![a-zA-Z_])\\d+\\.?\\d*(?:[eE][+-]?\\d+)?\", \"C\", expr)",
+          "judgments": [
+            {
+              "text_sha256": "975972305abb10f53c5599366131cc77907db648267b2869f45393ffb0f9ba68",
+              "model": "gpt-4.1",
+              "supported": true
+            },
+            {
+              "text_sha256": "fdee55e513c95b3a8fdd6df130e90ddbee9178b4dad77bdf31d74e0f0a617e57",
+              "model": "gpt-4.1",
+              "supported": true
+            }
+          ]
         },
         {
           "id": "s2.p29",
           "node_type": "method",
-          "quote": "expressions = _filter_valid_expressions(expressions_raw, store, self._oracle.parameter_names)"
+          "quote": "expressions = _filter_valid_expressions(expressions_raw, store, self._oracle.parameter_names)",
+          "judgments": [
+            {
+              "text_sha256": "b83ba85203ef59129f0ad71d4c65364a49f77d031c4ea5a1b50b25d3ed559597",
+              "model": "gpt-4.1",
+              "supported": true
+            },
+            {
+              "text_sha256": "93960b42fed43fd457397207efd43a2d8fc771ead6d149f17d4111d8cac341e2",
+              "model": "gpt-4.1",
+              "supported": true
+            },
+            {
+              "text_sha256": "29be0d8ea668d9bcae4a5975356fec65e3abd4ffcb15e04157b24217e7ab312a",
+              "model": "gpt-4.1",
+              "supported": false,
+              "reason": "The citing text states that the filtering step for valid hypotheses (as Python expressions) is inapplicable for Antimony and thus the method is overwritten, but the quoted passage only shows a Python filtering function; it does not discuss Antimony compatibility or method overriding."
+            }
+          ]
         },
         {
           "id": "s2.p30",
           "node_type": "setup",
-          "quote": "k_max: int = 20,"
+          "quote": "k_max: int = 20,",
+          "judgments": [
+            {
+              "text_sha256": "5664ca0bf09991450a9adda3f4bc7d5ca9c224db25d392c19f0f4c8464bfb141",
+              "model": "gpt-4.1",
+              "supported": true,
+              "reason": "The citing text refers to a '公式既定値' (official default value) of 20 for a stopping condition parameter, and the passage shows 'k_max: int = 20,' which supports this."
+            }
+          ]
         },
         {
           "id": "s2.p31",
           "node_type": "setup",
-          "quote": "stability_threshold: float = 0.1,"
+          "quote": "stability_threshold: float = 0.1,",
+          "judgments": [
+            {
+              "text_sha256": "5664ca0bf09991450a9adda3f4bc7d5ca9c224db25d392c19f0f4c8464bfb141",
+              "model": "gpt-4.1",
+              "supported": true
+            }
+          ]
         },
         {
           "id": "s2.p32",
           "node_type": "method",
-          "quote": "line = self._proc.stdout.readline()"
+          "quote": "line = self._proc.stdout.readline()",
+          "judgments": [
+            {
+              "text_sha256": "0ca4e7494fbf70837e3f01100b512ac3c4f116cf4ffac95714617def45f4f9b2",
+              "model": "gpt-4.1",
+              "supported": false,
+              "reason": "The cited passage only shows synchronous reading from a process, not that there is upstream timeout enforcement, so the citing text infers a property not actually shown."
+            }
+          ]
         },
         {
           "id": "s2.p33",
           "node_type": "method",
-          "quote": "def to_text_table(self, max_rows: int = 20) -> str:"
+          "quote": "def to_text_table(self, max_rows: int = 20) -> str:",
+          "judgments": [
+            {
+              "text_sha256": "61d7c238f27e3c2967d87b0d5283d58ef1fdead1ef0c05e6e387db8e94941a7e",
+              "model": "gpt-4.1",
+              "supported": true
+            }
+          ]
         },
         {
           "id": "s2.p34",
           "node_type": "method",
-          "quote": "measurement: float"
+          "quote": "measurement: float",
+          "judgments": [
+            {
+              "text_sha256": "1eecfc1e7dd8981a182e4c4fcfcc700adc9f35aee980c5f4fc97c00cbd4dc399",
+              "model": "gpt-4.1",
+              "supported": true
+            }
+          ]
         },
         {
           "id": "s2.p35",
           "node_type": "method",
-          "quote": "confidence = 1 - mean(std(preds) / |mean(preds)|)"
+          "quote": "confidence = 1 - mean(std(preds) / |mean(preds)|)",
+          "judgments": [
+            {
+              "text_sha256": "75d137eeef8b9bab5f5303a6c3bc0432117f48c65af559c7c1c83ed9069103b2",
+              "model": "gpt-4.1",
+              "supported": true
+            }
+          ]
         },
         {
           "id": "s2.p36",
           "node_type": "method",
-          "quote": "if n_bootstrap > 0 and len(X_train) >= 10 and r2 > 0.5:"
+          "quote": "if n_bootstrap > 0 and len(X_train) >= 10 and r2 > 0.5:",
+          "judgments": [
+            {
+              "text_sha256": "2e266850d1f17ac7a7f2e2cced7dcb62302aaa2198d24e2bbcf256aa0de01631",
+              "model": "gpt-4.1",
+              "supported": false,
+              "reason": "The citing text describes the R^2 gate as 'R^2 の門' used for confidence gating in their code, matching the quoted passage, but implies more general use; the source specifically applies the R^2 > 0.5 gate only for bootstrapped confidence calculation, not as a general threshold. Thus, it's a slight generalization beyond the source's context."
+            }
+          ]
         },
         {
           "id": "s2.p37",
           "node_type": "method",
-          "quote": "def synthesize_proposal("
+          "quote": "def synthesize_proposal(",
+          "judgments": [
+            {
+              "text_sha256": "66e020083c8c1faba42eb6fe29a3baad06efe350e3c067f595f11e25b0eccb74",
+              "model": "gpt-4.1",
+              "supported": true
+            }
+          ]
         }
       ]
     }
