@@ -53,6 +53,11 @@
               "text_sha256": "bba20d9b36738fc9a7d91696b553aaea2aee236d174400d3a40a3843ab62ff58",
               "model": "gpt-4.1",
               "supported": true
+            },
+            {
+              "text_sha256": "88eda392d9c74d5498105e7b4c0cf06cf0811ceec5bfe204b92232fa2bbfe97f",
+              "model": "gpt-4.1",
+              "supported": true
             }
           ]
         },
@@ -68,6 +73,11 @@
             },
             {
               "text_sha256": "bba20d9b36738fc9a7d91696b553aaea2aee236d174400d3a40a3843ab62ff58",
+              "model": "gpt-4.1",
+              "supported": true
+            },
+            {
+              "text_sha256": "88eda392d9c74d5498105e7b4c0cf06cf0811ceec5bfe204b92232fa2bbfe97f",
               "model": "gpt-4.1",
               "supported": true
             }
@@ -99,6 +109,16 @@
               "text_sha256": "db5676a7771f2fa83f8119b174db378395939f25340f02390f518072f6ee9b8c",
               "model": "gpt-4.1",
               "supported": true
+            },
+            {
+              "text_sha256": "ed3cba08397eba2136ea4fdfa82f286580200dccc300bfd1154e0f24f637b2b4",
+              "model": "gpt-4.1",
+              "supported": true
+            },
+            {
+              "text_sha256": "c4eff44c1804742cd6c2ae754715bc9a61417c51d4cd7c952e633a105a6cbb9f",
+              "model": "gpt-4.1",
+              "supported": true
             }
           ]
         },
@@ -112,6 +132,11 @@
               "model": "gpt-4.1",
               "supported": false,
               "reason": "The citing text adds that STE is a symmetric mean absolute percentage error (SMAPE) over all species' time series, which the quoted passage only partially supports; the SMAPE detail is mentioned in the extended context, but not in this passage alone."
+            },
+            {
+              "text_sha256": "88eda392d9c74d5498105e7b4c0cf06cf0811ceec5bfe204b92232fa2bbfe97f",
+              "model": "gpt-4.1",
+              "supported": true
             }
           ]
         },
@@ -124,6 +149,11 @@
               "text_sha256": "30096eb006fbdc30e542b7bf6a2865721348fd45c1d3c5befaaeacc8cb4e9b96",
               "model": "gpt-4.1",
               "supported": true
+            },
+            {
+              "text_sha256": "9b4393c7052613507c71a3c89bdc57c835203345bf0f789e64ab7b2771c3b70d",
+              "model": "gpt-4.1",
+              "supported": true
             }
           ]
         },
@@ -134,6 +164,11 @@
           "judgments": [
             {
               "text_sha256": "cbb4bd18e5b8c7ffc29ff5655cda7fd57b9d0e89e54cc2f9a45f0443f232e2d1",
+              "model": "gpt-4.1",
+              "supported": true
+            },
+            {
+              "text_sha256": "64e3696a493e93803de82d54e815f09bad9171e8b1e683ee8616a6962f34a8a0",
               "model": "gpt-4.1",
               "supported": true
             }
@@ -158,6 +193,11 @@
           "judgments": [
             {
               "text_sha256": "ba4841c3bc134fdd01660f2cc590c3d4c65d45070f60d6688c0baf225e7742da",
+              "model": "gpt-4.1",
+              "supported": true
+            },
+            {
+              "text_sha256": "ed8d82ddb16f07fee42805674d21054e2e36a6912a5cb51cd5fe6e400cdcdf74",
               "model": "gpt-4.1",
               "supported": true
             }
@@ -191,6 +231,11 @@
               "model": "gpt-4.1",
               "supported": false,
               "reason": "The citing text makes claims about the function's use as the sole interaction with the correct model and details about return behavior not supported by the quoted function definition alone; context is insufficient."
+            },
+            {
+              "text_sha256": "c4eff44c1804742cd6c2ae754715bc9a61417c51d4cd7c952e633a105a6cbb9f",
+              "model": "gpt-4.1",
+              "supported": true
             }
           ]
         }
@@ -351,6 +396,11 @@
               "text_sha256": "192658a0761b9fee5b7081f41ebe4cd9200720f08ef681cd186f532d72aff404",
               "model": "gpt-4.1",
               "supported": true
+            },
+            {
+              "text_sha256": "c65d33df0acb67637f7868b5a56557f786483df38767cd5b32ca09ffd66cc38f",
+              "model": "gpt-4.1",
+              "supported": true
             }
           ]
         },
@@ -366,6 +416,11 @@
             },
             {
               "text_sha256": "6fa21607afb1e5973a322687688ff9aea03f725f4867dfc114b90c5b58a54600",
+              "model": "gpt-4.1",
+              "supported": true
+            },
+            {
+              "text_sha256": "0f050cd919d222cbc54670ff3632f1ca06e39247a829adbeeb8232f2f0b78c89",
               "model": "gpt-4.1",
               "supported": true
             }
@@ -388,6 +443,11 @@
             },
             {
               "text_sha256": "18aef6a125632eebeca1107ebf1f9f00eff414cc9bd880ab078e300757c1944f",
+              "model": "gpt-4.1",
+              "supported": true
+            },
+            {
+              "text_sha256": "17d492bd458e37ce30893190386713f52772c27ecf81c48c02fcb30bfcd9cb89",
               "model": "gpt-4.1",
               "supported": true
             }
@@ -422,6 +482,11 @@
             },
             {
               "text_sha256": "2c105a3d865c5faa4fcae0d6d3212fa7ae69690c71d5d6ab9171ff2ab958b8b4",
+              "model": "gpt-4.1",
+              "supported": true
+            },
+            {
+              "text_sha256": "0927b181789a2ba967bf8f5d788aeb37eec7f7252c44d3ea765df4727e51389a",
               "model": "gpt-4.1",
               "supported": true
             }
@@ -519,6 +584,11 @@
               "text_sha256": "d89f006c25ace58388ec0fcfd85791687916af9e10b65e5cb0f86ca003f99de0",
               "model": "gpt-4.1",
               "supported": true
+            },
+            {
+              "text_sha256": "835ff1a6088c9e491f66fefdb247eb9fc5fb06f82382ab0c066f8cdc35454b9b",
+              "model": "gpt-4.1",
+              "supported": true
             }
           ]
         },
@@ -529,6 +599,11 @@
           "judgments": [
             {
               "text_sha256": "63df8f4cc13182b0e59894d50f1853eec6f0c6743c184f6a861b99c6bd1f5475",
+              "model": "gpt-4.1",
+              "supported": true
+            },
+            {
+              "text_sha256": "8b08ef4822f606b6e96fc1fb72ee4fe0d501635853c7e972c8606390fa8b25c6",
               "model": "gpt-4.1",
               "supported": true
             }
@@ -546,6 +621,11 @@
             },
             {
               "text_sha256": "fdee55e513c95b3a8fdd6df130e90ddbee9178b4dad77bdf31d74e0f0a617e57",
+              "model": "gpt-4.1",
+              "supported": true
+            },
+            {
+              "text_sha256": "6f50bce8bb71239e13e477d1e7a7f673ba36d3273d17383da36bd114781c8a6f",
               "model": "gpt-4.1",
               "supported": true
             }
@@ -571,6 +651,16 @@
               "model": "gpt-4.1",
               "supported": false,
               "reason": "The citing text states that the filtering step for valid hypotheses (as Python expressions) is inapplicable for Antimony and thus the method is overwritten, but the quoted passage only shows a Python filtering function; it does not discuss Antimony compatibility or method overriding."
+            },
+            {
+              "text_sha256": "79b212407db5fbd4a88c1fdb8d91508640c767824837d520d85a563de0986ecf",
+              "model": "gpt-4.1",
+              "supported": true
+            },
+            {
+              "text_sha256": "ac35478cd63fd773788aad1864adfd03092cbcf299b6eea8de119fee13dc0645",
+              "model": "gpt-4.1",
+              "supported": true
             }
           ]
         },
@@ -584,6 +674,11 @@
               "model": "gpt-4.1",
               "supported": true,
               "reason": "The citing text refers to a '公式既定値' (official default value) of 20 for a stopping condition parameter, and the passage shows 'k_max: int = 20,' which supports this."
+            },
+            {
+              "text_sha256": "ce7fc7ed93ab8a4baa2a813ed16fc7c51bce8b161d350de7fbfbf042f5e3adae",
+              "model": "gpt-4.1",
+              "supported": true
             }
           ]
         },
@@ -594,6 +689,11 @@
           "judgments": [
             {
               "text_sha256": "5664ca0bf09991450a9adda3f4bc7d5ca9c224db25d392c19f0f4c8464bfb141",
+              "model": "gpt-4.1",
+              "supported": true
+            },
+            {
+              "text_sha256": "ce7fc7ed93ab8a4baa2a813ed16fc7c51bce8b161d350de7fbfbf042f5e3adae",
               "model": "gpt-4.1",
               "supported": true
             }
@@ -609,6 +709,11 @@
               "model": "gpt-4.1",
               "supported": false,
               "reason": "The cited passage only shows synchronous reading from a process, not that there is upstream timeout enforcement, so the citing text infers a property not actually shown."
+            },
+            {
+              "text_sha256": "b1ef3e4247a0c8268aac9593a1f503990efcd051d91430666e5264335605208e",
+              "model": "gpt-4.1",
+              "supported": true
             }
           ]
         },
@@ -619,6 +724,11 @@
           "judgments": [
             {
               "text_sha256": "61d7c238f27e3c2967d87b0d5283d58ef1fdead1ef0c05e6e387db8e94941a7e",
+              "model": "gpt-4.1",
+              "supported": true
+            },
+            {
+              "text_sha256": "91203e337b75eaedb725bb6a796f2228a21ea47cf412434920d65d40425c0951",
               "model": "gpt-4.1",
               "supported": true
             }
@@ -633,6 +743,11 @@
               "text_sha256": "1eecfc1e7dd8981a182e4c4fcfcc700adc9f35aee980c5f4fc97c00cbd4dc399",
               "model": "gpt-4.1",
               "supported": true
+            },
+            {
+              "text_sha256": "5b0a7d702be349d90ec62bb2d5f0e6c3e1f95bfcac6ddd6adda4d421814075cc",
+              "model": "gpt-4.1",
+              "supported": true
             }
           ]
         },
@@ -643,6 +758,11 @@
           "judgments": [
             {
               "text_sha256": "75d137eeef8b9bab5f5303a6c3bc0432117f48c65af559c7c1c83ed9069103b2",
+              "model": "gpt-4.1",
+              "supported": true
+            },
+            {
+              "text_sha256": "b340df8aa34e81fd88554ce25d40f6d81d3e7461ba6d5caf801a7b09ed30cd54",
               "model": "gpt-4.1",
               "supported": true
             }
@@ -658,6 +778,11 @@
               "model": "gpt-4.1",
               "supported": false,
               "reason": "The citing text describes the R^2 gate as 'R^2 の門' used for confidence gating in their code, matching the quoted passage, but implies more general use; the source specifically applies the R^2 > 0.5 gate only for bootstrapped confidence calculation, not as a general threshold. Thus, it's a slight generalization beyond the source's context."
+            },
+            {
+              "text_sha256": "6ca785f6fcb221e5aade9bc47d54381a1da5aaf731a66c5ce3673085aa8bb568",
+              "model": "gpt-4.1",
+              "supported": true
             }
           ]
         },
@@ -668,6 +793,11 @@
           "judgments": [
             {
               "text_sha256": "66e020083c8c1faba42eb6fe29a3baad06efe350e3c067f595f11e25b0eccb74",
+              "model": "gpt-4.1",
+              "supported": true
+            },
+            {
+              "text_sha256": "7e990db158e3180463bf5cc61a464bd4f60d6eefb0c09fad6bba2dccd3195844",
               "model": "gpt-4.1",
               "supported": true
             }
