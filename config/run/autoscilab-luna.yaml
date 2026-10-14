@@ -1,0 +1,30 @@
+# キーは「その値を消費する関数の引数名」（src/keys.py）。record の params に同じキーで載り、gate が observed.json の値と比べる
+src.runner.run_all.method: autoscilab  # LLM-AutoSciLab の部品 + SciGym 用アダプタ
+src.preprocess.instances.split: small
+src.preprocess.instances.n_instances: 2  # id 順に等間隔の 2 件（pilot。3 run で同じ件）
+autoscilab.llm.client.LLMClient.__init__.model: &model openai/gpt-6-luna  # large
+autoscilab.llm.ensemble_client.EnsembleClient.__init__.model: *model  # small（ユーザー指定で large と同じ）
+autoscilab.llm.client.LLMClient.__init__.base_url: &base_url https://ai-gateway.vercel.sh/v1
+autoscilab.llm.ensemble_client.EnsembleClient.__init__.base_url: *base_url
+autoscilab.llm.ensemble_agent.EnsembleAgent.run_round.total_budget: 20  # 正解モデルへの問い合わせ回数
+autoscilab.al.falsification.FalsificationSelector.select.n: 4  # 1 反復あたりの実験数
+src.model.TrajectoryDistribution.over.acquisition: disagreement  # 仮説条件付き獲得
+autoscilab.llm.ensemble_client.EnsembleClient.__init__.k: 5
+autoscilab.llm.ensemble_agent.EnsembleAgent.__init__.adaptive: true
+autoscilab.llm.ensemble_agent.EnsembleAgent.__init__.k_max: 20
+autoscilab.llm.ensemble_agent.EnsembleAgent.__init__.stability_threshold: 0.1
+autoscilab.llm.ensemble_client.EnsembleClient.__init__.temperature: 1.0
+autoscilab.llm.ensemble_client.EnsembleClient.__init__.max_tokens: 4096
+autoscilab.llm.client.LLMClient.__init__.max_completion_tokens: 8192
+autoscilab.al.falsification.FalsificationSelector.__init__.n_candidates: 2000
+autoscilab.al.falsification.FalsificationSelector.__init__.diversity_weight: 0.3
+src.model.refine_gate.confidence_threshold: 0.9
+src.model.bootstrap_confidence.min_r2: 0.5  # 公式 learner.py の R² の門
+src.model.bootstrap_confidence.n_bootstrap: 3
+src.model.make_rng.seed: 0  # 候補点のサンプリング、フィットの再始動、ブートストラップに使う乱数
+src.model.System.allowed_bounds.factor: [0.2, 5.0]  # 実験で設定してよい初期濃度の範囲（既定値の倍率）
+src.model.set_sim_timeouts.sim_timeout: 15  # 候補の試走 1 バッチの時間切れ（秒）= sim_timeout + sim_timeout_per_job × 件数
+src.model.set_sim_timeouts.sim_timeout_per_job: 0.02
+src.runner.run_all.workers: 10
+src.runner.run_all.instance_timeout: 14400  # 1 件 1 試行の上限秒。超えたら最初からやり直す
+src.runner.run_all.stall_timeout: 900  # 出力が止まってからこの秒数で試行を打ち切る。ループはフィットごとに出力する

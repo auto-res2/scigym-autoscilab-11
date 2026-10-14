@@ -1,0 +1,14 @@
+# キーは「その値を消費する関数の引数名」（src/keys.py）。record の params に同じキーで載り、gate が observed.json の値と比べる
+src.runner.run_all.method: react  # SciGym 公式 Controller（ReAct）
+src.preprocess.instances.split: small
+src.preprocess.instances.n_instances: 2  # id 順に等間隔の 2 件（pilot。3 run で同じ件）
+scigym.api.api.LLM.__init__.model_name: openai/gpt-6-luna
+scigym.controller.Controller.__init__.max_iterations: 20
+scigym.controller.Controller.__init__.eval_debug_rounds: 3
+scigym.controller.Controller.__init__.temperature: &temperature 1.0
+scigym.api.api.LLM.__init__.temperature: *temperature
+scigym.api.api.LLM.__init__.max_length: 32768
+openai._client.OpenAI.__init__.base_url: https://ai-gateway.vercel.sh/v1
+src.runner.run_all.workers: 16
+src.runner.run_all.instance_timeout: 14400  # 1 件 1 試行の上限秒。超えたら最初からやり直す
+src.runner.run_all.stall_timeout: 3600  # 出力が止まってからこの秒数で試行を打ち切る（LLM のコードが ODE の C ライブラリ内で止まった件）
