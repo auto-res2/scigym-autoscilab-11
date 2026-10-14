@@ -18,6 +18,25 @@
         ".research/results/autoscilab-luna/observed.json": "a01f7ac135cf13c44c6a2896421f13b700f83119dc460d14118dd18038a3e1aa",
         ".research/results/autoscilab-luna/tokens.json": "adf2cc5f9315e5ba70217c701430cecf73f275383cb95f071c4be6398467c38e"
       }
+    },
+    "autoscilab-nohyp-luna": {
+      "execution_id": "456b251a-78c9-4343-a9e7-a3dcc34d1ca9",
+      "backend": "seyval",
+      "commit_hash": "dca18a5606777a91f6961095847e22abd6d959ce",
+      "overrides": {
+        "airas_secret_names": "ANTHROPIC_API_KEY,AWS_ACCESS_KEY_ID,AWS_BEARER_TOKEN_BEDROCK,AWS_SECRET_ACCESS_KEY,GEMINI_API_KEY,GH_PERSONAL_ACCESS_TOKEN,HF_TOKEN,NVIDIA_API_KEY,OPENAI_API_KEY,RIKYU_API_KEY,SEYVAL_API_KEY,VERCEL_AI_GATEWAY_API_KEY,WANDB_API_KEY",
+        "run_id": "autoscilab-nohyp-luna",
+        "mode": "pilot"
+      },
+      "parameters": {},
+      "files": {
+        ".research/results/autoscilab-nohyp-luna/eval_inputs/scigym_small.json.gz": "4a69f25df10d43a946fc1ddfeee3241375b84d25fa1739a7eacaffa33510a967",
+        ".research/results/autoscilab-nohyp-luna/evaluation/scigym_small.json": "b72b7890b5acade70bbd677741f0af377940d5199ecd5e1c6ae52d82e48c9292",
+        ".research/results/autoscilab-nohyp-luna/instances.tar.gz": "4094fc45f4ce0a638cb59566215e050f0acad0cc39bf8c02b789545cfcfead72",
+        ".research/results/autoscilab-nohyp-luna/metrics.json": "7e24254278519622ed4871f6bc1870d7dd0b5171b3c0f59f90af922504649dea",
+        ".research/results/autoscilab-nohyp-luna/observed.json": "48b501c1f4191e214618ae6005c3819308d3ae476165c5eb95956fed0b8046bd",
+        ".research/results/autoscilab-nohyp-luna/tokens.json": "743f67df16fc027b8f0c3d74e7adfc0113eef9dec4e752a9488574cc813294ef"
+      }
     }
   }
 }
