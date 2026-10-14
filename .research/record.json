@@ -1024,7 +1024,17 @@
                   "autoscilab.oracle.base.BaseOracle",
                   "autoscilab.oracle.external._JsonWorker"
                 ]
-              }
+              },
+              "reviews": [
+                {
+                  "commit": "dca18a5606777a91f6961095847e22abd6d959ce",
+                  "observed": {
+                    "autoscilab-luna": "a01f7ac135cf13c44c6a2896421f13b700f83119dc460d14118dd18038a3e1aa"
+                  },
+                  "inputs_sha256": "a119518e6f810f156f4f05fb3e72f811208b0b151a48de39d34861004fa7d102",
+                  "model": "gpt-4.1"
+                }
+              ]
             }
           ],
           "quoted_passage_ids": [
@@ -1218,7 +1228,17 @@
                   "autoscilab.oracle.base.BaseOracle",
                   "autoscilab.oracle.external._JsonWorker"
                 ]
-              }
+              },
+              "reviews": [
+                {
+                  "commit": "dca18a5606777a91f6961095847e22abd6d959ce",
+                  "observed": {
+                    "autoscilab-nohyp-luna": "48b501c1f4191e214618ae6005c3819308d3ae476165c5eb95956fed0b8046bd"
+                  },
+                  "inputs_sha256": "55f0d8c7b94d07a075dd6028f97940f413a5be3a42327fd90bc9da5290d63269",
+                  "model": "gpt-4.1"
+                }
+              ]
             }
           ],
           "quoted_passage_ids": [
@@ -1373,7 +1393,73 @@
                 "extension_points": [
                   "scigym.api.api.LLM"
                 ]
-              }
+              },
+              "reviews": [
+                {
+                  "commit": "dca18a5606777a91f6961095847e22abd6d959ce",
+                  "observed": {
+                    "react-luna": "b4d677314f60ffdb338cf8b5d7814ae0081ba95092a704cdfd61856d520bcd06"
+                  },
+                  "inputs_sha256": "f8ec9f2dce343e111794e47a0dacb9aecc696417ab4a7ff070b112ad6f71a427",
+                  "model": "gpt-4.1",
+                  "findings": [
+                    {
+                      "kind": "undeclared",
+                      "where": "src/train.py:main OpenAICompatible.initialize",
+                      "statement": "Sets OpenAI API client with max_retries=1 and timeout=1800 seconds for LLM calls.",
+                      "evidence": "self.client = OpenAI(api_key=..., max_retries=1, timeout=1800)"
+                    },
+                    {
+                      "kind": "undeclared",
+                      "where": "src/train.py:main Controller.__init__",
+                      "statement": "Sets test_memorize=False in the official Controller, affecting agent behavior, but this switch is not declared in params or summary.",
+                      "evidence": "controller = Controller(..., test_memorize=False, ...)"
+                    },
+                    {
+                      "kind": "undeclared",
+                      "where": "scigym.controller.Controller.__init__",
+                      "statement": "Uses fixed prompt files for experiment actions and customized functions: 'experiment_actions_path' and 'customized_functions_path' parameters hardcoded, not declared in params.",
+                      "evidence": "experiment_actions_path=\"prompts/experiment_actions_perturb.md\", customized_functions_path=\"prompts/customized_functions_sim.md\""
+                    },
+                    {
+                      "kind": "undeclared",
+                      "where": "src/train.py:main OpenAICompatible.get_response",
+                      "statement": "Empty response handling: if LLM returns empty, attempt is retried 30 times, and for 'length' finish_reason, max_tokens is doubled up to 131072; these retry/backoff details are not declared in params or summary.",
+                      "evidence": "for attempt in range(30): ... if choice.finish_reason == \"length\": max_tokens = min(max_tokens * 2, 131072)"
+                    },
+                    {
+                      "kind": "undeclared",
+                      "where": "src/train.py:main Controller.__init__",
+                      "statement": "Sets 'output_directory' for results but this parameter is not declared or listed in params and may affect where outputs go.",
+                      "evidence": "output_directory=str(out) in Controller(...)"
+                    },
+                    {
+                      "kind": "undeclared",
+                      "where": "src/train.py:main Controller.__init__",
+                      "statement": "Sets task_difficulty to 'fully_observable' for all runs, but this restriction is not specified in params or summary.",
+                      "evidence": "task_difficulty=\"fully_observable\""
+                    },
+                    {
+                      "kind": "undeclared",
+                      "where": "src/train.py:main OpenAICompatible.get_response",
+                      "statement": "On API errors (connection error or timeouts), script sleeps for 60s and retries up to 30 times before failing; this backoff policy is not declared in params.",
+                      "evidence": "print(f\"connection error ({type(exc).__name__}); retry {attempt + 1} after 60s\", flush=True)\ntime.sleep(60)"
+                    },
+                    {
+                      "kind": "undeclared",
+                      "where": "src/train.py:main OpenAICompatible.get_response",
+                      "statement": "On certain status codes (e.g., 402 budget exceeded, or 400 context overflow), script interprets the code and terminates or handles the output as defined, but those policies are not declared.",
+                      "evidence": "if exc.status_code == 402: sys.exit(BUDGET_EXCEEDED)\nif exc.status_code == 400 and ... sys.exit(CONTEXT_OVERFLOW)"
+                    },
+                    {
+                      "kind": "undeclared",
+                      "where": "src/preprocess.py:instances",
+                      "statement": "If no local data, downloads from HuggingFace dataset 'h4duan/scigym-sbml' for the specified split; this implicit data source selection is not declared in design/params (besides being documented in code comments).",
+                      "evidence": "if not data_dir.is_dir(): download_split(split, Path(data_root))"
+                    }
+                  ]
+                }
+              ]
             }
           ],
           "quoted_passage_ids": [
